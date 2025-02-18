@@ -1,3 +1,9 @@
+import Header from "./mainpage/header";
+
 export default function Home() {
-  return <div>Aippoint</div>;
+  return (
+    <div>
+      <Header/>
+    </div>
+  )
 }
