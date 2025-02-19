@@ -1,0 +1,181 @@
+{
+  "format": "page",
+  "id": "footer",
+  "label": "Footer",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "footer_logo": {
+        "type": "Image",
+        "config": {
+          "label": "Footer Logo",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "quick_links": {
+        "type": "Text",
+        "config": {
+          "label": "Quick Links",
+          "placeholder": ""
+        }
+      },
+      "home": {
+        "type": "Text",
+        "config": {
+          "label": "Home",
+          "placeholder": ""
+        }
+      },
+      "features": {
+        "type": "Text",
+        "config": {
+          "label": "Features",
+          "placeholder": ""
+        }
+      },
+      "pricing": {
+        "type": "Text",
+        "config": {
+          "label": "Pricing",
+          "placeholder": ""
+        }
+      },
+      "faq": {
+        "type": "Text",
+        "config": {
+          "label": "FAQ",
+          "placeholder": ""
+        }
+      },
+      "contact_us": {
+        "type": "Text",
+        "config": {
+          "label": "Contact Us",
+          "placeholder": ""
+        }
+      },
+      "reach_out_to_us": {
+        "type": "Text",
+        "config": {
+          "label": "Reach Out To Us",
+          "placeholder": ""
+        }
+      },
+      "email_icon": {
+        "type": "Image",
+        "config": {
+          "label": "Email Icon",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "email": {
+        "type": "Text",
+        "config": {
+          "label": "Email",
+          "placeholder": ""
+        }
+      },
+      "phone_icon": {
+        "type": "Image",
+        "config": {
+          "label": "Phone Icon",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "phone": {
+        "type": "Text",
+        "config": {
+          "label": "Phone",
+          "placeholder": ""
+        }
+      },
+      "follow_us": {
+        "type": "Text",
+        "config": {
+          "label": "Follow Us",
+          "placeholder": ""
+        }
+      },
+      "linkedin_text": {
+        "type": "Text",
+        "config": {
+          "label": "LinkedIn Text",
+          "placeholder": ""
+        }
+      },
+      "facebook_text": {
+        "type": "Text",
+        "config": {
+          "label": "Facebook Text",
+          "placeholder": ""
+        }
+      },
+      "legal": {
+        "type": "Text",
+        "config": {
+          "label": "Legal",
+          "placeholder": ""
+        }
+      },
+      "privacy_policy": {
+        "type": "Text",
+        "config": {
+          "label": "Privacy Policy",
+          "placeholder": ""
+        }
+      },
+      "terms_and_conditions": {
+        "type": "Text",
+        "config": {
+          "label": "Terms And Conditions",
+          "placeholder": ""
+        }
+      },
+      "button_text": {
+        "type": "Text",
+        "config": {
+          "label": "Button Text",
+          "placeholder": ""
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {}
+        }
+      }
+    },
+    "SEO & Metadata": {
+      "meta_title": {
+        "config": {
+          "label": "Meta Title",
+          "placeholder": "A title of the page used for social media and search engines"
+        },
+        "type": "Text"
+      },
+      "meta_description": {
+        "config": {
+          "label": "Meta Description",
+          "placeholder": "A brief summary of the page"
+        },
+        "type": "Text"
+      },
+      "meta_image": {
+        "config": {
+          "constraint": {
+            "height": 1260,
+            "width": 2400
+          },
+          "label": "Meta Image",
+          "thumbnails": []
+        },
+        "type": "Image"
+      }
+    }
+  }
+}
