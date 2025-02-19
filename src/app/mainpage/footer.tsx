@@ -45,7 +45,7 @@ function Footer() {
             flexDirection: { xs: "column", sm: "row", lg: "row", xl: "row" },
             background: "#0083C3",
             padding: "10px 24px",
-            gap:{xs:'20px'}
+            gap: { xs: "20px" },
           }}
         >
           <Grid item lg={2}>
@@ -61,11 +61,18 @@ function Footer() {
               />
             )}
           </Grid>
-          <Grid item lg={1} sx={{ textAlign: {xs:"center",sm:"left",lg:"left",xl:"left"} }}>
+          <Grid
+            item
+            lg={1}
+            sx={{
+              textAlign: { xs: "center", sm: "left", lg: "left", xl: "left" },
+              paddingTop: "23px",
+            }}
+          >
             <Typography style={heading}>
               {footerPage[0]?.data.quick_links}
             </Typography>
-            <Typography style={subHeading}>
+            <Typography style={{ paddingTop: "9px", ...subHeading }}>
               {footerPage[0]?.data.home}
             </Typography>
             <Typography style={subHeading}>
@@ -81,7 +88,14 @@ function Footer() {
               {footerPage[0]?.data.contact_us}
             </Typography>
           </Grid>
-          <Grid item lg={2} sx={{ textAlign: {xs:"center",sm:"left",lg:"left",xl:"left"} }}>
+          <Grid
+            item
+            lg={2}
+            sx={{
+              textAlign: { xs: "center", sm: "left", lg: "left", xl: "left" },
+              paddingTop: "23px",
+            }}
+          >
             <Typography style={heading}>
               {footerPage[0]?.data.reach_out_to_us}
             </Typography>
@@ -90,14 +104,25 @@ function Footer() {
                 display: "flex",
                 flexDirection: "column",
                 gap: "10px",
+                paddingTop: "9px",
               }}
             >
               <Grid
                 sx={{
                   display: "flex",
-                  flexDirection: { xs: "row", sm: "column", lg: "row", xl: "row" },
+                  flexDirection: {
+                    xs: "row",
+                    sm: "column",
+                    lg: "row",
+                    xl: "row",
+                  },
                   gap: "10px",
-                  justifyContent:{xs:'center',sm:'center',lg:'left',xl:'left'}
+                  justifyContent: {
+                    xs: "center",
+                    sm: "center",
+                    lg: "left",
+                    xl: "left",
+                  },
                 }}
               >
                 {footerPage[0]?.data.email_icon && (
@@ -118,9 +143,19 @@ function Footer() {
               <Grid
                 sx={{
                   display: "flex",
-                  flexDirection: { xs: "row", sm: "column", lg: "row", xl: "row" },
+                  flexDirection: {
+                    xs: "row",
+                    sm: "column",
+                    lg: "row",
+                    xl: "row",
+                  },
                   gap: "10px",
-                  justifyContent:{xs:'center',sm:'center',lg:'left',xl:'left'}
+                  justifyContent: {
+                    xs: "center",
+                    sm: "center",
+                    lg: "left",
+                    xl: "left",
+                  },
                 }}
               >
                 {footerPage[0]?.data.phone_icon && (
@@ -140,27 +175,41 @@ function Footer() {
               </Grid>
             </Grid>
           </Grid>
-          <Grid item lg={1} sx={{ textAlign: {xs:"center",sm:"left",lg:"left",xl:"left"} }}>
+          <Grid
+            item
+            lg={1}
+            sx={{
+              textAlign: { xs: "center", sm: "left", lg: "left", xl: "left" },
+              paddingTop: "23px",
+            }}
+          >
             <Typography style={heading}>
               {footerPage[0]?.data.follow_us}
             </Typography>
-            <Typography style={subHeading}>
+            <Typography style={{ paddingTop: "9px", ...subHeading }}>
               {footerPage[0]?.data.linkedin_text}
             </Typography>
             <Typography style={subHeading}>
               {footerPage[0]?.data.facebook_text}
             </Typography>
           </Grid>
-          <Grid item lg={1.5} sx={{ textAlign: {xs:"center",sm:"left",lg:"left",xl:"left"} }}>
+          <Grid
+            item
+            lg={1.5}
+            sx={{
+              textAlign: { xs: "center", sm: "left", lg: "left", xl: "left" },
+              paddingTop: "23px",
+            }}
+          >
             <Typography style={heading}>{footerPage[0]?.data.legal}</Typography>
-            <Typography style={subHeading}>
+            <Typography style={{ paddingTop: "9px", ...subHeading }}>
               {footerPage[0]?.data.privacy_policy}
             </Typography>
             <Typography style={subHeading}>
               {footerPage[0]?.data.terms_and_conditions}
             </Typography>
           </Grid>
-          <Grid item lg={2} sx={{ textAlign: "center" }}>
+          <Grid item lg={2} sx={{ textAlign: "center", paddingTop: "33px" }}>
             <Button
               style={{
                 background: "#FFFFFF",
@@ -170,6 +219,8 @@ function Footer() {
                 lineHeight: "24px",
                 fontFamily: "Poppins",
                 textTransform: "none",
+                borderRadius: "12px",
+                padding: "18px 38px",
               }}
             >
               {footerPage[0]?.data.button_text}
