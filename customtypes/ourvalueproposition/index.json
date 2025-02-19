@@ -1,0 +1,194 @@
+{
+  "format": "page",
+  "id": "ourvalueproposition",
+  "label": "Ourvalueproposition",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "top_heading": {
+        "type": "Text",
+        "config": {
+          "label": "Top Heading",
+          "placeholder": ""
+        }
+      },
+      "top_content": {
+        "type": "Text",
+        "config": {
+          "label": "Top Content",
+          "placeholder": ""
+        }
+      },
+      "values": {
+        "type": "Text",
+        "config": {
+          "label": "Values",
+          "placeholder": ""
+        }
+      },
+      "hiring_process": {
+        "type": "Text",
+        "config": {
+          "label": "Hiring Process",
+          "placeholder": ""
+        }
+      },
+      "candidate_matching": {
+        "type": "Text",
+        "config": {
+          "label": "Candidate Matching",
+          "placeholder": ""
+        }
+      },
+      "hiring_cost": {
+        "type": "Text",
+        "config": {
+          "label": "Hiring Cost",
+          "placeholder": ""
+        }
+      },
+      "assistance": {
+        "type": "Text",
+        "config": {
+          "label": "Assistance",
+          "placeholder": ""
+        }
+      },
+      "faster_hiring_heading": {
+        "type": "Text",
+        "config": {
+          "label": "Faster Hiring Heading",
+          "placeholder": ""
+        }
+      },
+      "faster_hiring_content": {
+        "type": "Text",
+        "config": {
+          "label": "Faster Hiring Content",
+          "placeholder": ""
+        }
+      },
+      "faster_hiring_score": {
+        "type": "Text",
+        "config": {
+          "label": "Faster Hiring Score",
+          "placeholder": ""
+        }
+      },
+      "upward_image": {
+        "type": "Image",
+        "config": {
+          "label": "Upward Image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "downward_image": {
+        "type": "Image",
+        "config": {
+          "label": "Downward Image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "smart_matching_heading": {
+        "type": "Text",
+        "config": {
+          "label": "Smart Matching Heading",
+          "placeholder": ""
+        }
+      },
+      "smart_matching_content": {
+        "type": "Text",
+        "config": {
+          "label": "Smart Matching Content",
+          "placeholder": ""
+        }
+      },
+      "smart_matching_score": {
+        "type": "Text",
+        "config": {
+          "label": "Smart Matching Score",
+          "placeholder": ""
+        }
+      },
+      "cost_efficient_heading": {
+        "type": "Text",
+        "config": {
+          "label": "Cost Efficient Heading",
+          "placeholder": ""
+        }
+      },
+      "cost_efficient_content": {
+        "type": "Text",
+        "config": {
+          "label": "Cost Efficient Content",
+          "placeholder": ""
+        }
+      },
+      "cost_efficient_score": {
+        "type": "Text",
+        "config": {
+          "label": "Cost Efficient Score",
+          "placeholder": ""
+        }
+      },
+      "ai_assistance_heading": {
+        "type": "Text",
+        "config": {
+          "label": "AI Assistance Heading",
+          "placeholder": ""
+        }
+      },
+      "ai_assistance_content": {
+        "type": "Text",
+        "config": {
+          "label": "AI Assistance Content",
+          "placeholder": ""
+        }
+      },
+      "ai_assistance_score": {
+        "type": "Text",
+        "config": {
+          "label": "AI Assistance Score",
+          "placeholder": ""
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {}
+        }
+      }
+    },
+    "SEO & Metadata": {
+      "meta_title": {
+        "config": {
+          "label": "Meta Title",
+          "placeholder": "A title of the page used for social media and search engines"
+        },
+        "type": "Text"
+      },
+      "meta_description": {
+        "config": {
+          "label": "Meta Description",
+          "placeholder": "A brief summary of the page"
+        },
+        "type": "Text"
+      },
+      "meta_image": {
+        "config": {
+          "constraint": {
+            "height": 1260,
+            "width": 2400
+          },
+          "label": "Meta Image",
+          "thumbnails": []
+        },
+        "type": "Image"
+      }
+    }
+  }
+}

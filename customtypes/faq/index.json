@@ -1,0 +1,199 @@
+{
+  "format": "page",
+  "id": "faq",
+  "label": "Faq",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "heading": {
+        "type": "Text",
+        "config": {
+          "label": "Heading",
+          "placeholder": ""
+        }
+      },
+      "title": {
+        "type": "Text",
+        "config": {
+          "label": "Title",
+          "placeholder": ""
+        }
+      },
+      "question1": {
+        "type": "Text",
+        "config": {
+          "label": "Question1",
+          "placeholder": ""
+        }
+      },
+      "answer1": {
+        "type": "Text",
+        "config": {
+          "label": "Answer1",
+          "placeholder": ""
+        }
+      },
+      "question2": {
+        "type": "Text",
+        "config": {
+          "label": "Question2",
+          "placeholder": ""
+        }
+      },
+      "answer2": {
+        "type": "Text",
+        "config": {
+          "label": "Answer2",
+          "placeholder": ""
+        }
+      },
+      "question3": {
+        "type": "Text",
+        "config": {
+          "label": "Question3",
+          "placeholder": ""
+        }
+      },
+      "answer3": {
+        "type": "Text",
+        "config": {
+          "label": "Answer3",
+          "placeholder": ""
+        }
+      },
+      "question4": {
+        "type": "Text",
+        "config": {
+          "label": "Question4",
+          "placeholder": ""
+        }
+      },
+      "answer4": {
+        "type": "Text",
+        "config": {
+          "label": "Answer4",
+          "placeholder": ""
+        }
+      },
+      "question5": {
+        "type": "Text",
+        "config": {
+          "label": "Question5",
+          "placeholder": ""
+        }
+      },
+      "answer5": {
+        "type": "Text",
+        "config": {
+          "label": "Answer5",
+          "placeholder": ""
+        }
+      },
+      "question6": {
+        "type": "Text",
+        "config": {
+          "label": "Question6",
+          "placeholder": ""
+        }
+      },
+      "answer6": {
+        "type": "Text",
+        "config": {
+          "label": "Answer6",
+          "placeholder": ""
+        }
+      },
+      "question7": {
+        "type": "Text",
+        "config": {
+          "label": "Question7",
+          "placeholder": ""
+        }
+      },
+      "answer7": {
+        "type": "Text",
+        "config": {
+          "label": "Answer7",
+          "placeholder": ""
+        }
+      },
+      "question8": {
+        "type": "Text",
+        "config": {
+          "label": "Question8",
+          "placeholder": ""
+        }
+      },
+      "answer8": {
+        "type": "Text",
+        "config": {
+          "label": "Answer8",
+          "placeholder": ""
+        }
+      },
+      "question9": {
+        "type": "Text",
+        "config": {
+          "label": "Question9",
+          "placeholder": ""
+        }
+      },
+      "answer9": {
+        "type": "Text",
+        "config": {
+          "label": "Answer9",
+          "placeholder": ""
+        }
+      },
+      "question10": {
+        "type": "Text",
+        "config": {
+          "label": "Question10",
+          "placeholder": ""
+        }
+      },
+      "answer10": {
+        "type": "Text",
+        "config": {
+          "label": "Answer10",
+          "placeholder": ""
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {}
+        }
+      }
+    },
+    "SEO & Metadata": {
+      "meta_title": {
+        "config": {
+          "label": "Meta Title",
+          "placeholder": "A title of the page used for social media and search engines"
+        },
+        "type": "Text"
+      },
+      "meta_description": {
+        "config": {
+          "label": "Meta Description",
+          "placeholder": "A brief summary of the page"
+        },
+        "type": "Text"
+      },
+      "meta_image": {
+        "config": {
+          "constraint": {
+            "height": 1260,
+            "width": 2400
+          },
+          "label": "Meta Image",
+          "thumbnails": []
+        },
+        "type": "Image"
+      }
+    }
+  }
+}

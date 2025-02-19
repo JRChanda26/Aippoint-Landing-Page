@@ -1,0 +1,186 @@
+{
+  "format": "page",
+  "id": "revolutionizing",
+  "label": "Revolutionizing",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "features": {
+        "type": "Text",
+        "config": {
+          "label": "Features",
+          "placeholder": ""
+        }
+      },
+      "top_heading": {
+        "type": "Text",
+        "config": {
+          "label": "Top Heading",
+          "placeholder": ""
+        }
+      },
+      "top_content": {
+        "type": "Text",
+        "config": {
+          "label": "Top Content",
+          "placeholder": ""
+        }
+      },
+      "ai_powered": {
+        "type": "Text",
+        "config": {
+          "label": "AI Powered",
+          "placeholder": ""
+        }
+      },
+      "intelligent_image": {
+        "type": "Image",
+        "config": {
+          "label": "Intelligent Image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "intelligent": {
+        "type": "Text",
+        "config": {
+          "label": "Intelligent",
+          "placeholder": ""
+        }
+      },
+      "job_description_image": {
+        "type": "Image",
+        "config": {
+          "label": "Job Description Image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "job_description": {
+        "type": "Text",
+        "config": {
+          "label": "Job Description",
+          "placeholder": ""
+        }
+      },
+      "ai_driven_image": {
+        "type": "Image",
+        "config": {
+          "label": "AI Driven Image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "ai_driven": {
+        "type": "Text",
+        "config": {
+          "label": "AI Driven",
+          "placeholder": ""
+        }
+      },
+      "ai_powered_shortlisting_image": {
+        "type": "Image",
+        "config": {
+          "label": "AI Powered Shortlisting Image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "ai_powered_shortlisting": {
+        "type": "Text",
+        "config": {
+          "label": "AI Powered Shortlisting",
+          "placeholder": ""
+        }
+      },
+      "smart_interview_image": {
+        "type": "Image",
+        "config": {
+          "label": "Smart Interview Image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "smart_interview": {
+        "type": "Text",
+        "config": {
+          "label": "Smart Interview",
+          "placeholder": ""
+        }
+      },
+      "video_analytics_image": {
+        "type": "Image",
+        "config": {
+          "label": "Video Analytics Image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "video_analytics": {
+        "type": "Text",
+        "config": {
+          "label": "Video Analytics",
+          "placeholder": ""
+        }
+      },
+      "seamless_image": {
+        "type": "Image",
+        "config": {
+          "label": "Seamless Image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "seamless": {
+        "type": "Text",
+        "config": {
+          "label": "Seamless",
+          "placeholder": ""
+        }
+      },
+      "ai_powered_image": {
+        "type": "Image",
+        "config": {
+          "label": "AI Powered Image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {}
+        }
+      }
+    },
+    "SEO & Metadata": {
+      "meta_title": {
+        "config": {
+          "label": "Meta Title",
+          "placeholder": "A title of the page used for social media and search engines"
+        },
+        "type": "Text"
+      },
+      "meta_description": {
+        "config": {
+          "label": "Meta Description",
+          "placeholder": "A brief summary of the page"
+        },
+        "type": "Text"
+      },
+      "meta_image": {
+        "config": {
+          "constraint": {
+            "height": 1260,
+            "width": 2400
+          },
+          "label": "Meta Image",
+          "thumbnails": []
+        },
+        "type": "Image"
+      }
+    }
+  }
+}
