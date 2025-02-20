@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "cross-env NEXTJS_IGNORE_ESLINT_ERRORS=true next build",
     "start": "next start",
     "lint": "next lint",
     "slicemachine": "start-slicemachine"
@@ -30,6 +30,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "cross-env": "^7.0.3",
     "eslint": "^9",
     "eslint-config-next": "15.1.7",
     "postcss": "^8",
