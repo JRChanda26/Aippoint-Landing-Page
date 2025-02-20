@@ -1577,6 +1577,414 @@ export type RevolutionizingDocument<Lang extends string = string> =
     Lang
   >;
 
+type SubscriptionDocumentDataSlicesSlice = never;
+
+/**
+ * Content for Subscription documents
+ */
+interface SubscriptionDocumentData {
+  /**
+   * Pricing field in *Subscription*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: subscription.pricing
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  pricing: prismic.KeyTextField;
+
+  /**
+   * Top Heading field in *Subscription*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: subscription.top_heading
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  top_heading: prismic.KeyTextField;
+
+  /**
+   * Top Content field in *Subscription*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: subscription.top_content
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  top_content: prismic.KeyTextField;
+
+  /**
+   * Billed Monthly field in *Subscription*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: subscription.billed_monthly
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  billed_monthly: prismic.KeyTextField;
+
+  /**
+   * Save up to field in *Subscription*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: subscription.save_up_to
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  save_up_to: prismic.KeyTextField;
+
+  /**
+   * Billed Yearly field in *Subscription*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: subscription.billed_yearly
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  billed_yearly: prismic.KeyTextField;
+
+  /**
+   * Small teams field in *Subscription*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: subscription.small_teams
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  small_teams: prismic.KeyTextField;
+
+  /**
+   * Starter field in *Subscription*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: subscription.starter
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  starter: prismic.KeyTextField;
+
+  /**
+   * Free field in *Subscription*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: subscription.free
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  free: prismic.KeyTextField;
+
+  /**
+   * Limited AI Resume Parsing  field in *Subscription*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: subscription.limited_ai_resume_parsing
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  limited_ai_resume_parsing: prismic.KeyTextField;
+
+  /**
+   * Basic Candidate Scoring field in *Subscription*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: subscription.basic_candidate_scoring
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  basic_candidate_scoring: prismic.KeyTextField;
+
+  /**
+   * AI Interview field in *Subscription*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: subscription.ai_interview
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  ai_interview: prismic.KeyTextField;
+
+  /**
+   * Standard Job Posting  field in *Subscription*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: subscription.standard_job_posting
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  standard_job_posting: prismic.KeyTextField;
+
+  /**
+   * Try for Free field in *Subscription*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: subscription.try_for_free
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  try_for_free: prismic.KeyTextField;
+
+  /**
+   * Growing businesses field in *Subscription*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: subscription.growing_businesses
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  growing_businesses: prismic.KeyTextField;
+
+  /**
+   * Pro field in *Subscription*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: subscription.pro
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  pro: prismic.KeyTextField;
+
+  /**
+   * Growing businesses Value field in *Subscription*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: subscription.growing_businesses_value
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  growing_businesses_value: prismic.KeyTextField;
+
+  /**
+   * month field in *Subscription*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: subscription.month
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  month: prismic.KeyTextField;
+
+  /**
+   * Unlimited AI Resume Parsing field in *Subscription*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: subscription.unlimited_ai_resume_parsing
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  unlimited_ai_resume_parsing: prismic.KeyTextField;
+
+  /**
+   * Advanced Candidate Scoring field in *Subscription*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: subscription.advanced_candidate_scoring
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  advanced_candidate_scoring: prismic.KeyTextField;
+
+  /**
+   * AI Driven Interviews field in *Subscription*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: subscription.ai_driven_interviews
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  ai_driven_interviews: prismic.KeyTextField;
+
+  /**
+   * Smart Job Description Optimization field in *Subscription*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: subscription.smart_job_description_optimization
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  smart_job_description_optimization: prismic.KeyTextField;
+
+  /**
+   * Interview Scheduling Automation field in *Subscription*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: subscription.interview_scheduling_automation
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  interview_scheduling_automation: prismic.KeyTextField;
+
+  /**
+   * Basic Analytics Dashboard field in *Subscription*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: subscription.basic_analytics_dashboard
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  basic_analytics_dashboard: prismic.KeyTextField;
+
+  /**
+   * Large enterprises field in *Subscription*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: subscription.large_enterprises
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  large_enterprises: prismic.KeyTextField;
+
+  /**
+   * Enterprise field in *Subscription*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: subscription.enterprise
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  enterprise: prismic.KeyTextField;
+
+  /**
+   * Custom field in *Subscription*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: subscription.custom
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  custom: prismic.KeyTextField;
+
+  /**
+   * Everything in Pro Plan field in *Subscription*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: subscription.everything_in_pro_plan
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  everything_in_pro_plan: prismic.KeyTextField;
+
+  /**
+   * Custom AI Model field in *Subscription*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: subscription.custom_ai_model
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  custom_ai_model: prismic.KeyTextField;
+
+  /**
+   * ATS Integration field in *Subscription*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: subscription.ats_integration
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  ats_integration: prismic.KeyTextField;
+
+  /**
+   * AI Powered Candidate field in *Subscription*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: subscription.ai_powered_candidate
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  ai_powered_candidate: prismic.KeyTextField;
+
+  /**
+   * Dedicated Account Manager field in *Subscription*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: subscription.dedicated_account_manager
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  dedicated_account_manager: prismic.KeyTextField;
+
+  /**
+   * Advanced Analytics field in *Subscription*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: subscription.advanced_analytics
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  advanced_analytics: prismic.KeyTextField;
+
+  /**
+   * Contact Us field in *Subscription*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: subscription.contact_us
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  contact_us: prismic.KeyTextField;
+
+  /**
+   * `slices` field in *Subscription*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: subscription.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#slices
+   */
+  slices: prismic.SliceZone<SubscriptionDocumentDataSlicesSlice>;
+}
+
+/**
+ * Subscription document from Prismic
+ *
+ * - **API ID**: `subscription`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type SubscriptionDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<
+    Simplify<SubscriptionDocumentData>,
+    "subscription",
+    Lang
+  >;
+
 export type AllDocumentTypes =
   | ContactDocument
   | FaqDocument
@@ -1584,7 +1992,8 @@ export type AllDocumentTypes =
   | HeaderDocument
   | HirethebestDocument
   | OurvaluepropositionDocument
-  | RevolutionizingDocument;
+  | RevolutionizingDocument
+  | SubscriptionDocument;
 
 declare module "@prismicio/client" {
   interface CreateClient {
@@ -1628,6 +2037,9 @@ declare module "@prismicio/client" {
       RevolutionizingDocument,
       RevolutionizingDocumentData,
       RevolutionizingDocumentDataSlicesSlice,
+      SubscriptionDocument,
+      SubscriptionDocumentData,
+      SubscriptionDocumentDataSlicesSlice,
       AllDocumentTypes,
     };
   }
