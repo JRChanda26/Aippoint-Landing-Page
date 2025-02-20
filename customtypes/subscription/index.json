@@ -1,0 +1,253 @@
+{
+  "format": "page",
+  "id": "subscription",
+  "label": "Subscription",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "pricing": {
+        "type": "Text",
+        "config": {
+          "label": "Pricing",
+          "placeholder": ""
+        }
+      },
+      "top_heading": {
+        "type": "Text",
+        "config": {
+          "label": "Top Heading",
+          "placeholder": ""
+        }
+      },
+      "top_content": {
+        "type": "Text",
+        "config": {
+          "label": "Top Content",
+          "placeholder": ""
+        }
+      },
+      "billed_monthly": {
+        "type": "Text",
+        "config": {
+          "label": "Billed Monthly",
+          "placeholder": ""
+        }
+      },
+      "save_up_to": {
+        "type": "Text",
+        "config": {
+          "label": "Save up to",
+          "placeholder": ""
+        }
+      },
+      "billed_yearly": {
+        "type": "Text",
+        "config": {
+          "label": "Billed Yearly",
+          "placeholder": ""
+        }
+      },
+      "small_teams": {
+        "type": "Text",
+        "config": {
+          "label": "Small teams",
+          "placeholder": ""
+        }
+      },
+      "starter": {
+        "type": "Text",
+        "config": {
+          "label": "Starter",
+          "placeholder": ""
+        }
+      },
+      "free": {
+        "type": "Text",
+        "config": {
+          "label": "Free",
+          "placeholder": ""
+        }
+      },
+      "limited_ai_resume_parsing": {
+        "type": "Text",
+        "config": {
+          "label": "Limited AI Resume Parsing ",
+          "placeholder": ""
+        }
+      },
+      "basic_candidate_scoring": {
+        "type": "Text",
+        "config": {
+          "label": "Basic Candidate Scoring",
+          "placeholder": ""
+        }
+      },
+      "ai_interview": {
+        "type": "Text",
+        "config": {
+          "label": "AI Interview",
+          "placeholder": ""
+        }
+      },
+      "standard_job_posting": {
+        "type": "Text",
+        "config": {
+          "label": "Standard Job Posting ",
+          "placeholder": ""
+        }
+      },
+      "try_for_free": {
+        "type": "Text",
+        "config": {
+          "label": "Try for Free",
+          "placeholder": ""
+        }
+      },
+      "growing_businesses": {
+        "type": "Text",
+        "config": {
+          "label": "Growing businesses",
+          "placeholder": ""
+        }
+      },
+      "pro": {
+        "type": "Text",
+        "config": {
+          "label": "Pro",
+          "placeholder": ""
+        }
+      },
+      "growing_businesses_value": {
+        "type": "Text",
+        "config": {
+          "label": "Growing businesses Value",
+          "placeholder": ""
+        }
+      },
+      "month": {
+        "type": "Text",
+        "config": {
+          "label": "month",
+          "placeholder": ""
+        }
+      },
+      "unlimited_ai_resume_parsing": {
+        "type": "Text",
+        "config": {
+          "label": "Unlimited AI Resume Parsing",
+          "placeholder": ""
+        }
+      },
+      "advanced_candidate_scoring": {
+        "type": "Text",
+        "config": {
+          "label": "Advanced Candidate Scoring",
+          "placeholder": ""
+        }
+      },
+      "ai_driven_interviews": {
+        "type": "Text",
+        "config": {
+          "label": "AI Driven Interviews",
+          "placeholder": ""
+        }
+      },
+      "smart_job_description_optimization": {
+        "type": "Text",
+        "config": {
+          "label": "Smart Job Description Optimization",
+          "placeholder": ""
+        }
+      },
+      "interview_scheduling_automation": {
+        "type": "Text",
+        "config": {
+          "label": "Interview Scheduling Automation",
+          "placeholder": ""
+        }
+      },
+      "basic_analytics_dashboard": {
+        "type": "Text",
+        "config": {
+          "label": "Basic Analytics Dashboard",
+          "placeholder": ""
+        }
+      },
+      "large_enterprises": {
+        "type": "Text",
+        "config": {
+          "label": "Large enterprises",
+          "placeholder": ""
+        }
+      },
+      "enterprise": {
+        "type": "Text",
+        "config": {
+          "label": "Enterprise",
+          "placeholder": ""
+        }
+      },
+      "custom": {
+        "type": "Text",
+        "config": {
+          "label": "Custom",
+          "placeholder": ""
+        }
+      },
+      "everything_in_pro_plan": {
+        "type": "Text",
+        "config": {
+          "label": "Everything in Pro Plan",
+          "placeholder": ""
+        }
+      },
+      "custom_ai_model": {
+        "type": "Text",
+        "config": {
+          "label": "Custom AI Model",
+          "placeholder": ""
+        }
+      },
+      "ats_integration": {
+        "type": "Text",
+        "config": {
+          "label": "ATS Integration",
+          "placeholder": ""
+        }
+      },
+      "ai_powered_candidate": {
+        "type": "Text",
+        "config": {
+          "label": "AI Powered Candidate",
+          "placeholder": ""
+        }
+      },
+      "dedicated_account_manager": {
+        "type": "Text",
+        "config": {
+          "label": "Dedicated Account Manager",
+          "placeholder": ""
+        }
+      },
+      "advanced_analytics": {
+        "type": "Text",
+        "config": {
+          "label": "Advanced Analytics",
+          "placeholder": ""
+        }
+      },
+      "contact_us": {
+        "type": "Text",
+        "config": {
+          "label": "Contact Us",
+          "placeholder": ""
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone"
+      }
+    }
+  }
+}

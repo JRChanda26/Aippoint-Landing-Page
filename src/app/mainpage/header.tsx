@@ -15,7 +15,7 @@ function Header() {
   }, []);
   return (
     <>
-      <Grid container spacing={0}>
+      <Grid container spacing={0} style={{paddingTop:'20px'}}>
         <Grid item lg={2}>
           {headerPage.map((post: any) => (
             <div key={post.id} style={{ paddingLeft: "24px",paddingTop:'12px' }}>
@@ -109,6 +109,10 @@ function Header() {
                  padding:'18px 38px 18px 38px',
                  borderRadius:'12px'
                 }}
+                onClick={() => {
+                  window.location.href = "https://aippoint.ai/aippoint-userinterface/";
+                }}
+        
               >
                 {post.data.button_text}
               </Button>
