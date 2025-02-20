@@ -325,6 +325,7 @@ function Subscription() {
                      color:'#0083C3'
                   }}>
                   {post.data.growing_businesses_value}
+                  
                   <span style={{
                     fontFamily: "Poppins",
                     fontWeight: 400,
