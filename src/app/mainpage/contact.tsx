@@ -65,6 +65,7 @@ function Contact() {
           lg={12}
           sx={{
             textAlign: "center",
+            marginTop:'120px'
           }}
         >
           <Typography
