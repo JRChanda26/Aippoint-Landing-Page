@@ -829,6 +829,17 @@ interface HeaderDocumentData {
   button_text: prismic.KeyTextField;
 
   /**
+   * Try Now field in *Header*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.try_now
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  try_now: prismic.KeyTextField;
+
+  /**
    * Slice Zone field in *Header*
    *
    * - **Field Type**: Slice Zone

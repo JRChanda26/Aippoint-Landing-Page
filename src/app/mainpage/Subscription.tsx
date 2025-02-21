@@ -158,19 +158,21 @@ function Subscription() {
       </div>
       <Grid
         container
-        spacing={3}
         style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          paddingTop:'32px'
+          // display: "flex",
+          // justifyContent: "center",
+          // alignItems: "center",
+          paddingTop:'32px',
+          paddingLeft:'24px',
+          paddingRight: '24px',
+          gap:'30px'
         }}
       >
         
-        <Grid item lg={3.5}>
+        <Grid item lg={3.8} sx={{border: '0.5px solid #000000',borderRadius:'24px'}}>
           {subscriptionPage.map((post: any) => (
             <div key={post.id}>
-              <div>
+              <div style={{padding:'14px'}}>
                 <Typography
                   style={{
                     fontFamily: "Poppins",
@@ -276,17 +278,23 @@ function Subscription() {
                   </span>
                   {post.data.standard_job_posting}
                 </Typography>
-                <div style={{ paddingTop: "268px" }}>
+                <div style={{ paddingTop: "268px",display:'flex',
+                      justifyContent:'center',
+                      textAlign:'center'}}>
                   <Button
                     style={{
                       textTransform: "none",
                       color: "#0A0A0A",
                       border: "1px solid #0A0A0A",
                       borderRadius: "12px",
-                      padding: "18px 141px 18px 141px",
+                      // padding: "18px 141px 18px 141px",
                       fontWeight: 500,
                       fontSize: "16px",
                       lineHeight: "24px",
+                      width:'400px',
+                      paddingTop:'18px',
+                      paddingBottom:'18px'
+                      
                     }}
                   >
                     {post.data.try_for_free}
@@ -299,10 +307,10 @@ function Subscription() {
             </div>
           ))}
         </Grid>
-        <Grid item lg={3.5}>
+        <Grid item lg={3.8} sx={{border: '0.5px solid #000000',borderRadius:'24px'}}>
           {subscriptionPage.map((post: any) => (
             <div key={post.id}>
-              <div>
+               <div style={{padding:'14px'}}>
                 <Typography  style={{
                     fontFamily: "Poppins",
                     fontWeight: 400,
@@ -430,17 +438,22 @@ function Subscription() {
                   </span>
                   {post.data.basic_analytics_dashboard}
                 </Typography>
-                <div style={{ paddingTop: "185px" }}>
+                <div style={{ paddingTop: "220px",display:'flex',
+                      justifyContent:'center',
+                      textAlign:'center' }}>
                   <Button
                     style={{
                       textTransform: "none",
                       color: "#0A0A0A",
                       border: "1px solid #0A0A0A",
                       borderRadius: "12px",
-                      padding: "18px 141px 18px 141px",
+                      // padding: "18px 141px 18px 141px",
                       fontWeight: 500,
                       fontSize: "16px",
                       lineHeight: "24px",
+                      width:'400px',
+                      paddingTop:'18px',
+                      paddingBottom:'18px'
                     }}
                   >
                     {post.data.try_for_free}
@@ -453,10 +466,10 @@ function Subscription() {
             </div>
           ))}
         </Grid>
-        <Grid item lg={3.5}>
+        <Grid item lg={3.8} sx={{border: '0.5px solid #000000',borderRadius:'24px'}}>
           {subscriptionPage.map((post: any) => (
             <div key={post.id}>
-              <div>
+               <div style={{padding:'14px'}}>
                 <Typography style={{
                     fontFamily: "Poppins",
                     fontWeight: 400,
@@ -576,17 +589,22 @@ function Subscription() {
                   </span>
                   {post.data.advanced_analytics}
                 </Typography>
-                <div style={{ paddingTop: "185px" }}>
+                <div style={{ paddingTop: "173px",display:'flex',
+                      justifyContent:'center',
+                      textAlign:'center' }}>
                   <Button
                     style={{
                       textTransform: "none",
                       color: "#0A0A0A",
                       border: "1px solid #0A0A0A",
                       borderRadius: "12px",
-                      padding: "18px 141px 18px 141px",
+                      // padding: "18px 141px 18px 141px",
                       fontWeight: 500,
                       fontSize: "16px",
                       lineHeight: "24px",
+                      width:'400px',
+                      paddingTop:'18px',
+                      paddingBottom:'18px'
                     }}
                   >
                     {post.data.contact_us}

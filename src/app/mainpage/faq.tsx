@@ -89,7 +89,7 @@ function Faq() {
   };
 
   return (
-    <div>
+    <div style={{paddingTop:'50px'}}>
       <Grid container>
         <Grid
           item
