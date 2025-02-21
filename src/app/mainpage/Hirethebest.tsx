@@ -15,7 +15,7 @@ function Hire() {
   return (
     <>
       <Grid container spacing={0}>
-        <Grid item lg={6}>
+        <Grid item lg={5.8}>
           {hirePage.map((post: any) => (
             <div key={post.id}>
               <div style={{ paddingLeft: "20px", paddingTop: "283px" }}>
@@ -82,10 +82,10 @@ function Hire() {
             </div>
           ))}
         </Grid>
-        <Grid item lg={6}>
+        <Grid item lg={6.2}>
           {hirePage.map((post: any) => (
             <div key={post.id}>
-              <div style={{ paddingTop: "40px" }}>
+              <div style={{ paddingTop: "40px",paddingBottom:'25px',paddingRight:'33.29px' }}>
                 {post?.data.hire_image && (
                   // eslint-disable-next-line @next/next/no-img-element
                   <img
@@ -93,9 +93,8 @@ function Hire() {
                     alt={post.data.hire_image.alt || "Image"}
                     style={
                       {
-                        //   width: "166.31px",
-                        //   height: "46px",
-                        //   cursor: "pointer",
+                          width: "912.71px",
+                          height: "762.67px",
                       }
                     }
                   />

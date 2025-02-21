@@ -15,7 +15,7 @@ function Header() {
   }, []);
   return (
     <>
-      <Grid container spacing={0} style={{paddingTop:'20px'}}>
+      <Grid container style={{paddingTop:'20px'}}>
         <Grid item lg={2}>
           {headerPage.map((post: any) => (
             <div key={post.id} style={{ paddingLeft: "24px",paddingTop:'12px' }}>
@@ -35,7 +35,7 @@ function Header() {
             </div>
           ))}
         </Grid>
-        <Grid item lg={8}>
+        <Grid item lg={6}>
           {headerPage.map((post: any) => (
             <div
               key={post.id}
@@ -98,19 +98,33 @@ function Header() {
             </div>
           ))}
         </Grid>
-        <Grid item lg={2}>
+        <Grid item lg={4}>
           {headerPage.map((post: any) => (
-            <div key={post.id} style={{ paddingTop: "5px" }}>
+            <div key={post.id} style={{ paddingTop: "5px",display:'flex' ,gap:'10px'}}>
+                <Button
+                style={{
+                  background: "#0083C3",
+                  color: "#FFFFFF",
+                  textTransform: "none",
+                 padding:'18px 38px 18px 38px',
+                width:'209px',
+                 borderRadius:'12px'
+                }}
+                onClick={() => {
+                  window.location.href = "https://aippoint.ai/aippoint-userinterface/";
+                }}
+        
+              >
+                {post.data.try_now}
+              </Button>
               <Button
                 style={{
                   background: "#0083C3",
                   color: "#FFFFFF",
                   textTransform: "none",
                  padding:'18px 38px 18px 38px',
+                width:'209px',
                  borderRadius:'12px'
-                }}
-                onClick={() => {
-                  window.location.href = "https://aippoint.ai/aippoint-userinterface/";
                 }}
         
               >

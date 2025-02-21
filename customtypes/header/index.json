@@ -56,6 +56,13 @@
           "placeholder": ""
         }
       },
+      "try_now": {
+        "type": "Text",
+        "config": {
+          "label": "Try Now",
+          "placeholder": ""
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",

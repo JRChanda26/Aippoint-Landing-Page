@@ -15,7 +15,7 @@ function Revolutionizing() {
   }, []);
   return (
     <>
-      <div>
+       <div style={{paddingTop:'75px'}}>
         {revolutionizingPage.map((post: any) => (
           <div key={post.id}>
             <div
@@ -46,7 +46,7 @@ function Revolutionizing() {
       </div>
       <div>
         {revolutionizingPage.map((post: any) => (
-          <div key={post.id}>
+          <div key={post.id} style={{textAlign:'center'}}>
             <div
               style={{
                 display: "flex",

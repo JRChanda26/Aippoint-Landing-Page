@@ -1,7 +1,9 @@
 "use client";
 import {
+  Alert,
   Button,
   Grid,
+  Snackbar,
   TextField,
   Typography,
 } from "@mui/material";
@@ -56,6 +58,90 @@ function Contact() {
     color: "#0A0A0A",
     paddingTop: "25px",
   };
+  const [fullname, setFullname] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [message, setMessage] = useState("");
+  const [statusMessage, setStatusMessage] = useState("");
+  
+  const [openSnackbar, setOpenSnackbar] = useState(false);
+  const [status, setStatus] = useState<number | null>(null);
+  
+  const handleCloseSnackbar = () => {
+    setOpenSnackbar(false);
+  };
+  
+  type Errors = {
+    fullname?: string;
+    email?: string;
+    phone?: string;
+    message?: string;
+  };
+  
+  const [errors, setErrors] = useState<Errors>({});
+  
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  
+  const validateFields = (): Errors => {
+    const newErrors: Errors = {};
+    if (!fullname) newErrors.fullname = "Full name is required";
+    if (!email) newErrors.email = "Email is required";
+    else if (!emailRegex.test(email))
+      newErrors.email = "Please enter a valid email address";
+    if (!phone) newErrors.phone = "Phone number is required";
+    else if (phone.length !== 10)
+      newErrors.phone = "Phone number must be exactly 10 digits";
+    if (!message) newErrors.message = "Message is required";
+    // if (!captchaVerified) newErrors.captcha = "Captcha is required";
+    return newErrors;
+  };
+  
+  const handleSubmit = async (e: any) => {
+    e.preventDefault();
+  
+    // Check for errors
+    const newErrors = validateFields();
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
+      return;
+    } else {
+      setErrors({});
+    }
+  
+    const formData = {
+      fullname,
+      email,
+      phone,
+      message,
+      // captcha: captchaVerified,
+    };
+  
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+  
+      const result = await response.json();
+      setStatusMessage(result.temp);
+      setOpenSnackbar(true);
+  
+      const statusCode = response.status;
+      setStatus(statusCode);
+  
+      setFullname("");
+      setEmail("");
+      setPhone("");
+      setMessage("");
+    } catch (error) {
+      console.error("Error saving contact:", error);
+    }
+  };
+  
+
 
   return (
     <div>
@@ -122,6 +208,14 @@ function Contact() {
                 {contactPage[0]?.data.full_name_label}
               </Typography>
               <TextField
+               name="fullname"
+               value={fullname}
+               onChange={(e) => setFullname(e.target.value)}
+               type="text"
+               fullWidth
+               autoComplete="off"
+               error={!!errors.fullname}
+               helperText={errors.fullname}
                 placeholder="Enter your full name"
                 sx={{
                   "& fieldset": { border: "none" },
@@ -133,6 +227,14 @@ function Contact() {
                 {contactPage[0]?.data.email_label}
               </Typography>
               <TextField
+               name="email"
+               value={email}
+               onChange={(e) => setEmail(e.target.value)}
+               type="text"
+               fullWidth
+               autoComplete="off"
+               error={!!errors.email}
+               helperText={errors.email}
                 placeholder="Enter your valid and working email address"
                 sx={{
                   "& fieldset": { border: "none" },
@@ -144,6 +246,14 @@ function Contact() {
                 {contactPage[0]?.data.phone_label}
               </Typography>
               <TextField
+               name="phone"
+               value={phone}
+               onChange={(e) => setPhone(e.target.value)}
+               type="text"
+               fullWidth
+               autoComplete="off"
+               error={!!errors.phone}
+               helperText={errors.phone}
                 placeholder="+91 9100876754"
                 sx={{
                   "& fieldset": { border: "none" },
@@ -155,6 +265,14 @@ function Contact() {
                 {contactPage[0]?.data.message_label}
               </Typography>
               <TextField
+               name="message"
+               value={message}
+               onChange={(e) => setMessage(e.target.value)}
+               type="text"
+               fullWidth
+               autoComplete="off"
+               error={!!errors.message}
+               helperText={errors.message}
                 placeholder="Type your message or note here..."
                 multiline
                 minRows={4}
@@ -181,10 +299,23 @@ function Contact() {
                 padding: "18px 0px",
                 marginTop: { xs: "33px", sm: "33px", lg: "33px", xl: "60px" },
               }}
+              onClick={handleSubmit}
             >
               Send Message
               <ArrowForwardIcon />
             </Button>
+            <Snackbar
+              open={openSnackbar}
+              autoHideDuration={3000}
+              onClose={handleCloseSnackbar}
+            >
+              <Alert
+                onClose={handleCloseSnackbar}
+                severity={status === 200 ? "success" : "error"}
+              >
+                {statusMessage}
+              </Alert>
+            </Snackbar>
           </Grid>
           <Grid item lg={6}>
             {contactPage[0]?.data.image && (

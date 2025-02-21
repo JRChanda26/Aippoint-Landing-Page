@@ -15,7 +15,7 @@ function Ourvalueproposition() {
   }, []);
   return (
     <>
-      <div>
+      <div style={{paddingTop:'65px'}}>
         {ourvaluePage.map((post: any) => (
           <div key={post.id}>
             <div
@@ -110,13 +110,16 @@ function Ourvalueproposition() {
                     border: "0.5px solid #0A0A0A",
                     borderRadius: "100px",
                     padding: "20px 20px",
-                    width: "160px",
+                    width: "220px",
+                    textAlign:'center'
                   }}
                 >
                   {post.data.hiring_process}
                 </Typography>
               </div>
-              <div style={{ paddingTop: "50px", paddingLeft: "29px" }}>
+              <div style={{ 
+                // paddingTop: "50px",
+                 paddingLeft: "29px" }}>
                 <Typography
                   style={{
                     fontFamily: "Poppins",
@@ -129,7 +132,9 @@ function Ourvalueproposition() {
                   {post.data.faster_hiring_heading}
                 </Typography>
               </div>
-              <div style={{ paddingTop: "50px", paddingLeft: "29px" }}>
+              <div style={{ 
+                // paddingTop: "50px",
+                 paddingLeft: "29px" }}>
                 <Typography
                   style={{
                     fontFamily: "Poppins",
@@ -147,9 +152,9 @@ function Ourvalueproposition() {
                 style={{
                   display: "flex",
                   gap: "54px",
-                  paddingTop: "50px",
+                  // paddingTop: "50px",
                   paddingLeft: "29px",
-                  paddingBottom: "38px",
+                  // paddingBottom: "38px",
                 }}
               >
                 <Typography
@@ -194,12 +199,15 @@ function Ourvalueproposition() {
                     borderRadius: "100px",
                     padding: "20px 20px",
                     width: "220px",
+                    textAlign:'center'
                   }}
                 >
                   {post.data.candidate_matching}
                 </Typography>
               </div>
-              <div style={{ paddingTop: "41px", paddingLeft: "29px" }}>
+              <div style={{
+                //  paddingTop: "41px",
+                  paddingLeft: "29px" }}>
                 <Typography
                   style={{
                     fontFamily: "Poppins",
@@ -212,7 +220,9 @@ function Ourvalueproposition() {
                   {post.data.smart_matching_heading}
                 </Typography>
               </div>
-              <div style={{ paddingTop: "41px", paddingLeft: "29px" }}>
+              <div style={{ 
+                // paddingTop: "41px", 
+                paddingLeft: "29px" }}>
                 <Typography
                   style={{
                     fontFamily: "Poppins",
@@ -230,9 +240,9 @@ function Ourvalueproposition() {
                 style={{
                   display: "flex",
                   gap: "55px",
-                  paddingTop: "50px",
+                  // paddingTop: "50px",
                   paddingLeft: "29px",
-                  paddingBottom: "38px",
+                  // paddingBottom: "38px",
                 }}
               >
                 <Typography
@@ -283,13 +293,16 @@ function Ourvalueproposition() {
                     border: "0.5px solid #0A0A0A",
                     borderRadius: "100px",
                     padding: "20px 20px",
-                    width: "140px",
+                    width: "220px",
+                    textAlign:'center'
                   }}
                 >
                   {post.data.hiring_cost}
                 </Typography>
               </div>
-              <div style={{ paddingTop: "41px", paddingLeft: "29px" }}>
+              <div style={{
+                //  paddingTop: "41px", 
+                 paddingLeft: "29px" }}>
                 <Typography
                   style={{
                     fontFamily: "Poppins",
@@ -302,7 +315,9 @@ function Ourvalueproposition() {
                   {post.data.cost_efficient_heading}
                 </Typography>
               </div>
-              <div style={{ paddingTop: "41px", paddingLeft: "29px" }}>
+              <div style={{
+                //  paddingTop: "41px", 
+                 paddingLeft: "29px" }}>
                 <Typography
                   style={{
                     fontFamily: "Poppins",
@@ -320,9 +335,9 @@ function Ourvalueproposition() {
                 style={{
                   display: "flex",
                   gap: "59px",
-                  paddingTop: "50px",
+                  // paddingTop: "50px",
                   paddingLeft: "29px",
-                  paddingBottom: "38px",
+                  // paddingBottom: "38px",
                 }}
               >
                 <Typography
@@ -366,13 +381,16 @@ function Ourvalueproposition() {
                     border: "0.5px solid #0A0A0A",
                     borderRadius: "100px",
                     padding: "20px 20px",
-                    width: "130px",
+                    width: "220px",
+                    textAlign:'center'
                   }}
                 >
                   {post.data.assistance}
                 </Typography>
               </div>
-              <div style={{ paddingTop: "50px", paddingLeft: "29px" }}>
+              <div style={{
+                //  paddingTop: "50px", 
+                 paddingLeft: "29px" }}>
                 <Typography
                   style={{
                     fontFamily: "Poppins",
@@ -385,7 +403,9 @@ function Ourvalueproposition() {
                   {post.data.ai_assistance_heading}
                 </Typography>
               </div>
-              <div style={{ paddingTop: "50px", paddingLeft: "29px" }}>
+              <div style={{
+                //  paddingTop: "50px",
+                  paddingLeft: "29px" }}>
                 <Typography
                   style={{
                     fontFamily: "Poppins",
@@ -403,9 +423,9 @@ function Ourvalueproposition() {
                 style={{
                   display: "flex",
                   gap: "57px",
-                  paddingTop: "50px",
+                  // paddingTop: "50px",
                   paddingLeft: "29px",
-                  paddingBottom: "38px",
+                  // paddingBottom: "38px",
                 }}
               >
                 <Typography
