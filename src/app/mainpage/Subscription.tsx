@@ -1,6 +1,6 @@
 "use client";
 
-import { Button, Checkbox, Grid, Typography } from "@mui/material";
+import { Button, Checkbox, Grid, Typography, useMediaQuery } from "@mui/material";
 import { useEffect, useState } from "react";
 import { client } from "../../../lib/prismic-configuration";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
@@ -20,6 +20,22 @@ function Subscription() {
   const handleClick = (index:any) => {
     setClickedIndex(index); 
   };
+  const isXl = useMediaQuery("(max-width:1920px)");
+  const isLg = useMediaQuery("(max-width:1360px)");
+  const isMd = useMediaQuery("(max-width:992px)");
+  const isSm = useMediaQuery("(max-width:768px)");
+  const isXs = useMediaQuery("(max-width:576px)");
+
+  const getDimensions = () => {
+    if (isXs) return { width: "150px", height: "250px" };
+    if (isSm) return { width: "200px", height: "320px" };
+    if (isMd) return { width: "250px", height: "400px" };
+    if (isLg) return { width: "283.55px", height: "433px" };
+    if (isXl) return { width: "283.55px", height: "433px" };
+    return { width: "283.55px", height: "433px" };
+  };
+
+  const dimensions = getDimensions();
 
   const gridItems = [1, 2, 3];
   return (
@@ -66,11 +82,19 @@ function Subscription() {
               }}
             >
               <Typography
-                style={{
+                sx={{
                   fontFamily: "Poppins",
                   fontWeight: 700,
-                  fontSize: "45px",
-                  lineHeight: "67.5px",
+                  // fontSize: "45px",
+                  // lineHeight: "67.5px",
+                  fontSize: { xs: "24px", sm: "32px",md:"32px", lg: "36px", xl: "45px" },
+                  lineHeight: {
+                    xs: "36px",
+                    sm: "48px",
+                    md:"48px",
+                    lg: "54px",                         
+                    xl: "67.5px",
+                  },
                   color: "#0083C3",
                 }}
               >
@@ -86,11 +110,19 @@ function Subscription() {
               }}
             >
               <Typography
-                style={{
+                sx={{
                   fontFamily: "Poppins",
                   fontWeight: 400,
-                  fontSize: "18px",
-                  lineHeight: "27px",
+                  // fontSize: "18px",
+                  // lineHeight: "27px",
+                  fontSize: { xs: "14px", sm: "14px",md:"14px", lg: "16px", xl: "18px" },
+                  lineHeight: {
+                    xs: "21px",
+                    sm: "21px",
+                    md:"21px",
+                    lg: "24px",
+                    xl: "27px",
+                  },
                   color: "#0A0A0A",
                 }}
               >
@@ -125,18 +157,34 @@ function Subscription() {
               gap:'11px',
               padding:'14px',
               borderRadius:'100px' }}>
-              <Typography style={{
+              <Typography sx={{
                 fontFamily:'Poppins',
                 fontWeight:500,
-                fontSize:'16px',
-                lineHeight:'24px',
+                // fontSize:'16px',
+                // lineHeight:'24px',
+                fontSize: { xs: "14px", sm: "16px",md:"16px", lg: "16px", xl: "16px" },
+                  lineHeight: {
+                    xs: "21px",
+                    sm: "24px",
+                    md:"24px",
+                    lg: "24px",
+                    xl: "24px",
+                  },
                 color:'#0083C3'
               }}>{post.data.billed_monthly}</Typography>
-              <Typography  style={{
+              <Typography  sx={{
                 fontFamily:'Poppins',
                 fontWeight:300,
-                fontSize:'14px',
-                lineHeight:'21px',
+                // fontSize:'14px',
+                // lineHeight:'21px',
+                fontSize: { xs: "14px", sm: "14px",md:"14px", lg: "14px", xl: "14px" },
+                  lineHeight: {
+                    xs: "21px",
+                    sm: "21px",
+                    md:"21px",
+                    lg: "21px",
+                    xl: "21px",
+                  },
                 color:'#FFFFFF',
                 background:'#0083C3',
                 borderRadius:'100px',
@@ -144,11 +192,19 @@ function Subscription() {
               }}>{post.data.save_up_to}</Typography>
             </div>
             <div style={{paddingLeft:'82px'}}>
-            <Typography style={{
+            <Typography sx={{
                 fontFamily:'Poppins',
                 fontWeight:500,
-                fontSize:'16px',
-                lineHeight:'24px',
+                // fontSize:'16px',
+                // lineHeight:'24px',
+                fontSize: { xs: "16px", sm: "16px",md:"16px", lg: "16px", xl: "14px" },
+                lineHeight: {
+                  xs: "24px",
+                  sm: "24px",
+                  md:"24px",
+                  lg: "24px",
+                  xl: "21px",
+                },
                 color:'#0A0A0A',
                 paddingRight:'122px'
               }}>{post.data.billed_yearly}</Typography>
@@ -174,33 +230,57 @@ function Subscription() {
             <div key={post.id}>
               <div style={{padding:'14px'}}>
                 <Typography
-                  style={{
+                  sx={{
                     fontFamily: "Poppins",
                     fontWeight: 400,
-                    fontSize: "16px",
-                    lineHeight: "24px",
+                    // fontSize: "16px",
+                    // lineHeight: "24px",
+                    fontSize: { xs: "14px", sm: "14px",md:"14px", lg: "14px", xl: "16px" },
+                    lineHeight: {
+                      xs: "21px",
+                      sm: "21px",
+                      md:"21px",
+                      lg: "21px",
+                      xl: "24px",
+                    },
                     color:'#0A0A0A'
                   }}
                 >
                   {post.data.small_teams}
                 </Typography>
                 <Typography
-                  style={{
+                  sx={{
                     fontFamily: "Poppins",
                     fontWeight: 700,
-                    fontSize: "20px",
-                    lineHeight: "30px",
+                    // fontSize: "20px",
+                    // lineHeight: "30px",
+                    fontSize: { xs: "14px", sm: "14px",md:"14px", lg: "18px", xl: "20px" },
+                    lineHeight: {
+                      xs: "21px",
+                      sm: "21px",
+                      md:"21px",
+                      lg: "27px",
+                      xl: "30px",
+                    },
                     color:'#0A0A0A'
                   }}
                 >
                   {post.data.starter}
                 </Typography>
                 <Typography
-                  style={{
+                  sx={{
                     fontFamily: "Poppins",
                     fontWeight: 700,
-                    fontSize: "48px",
-                    lineHeight: "72px",
+                    // fontSize: "48px",
+                    // lineHeight: "72px",
+                    fontSize: { xs: "28px", sm: "32px",md:"32px", lg: "36px", xl: "48px" },
+                    lineHeight: {
+                      xs: "42px",
+                      sm: "48px",
+                      md:"48px",
+                      lg: "54px",
+                      xl: "72px",
+                    },
                     color:'#0A0A0A'
                   }}
                 >
@@ -311,25 +391,49 @@ function Subscription() {
           {subscriptionPage.map((post: any) => (
             <div key={post.id}>
                <div style={{padding:'14px'}}>
-                <Typography  style={{
+                <Typography  sx={{
                     fontFamily: "Poppins",
                     fontWeight: 400,
-                    fontSize: "16px",
-                    lineHeight: "24px",
+                    // fontSize: "16px",
+                    // lineHeight: "24px",
+                    fontSize: { xs: "14px", sm: "14px",md:"14px", lg: "14px", xl: "16px" },
+                    lineHeight: {
+                      xs: "21px",
+                      sm: "21px",
+                      md:"21px",
+                      lg: "21px",
+                      xl: "24px",
+                    },
                     color:'#0A0A0A'
                   }}>{post.data.growing_businesses}</Typography>
-                <Typography style={{
+                <Typography sx={{
                     fontFamily: "Poppins",
                     fontWeight: 700,
-                    fontSize: "20px",
-                    lineHeight: "30px",
+                    // fontSize: "20px",
+                    // lineHeight: "30px",
+                    fontSize: { xs: "14px", sm: "14px",md:"14px", lg: "14px", xl: "16px" },
+                    lineHeight: {
+                      xs: "21px",
+                      sm: "21px",
+                      md:"21px",
+                      lg: "21px",
+                      xl: "24px",
+                    },
                     color:'#0083C3'
                   }}>{post.data.pro}</Typography>
-                <Typography style={{
+                <Typography sx={{
                     fontFamily: "Poppins",
                     fontWeight: 700,
-                    fontSize: "48px",
-                    lineHeight: "72px",
+                    // fontSize: "48px",
+                    // lineHeight: "72px",
+                    fontSize: { xs: "28px", sm: "32px",md:"32px", lg: "36px", xl: "48px" },
+                    lineHeight: {
+                      xs: "42px",
+                      sm: "48px",
+                      md:"48px",
+                      lg: "54px",
+                      xl: "72px",
+                    },
                      color:'#0083C3'
                   }}>
                   {post.data.growing_businesses_value}
@@ -470,25 +574,49 @@ function Subscription() {
           {subscriptionPage.map((post: any) => (
             <div key={post.id}>
                <div style={{padding:'14px'}}>
-                <Typography style={{
+                <Typography sx={{
                     fontFamily: "Poppins",
                     fontWeight: 400,
-                    fontSize: "16px",
-                    lineHeight: "24px",
+                    // fontSize: "16px",
+                    // lineHeight: "24px",
+                    fontSize: { xs: "14px", sm: "14px",md:"14px", lg: "14px", xl: "16px" },
+                    lineHeight: {
+                      xs: "21px",
+                      sm: "21px",
+                      md:"21px",
+                      lg: "21px",
+                      xl: "24px",
+                    },
                     color:'#0A0A0A'
                   }}>{post.data.large_enterprises}</Typography>
-                <Typography style={{
+                <Typography sx={{
                     fontFamily: "Poppins",
                     fontWeight: 700,
-                    fontSize: "20px",
-                    lineHeight: "30px",
+                    // fontSize: "20px",
+                    // lineHeight: "30px",
+                    fontSize: { xs: "14px", sm: "14px",md:"14px", lg: "18px", xl: "20px" },
+                    lineHeight: {
+                      xs: "21px",
+                      sm: "21px",
+                      md:"21px",
+                      lg: "27px",
+                      xl: "30px",
+                    },
                     color:'#0A0A0A'
                   }}>{post.data.enterprise}</Typography>
-                <Typography style={{
+                <Typography sx={{
                     fontFamily: "Poppins",
                     fontWeight: 700,
-                    fontSize: "48px",
-                    lineHeight: "72px",
+                    // fontSize: "48px",
+                    // lineHeight: "72px",
+                    fontSize: { xs: "28px", sm: "32px",md:"32px", lg: "36px", xl: "48px" },
+                    lineHeight: {
+                      xs: "42px",
+                      sm: "48px",
+                      md:"48px",
+                      lg: "54px",
+                      xl: "72px",
+                    },
                     color:'#0A0A0A'
                   }} >
                   {post.data.custom}

@@ -1,6 +1,6 @@
 "use client";
 
-import { Grid, Typography } from "@mui/material";
+import { Grid, Typography, useMediaQuery } from "@mui/material";
 import { useEffect, useState } from "react";
 import { client } from "../../../lib/prismic-configuration";
 
@@ -13,6 +13,7 @@ function Revolutionizing() {
     };
     fetchData();
   }, []);
+  const isSmallScreen = useMediaQuery("(max-width:600px)");
   return (
     <>
        <div style={{paddingTop:'75px'}}>
@@ -57,11 +58,19 @@ function Revolutionizing() {
               }}
             >
               <Typography
-                style={{
+                sx={{   
                   fontFamily: "Poppins",
                   fontWeight: 700,
-                  fontSize: "45px",
-                  lineHeight: "67.5px",
+                  // fontSize: "45px",
+                  // lineHeight: "67.5px",
+                  fontSize: { xs: "24px", sm: "32px",md:"32px", lg: "36px", xl: "45px" },
+                  lineHeight: {
+                    xs: "36px",
+                    sm: "48px",
+                    md:"48px",
+                    lg: "54px",                         
+                    xl: "67.5px",
+                  },
                   color: "#0083C3",
                 }}
               >
@@ -77,11 +86,19 @@ function Revolutionizing() {
               }}
             >
               <Typography
-                style={{
+                sx={{
                   fontFamily: "Poppins",
                   fontWeight: 400,
-                  fontSize: "18px",
-                  lineHeight: "27px",
+                  // fontSize: "18px",
+                  // lineHeight: "27px",
+                  fontSize: { xs: "14px", sm: "14px",md:"14px", lg: "16px", xl: "18px" },
+                  lineHeight: {
+                    xs: "21px",
+                    sm: "21px",
+                    md:"21px",
+                    lg: "24px",
+                    xl: "27px",
+                  },
                   color: "#0A0A0A",
                 }}
               >
@@ -127,8 +144,8 @@ function Revolutionizing() {
                       src={post.data.ai_powered_image.url || undefined}
                       alt={post.data.ai_powered_image.alt || "Image"}
                       style={{
-                        width: "80px",
-                        height: "100px",
+                        width: isSmallScreen?"40px":"80px",
+                        height:isSmallScreen?"50": "100px",
                       }}
                       // onClick={handleNavigation}
                     />
@@ -144,11 +161,19 @@ function Revolutionizing() {
                 }}
               >
                 <Typography
-                  style={{
+                  sx={{
                     fontFamily: "Poppins",
                     fontWeight: 700,
-                    fontSize: "30px",
-                    lineHeight: "45px",
+                    // fontSize: "30px",
+                    // lineHeight: "45px",
+                    fontSize: { xs: "14px", sm: "18px",md:"18px", lg: "16px", xl: "30px" },
+                  lineHeight: {
+                    xs: "21px",
+                    sm: "27px",
+                    md:"27px",
+                    lg: "24px",
+                    xl: "45px",
+                  },
                   }}
                 >
                   {post.data.ai_powered}
@@ -186,8 +211,8 @@ function Revolutionizing() {
                     src={post.data.intelligent_image.url || undefined}
                     alt={post.data.intelligent_image.alt || "Image"}
                     style={{
-                      width: "99.91px",
-                      height: "100px",
+                      width: isSmallScreen?"40px": "99.91px",
+                      height:isSmallScreen?"50": "100px",
                     }}
                     // onClick={handleNavigation}
                   />
@@ -202,11 +227,19 @@ function Revolutionizing() {
                 }}
               >
                 <Typography
-                  style={{
+                  sx={{
                     fontFamily: "Poppins",
                     fontWeight: 700,
-                    fontSize: "30px",
-                    lineHeight: "45px",
+                    // fontSize: "30px",
+                    // lineHeight: "45px",
+                    fontSize: { xs: "14px", sm: "18px",md:"18px", lg: "16px", xl: "30px" },
+                    lineHeight: {
+                      xs: "21px",
+                      sm: "27px",
+                      md:"27px",
+                      lg: "24px",
+                      xl: "45px",
+                    },
                   }}
                 >
                   {post.data.intelligent}
@@ -244,8 +277,8 @@ function Revolutionizing() {
                     src={post.data.job_description_image.url || undefined}
                     alt={post.data.job_description_image.alt || "Image"}
                     style={{
-                      width: "80px",
-                      height: "100px",
+                      width: isSmallScreen?"40px": "80px",
+                      height:isSmallScreen?"50": "100px",
                     }}
                     // onClick={handleNavigation}
                   />
@@ -260,11 +293,19 @@ function Revolutionizing() {
                 }}
               >
                 <Typography
-                  style={{
+                  sx={{
                     fontFamily: "Poppins",
                     fontWeight: 700,
-                    fontSize: "30px",
-                    lineHeight: "45px",
+                    // fontSize: "30px",
+                    // lineHeight: "45px",
+                    fontSize: { xs: "14px", sm: "18px",md:"18px", lg: "16px", xl: "30px" },
+                    lineHeight: {
+                      xs: "21px",
+                      sm: "27px",
+                      md:"27px",
+                      lg: "24px",
+                      xl: "45px",
+                    },
                   }}
                 >
                   {post.data.job_description}
@@ -302,8 +343,8 @@ function Revolutionizing() {
                     src={post.data.ai_driven_image.url || undefined}
                     alt={post.data.ai_driven_image.alt || "Image"}
                     style={{
-                      width: "80px",
-                      height: "100px",
+                      width: isSmallScreen?"40px": "80px",
+                      height:isSmallScreen?"50": "100px",
                     }}
                     // onClick={handleNavigation}
                   />
@@ -318,11 +359,19 @@ function Revolutionizing() {
                 }}
               >
                 <Typography
-                  style={{
+                  sx={{
                     fontFamily: "Poppins",
                     fontWeight: 700,
-                    fontSize: "30px",
-                    lineHeight: "45px",
+                    // fontSize: "30px",
+                    // lineHeight: "45px",
+                    fontSize: { xs: "14px", sm: "18px",md:"18px", lg: "16px", xl: "30px" },
+                    lineHeight: {
+                      xs: "21px",
+                      sm: "27px",
+                      md:"27px",
+                      lg: "24px",
+                      xl: "45px",
+                    },
                   }}
                 >
                   {post.data.ai_driven}
@@ -370,8 +419,8 @@ function Revolutionizing() {
                     style={{
                       // width: "99.48px",
                       // height: "79px",
-                      width: "98.76px",
-                      height: "100px",
+                      width: isSmallScreen?"40px": "98.76px",
+                      height:isSmallScreen?"50": "100px",
                     }}
                     // onClick={handleNavigation}
                   />
@@ -387,11 +436,19 @@ function Revolutionizing() {
                 }}
               >
                 <Typography
-                  style={{
+                  sx={{
                     fontFamily: "Poppins",
                     fontWeight: 700,
-                    fontSize: "30px",
-                    lineHeight: "45px",
+                    // fontSize: "30px",
+                    // lineHeight: "45px",
+                    fontSize: { xs: "14px", sm: "18px",md:"18px", lg: "16px", xl: "30px" },
+                    lineHeight: {
+                      xs: "21px",
+                      sm: "27px",
+                      md:"27px",
+                      lg: "24px",
+                      xl: "45px",
+                    },
                     textAlign:'center',
                     paddingBottom: "51px",
                    
@@ -433,8 +490,8 @@ function Revolutionizing() {
                     src={post.data.smart_interview_image.url || undefined}
                     alt={post.data.smart_interview_image.alt || "Image"}
                     style={{
-                      width: "98.76px",
-                      height: "100px",
+                      width: isSmallScreen?"40px": "98.76px",
+                      height:isSmallScreen?"50": "100px",
                     }}
                     // onClick={handleNavigation}
                   />
@@ -450,11 +507,19 @@ function Revolutionizing() {
                 }}
               >
                 <Typography
-                  style={{
+                  sx ={{
                     fontFamily: "Poppins",
                     fontWeight: 700,
-                    fontSize: "30px",
-                    lineHeight: "45px",
+                    // fontSize: "30px",
+                    // lineHeight: "45px",
+                    fontSize: { xs: "14px", sm: "18px",md:"18px", lg: "16px", xl: "30px" },
+                    lineHeight: {
+                      xs: "21px",
+                      sm: "27px",
+                      md:"27px",
+                      lg: "24px",
+                      xl: "45px",
+                    },
                     paddingBottom:'30px'
                   }}
                 >
@@ -495,8 +560,8 @@ function Revolutionizing() {
                     style={{
                       // width: "100px",
                       // height: "77.27px",
-                      width: "98.76px",
-                      height: "100px",
+                      width: isSmallScreen?"40px": "98.76px",
+                      height:isSmallScreen?"50": "100px",
                     }}
                     // onClick={handleNavigation}
                   />
@@ -511,11 +576,19 @@ function Revolutionizing() {
                 }}
               >
                 <Typography
-                  style={{
+                  sx={{
                     fontFamily: "Poppins",
                     fontWeight: 700,
-                    fontSize: "30px",
-                    lineHeight: "45px",
+                    // fontSize: "30px",
+                    // lineHeight: "45px",
+                    fontSize: { xs: "14px", sm: "18px",md:"18px", lg: "16px", xl: "30px" },
+                    lineHeight: {
+                      xs: "21px",
+                      sm: "27px",
+                      md:"27px",
+                      lg: "24px",
+                      xl: "45px",
+                    },
                   }}
                 >
                   {post.data.video_analytics}
@@ -553,8 +626,8 @@ function Revolutionizing() {
                     src={post.data.seamless_image.url || undefined}
                     alt={post.data.seamless_image.alt || "Image"}
                     style={{
-                      width: "99.95px",
-                      height: "111px",
+                      width: isSmallScreen?"40px": "99.95px",
+                      height:isSmallScreen?"50": "111px",
                     }}
                     // onClick={handleNavigation}
                   />
@@ -569,11 +642,19 @@ function Revolutionizing() {
                 }}
               >
                 <Typography
-                  style={{
+                  sx={{
                     fontFamily: "Poppins",
                     fontWeight: 700,
-                    fontSize: "30px",
-                    lineHeight: "45px",
+                    // fontSize: "30px",
+                    // lineHeight: "45px",
+                    fontSize: { xs: "14px", sm: "18px",md:"18px", lg: "16px", xl: "30px" },
+                    lineHeight: {
+                      xs: "21px",
+                      sm: "27px",
+                      md:"27px",
+                      lg: "24px",
+                      xl: "45px",
+                    },
                   }}
                 >
                   {post.data.seamless}
