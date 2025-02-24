@@ -57,11 +57,19 @@ function Ourvalueproposition() {
               }}
             >
               <Typography
-                style={{
+                sx={{
                   fontFamily: "Poppins",
                   fontWeight: 700,
-                  fontSize: "45px",
-                  lineHeight: "67.5px",
+                  // fontSize: "45px",
+                  // lineHeight: "67.5px",
+                  fontSize: { xs: "24px", sm: "32px",md:"32px", lg: "36px", xl: "45px" },
+                  lineHeight: {
+                    xs: "36px",
+                    sm: "48px",
+                    md:"48px",
+                    lg: "54px",
+                    xl: "67.5px",
+                  },
                   color: "#0083C3",
                 }}
               >
@@ -77,11 +85,19 @@ function Ourvalueproposition() {
               }}
             >
               <Typography
-                style={{
+                sx={{
                   fontFamily: "Poppins",
                   fontWeight: 400,
-                  fontSize: "18px",
-                  lineHeight: "27px",
+                  // fontSize: "18px",
+                  // lineHeight: "27px",
+                  fontSize: { xs: "14px", sm: "14px",md:"14px", lg: "16px", xl: "18px" },
+                  lineHeight: {
+                    xs: "21px",
+                    sm: "21px",
+                    md:"21px",
+                    lg: "24px",
+                    xl: "27px",
+                  },
                   color: "#0A0A0A",
                 }}
               >
@@ -101,11 +117,19 @@ function Ourvalueproposition() {
             <div key={post.id}>
               <div style={{ paddingTop: "38px", paddingLeft: "29px" }}>
                 <Typography
-                  style={{
+                  sx={{
                     fontFamily: "Poppins",
                     fontWeight: 300,
-                    fontSize: "16px",
-                    lineHeight: "24px",
+                    // fontSize: "16px",
+                    // lineHeight: "24px",
+                    fontSize: { xs: "16px", sm: "16px",md:"16px", lg: "16px", xl: "16px" },
+                    lineHeight: {
+                      xs: "24px",
+                      sm: "24px",
+                      md:"24px",
+                      lg: "24px",
+                      xl: "24px",
+                    },
                     color: "#0083C3",
                     border: "0.5px solid #0A0A0A",
                     borderRadius: "100px",
@@ -121,11 +145,19 @@ function Ourvalueproposition() {
                 // paddingTop: "50px",
                  paddingLeft: "29px" }}>
                 <Typography
-                  style={{
+                  sx={{
                     fontFamily: "Poppins",
                     fontWeight: 700,
-                    fontSize: "45px",
-                    lineHeight: "67.5px",
+                    // fontSize: "45px",
+                    // lineHeight: "67.5px",
+                    fontSize: { xs: "28px", sm: "32px",md:"32px", lg: "36px", xl: "45px" },
+                    lineHeight: {
+                      xs: "42px",
+                      sm: "48px",
+                      md:"48px",
+                      lg: "54px",
+                      xl: "67.5px",
+                    },
                     color: "#0A0A0A",
                   }}
                 >
@@ -136,11 +168,19 @@ function Ourvalueproposition() {
                 // paddingTop: "50px",
                  paddingLeft: "29px" }}>
                 <Typography
-                  style={{
+                  sx={{
                     fontFamily: "Poppins",
                     fontWeight: 400,
-                    fontSize: "18px",
-                    lineHeight: "27px",
+                    // fontSize: "18px",
+                    // lineHeight: "27px",
+                    fontSize: { xs: "14px", sm: "14px",md:"14px", lg: "16px", xl: "18px" },
+                    lineHeight: {
+                      xs: "21px",
+                      sm: "21px",
+                      md:"21px",
+                      lg: "24px",
+                      xl: "27px",
+                    },
                     color: "#0A0A0A",
                     paddingRight: "233px",
                   }}
@@ -158,11 +198,19 @@ function Ourvalueproposition() {
                 }}
               >
                 <Typography
-                  style={{
+                  sx={{
                     fontFamily: "Poppins",
                     fontWeight: 700,
-                    fontSize: "45px",
-                    lineHeight: "67.5px",
+                    // fontSize: "45px",
+                    // lineHeight: "67.5px",
+                    fontSize: { xs: "28px", sm: "32px",md:"32px", lg: "36px", xl: "45px" },
+                    lineHeight: {
+                      xs: "42px",
+                      sm: "48px",
+                      md:"48px",
+                      lg: "54px",
+                      xl: "67.5px",
+                    },
                     color: "#0083C3",
                   }}
                 >
@@ -189,11 +237,17 @@ function Ourvalueproposition() {
             <div key={post.id}>
               <div style={{ paddingTop: "38px", paddingLeft: "29px" }}>
                 <Typography
-                  style={{
+                  sx={{
                     fontFamily: "Poppins",
                     fontWeight: 300,
-                    fontSize: "16px",
-                    lineHeight: "24px",
+                    fontSize: { xs: "16px", sm: "16px",md:"16px", lg: "16px", xl: "16px" },
+                    lineHeight: {
+                      xs: "24px",
+                      sm: "24px",
+                      md:"24px",
+                      lg: "24px",
+                      xl: "24px",
+                    },
                     color: "#0083C3",
                     border: "0.5px solid #0A0A0A",
                     borderRadius: "100px",
@@ -209,11 +263,19 @@ function Ourvalueproposition() {
                 //  paddingTop: "41px",
                   paddingLeft: "29px" }}>
                 <Typography
-                  style={{
+                  sx={{
                     fontFamily: "Poppins",
                     fontWeight: 700,
-                    fontSize: "45px",
-                    lineHeight: "67.5px",
+                    // fontSize: "45px",
+                    // lineHeight: "67.5px",
+                    fontSize: { xs: "28px", sm: "32px",md:"32px", lg: "36px", xl: "45px" },
+                    lineHeight: {
+                      xs: "42px",
+                      sm: "48px",
+                      md:"48px",
+                      lg: "54px",
+                      xl: "67.5px",
+                    },
                     color: "#0A0A0A",
                   }}
                 >
@@ -224,11 +286,19 @@ function Ourvalueproposition() {
                 // paddingTop: "41px", 
                 paddingLeft: "29px" }}>
                 <Typography
-                  style={{
+                  sx={{
                     fontFamily: "Poppins",
                     fontWeight: 400,
-                    fontSize: "18px",
-                    lineHeight: "27px",
+                    // fontSize: "18px",
+                    // lineHeight: "27px",
+                    fontSize: { xs: "14px", sm: "14px",md:"14px", lg: "16px", xl: "18px" },
+                    lineHeight: {
+                      xs: "21px",
+                      sm: "21px",
+                      md:"21px",
+                      lg: "24px",
+                      xl: "27px",
+                    },
                     color: "#0A0A0A",
                     paddingRight: "37px",
                   }}
@@ -246,11 +316,19 @@ function Ourvalueproposition() {
                 }}
               >
                 <Typography
-                  style={{
+                  sx={{
                     fontFamily: "Poppins",
                     fontWeight: 700,
-                    fontSize: "45px",
-                    lineHeight: "67.5px",
+                    // fontSize: "45px",
+                    // lineHeight: "67.5px",
+                    fontSize: { xs: "28px", sm: "32px",md:"32px", lg: "36px", xl: "45px" },
+                    lineHeight: {
+                      xs: "42px",
+                      sm: "48px",
+                      md:"48px",
+                      lg: "54px",
+                      xl: "67.5px",
+                    },
                     color: "#0083C3",
                   }}
                 >
@@ -304,11 +382,19 @@ function Ourvalueproposition() {
                 //  paddingTop: "41px", 
                  paddingLeft: "29px" }}>
                 <Typography
-                  style={{
+                  sx={{
                     fontFamily: "Poppins",
                     fontWeight: 700,
-                    fontSize: "45px",
-                    lineHeight: "67.5px",
+                    // fontSize: "45px",
+                    // lineHeight: "67.5px",
+                    fontSize: { xs: "28px", sm: "32px",md:"32px", lg: "36px", xl: "45px" },
+                    lineHeight: {
+                      xs: "42px",
+                      sm: "48px",
+                      md:"48px",
+                      lg: "54px",
+                      xl: "67.5px",
+                    },
                     color: "#0A0A0A",
                   }}
                 >
@@ -319,11 +405,19 @@ function Ourvalueproposition() {
                 //  paddingTop: "41px", 
                  paddingLeft: "29px" }}>
                 <Typography
-                  style={{
+                  sx={{
                     fontFamily: "Poppins",
                     fontWeight: 400,
-                    fontSize: "18px",
-                    lineHeight: "27px",
+                    // fontSize: "18px",
+                    // lineHeight: "27px",
+                    fontSize: { xs: "14px", sm: "14px",md:"14px", lg: "16px", xl: "18px" },
+                    lineHeight: {
+                      xs: "21px",
+                      sm: "21px",
+                      md:"21px",
+                      lg: "24px",
+                      xl: "27px",
+                    },
                     color: "#0A0A0A",
                     paddingRight: "37px",
                   }}
@@ -341,11 +435,19 @@ function Ourvalueproposition() {
                 }}
               >
                 <Typography
-                  style={{
+                  sx={{
                     fontFamily: "Poppins",
                     fontWeight: 700,
-                    fontSize: "45px",
-                    lineHeight: "67.5px",
+                    // fontSize: "45px",
+                    // lineHeight: "67.5px",
+                    fontSize: { xs: "28px", sm: "32px",md:"32px", lg: "36px", xl: "45px" },
+                    lineHeight: {
+                      xs: "42px",
+                      sm: "48px",
+                      md:"48px",
+                      lg: "54px",
+                      xl: "67.5px",
+                    },
                     color: "#0083C3",
                   }}
                 >
@@ -392,11 +494,19 @@ function Ourvalueproposition() {
                 //  paddingTop: "50px", 
                  paddingLeft: "29px" }}>
                 <Typography
-                  style={{
+                  sx={{
                     fontFamily: "Poppins",
                     fontWeight: 700,
-                    fontSize: "45px",
-                    lineHeight: "67.5px",
+                    // fontSize: "45px",
+                    // lineHeight: "67.5px",
+                    fontSize: { xs: "28px", sm: "32px",md:"32px", lg: "36px", xl: "45px" },
+                    lineHeight: {
+                      xs: "42px",
+                      sm: "48px",
+                      md:"48px",
+                      lg: "54px",
+                      xl: "67.5px",
+                    },
                     color: "#0A0A0A",
                   }}
                 >
@@ -407,11 +517,19 @@ function Ourvalueproposition() {
                 //  paddingTop: "50px",
                   paddingLeft: "29px" }}>
                 <Typography
-                  style={{
+                  sx={{
                     fontFamily: "Poppins",
                     fontWeight: 400,
-                    fontSize: "18px",
-                    lineHeight: "27px",
+                    // fontSize: "18px",
+                    // lineHeight: "27px",
+                    fontSize: { xs: "14px", sm: "14px",md:"14px", lg: "16px", xl: "18px" },
+                    lineHeight: {
+                      xs: "21px",
+                      sm: "21px",
+                      md:"21px",
+                      lg: "24px",
+                      xl: "27px",
+                    },
                     color: "#0A0A0A",
                     paddingRight: "233px",
                   }}
@@ -429,11 +547,19 @@ function Ourvalueproposition() {
                 }}
               >
                 <Typography
-                  style={{
+                  sx={{
                     fontFamily: "Poppins",
                     fontWeight: 700,
-                    fontSize: "45px",
-                    lineHeight: "67.5px",
+                    // fontSize: "45px",
+                    // lineHeight: "67.5px",
+                    fontSize: { xs: "28px", sm: "32px",md:"32px", lg: "36px", xl: "45px" },
+                    lineHeight: {
+                      xs: "42px",
+                      sm: "48px",
+                      md:"48px",
+                      lg: "54px",
+                      xl: "67.5px",
+                    },
                     color: "#0083C3",
                   }}
                 >
