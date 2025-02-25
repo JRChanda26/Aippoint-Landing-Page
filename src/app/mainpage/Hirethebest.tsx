@@ -12,7 +12,7 @@ function Hire() {
     };
     fetchData();
   }, []);
-  const isSmallScreen = useMediaQuery("(max-width:600px)");
+  const isSmallScreen = useMediaQuery("(max-width:440px)");
    const isXl = useMediaQuery("(max-width:1920px)");
   const isLg = useMediaQuery("(max-width:1360px)");
   const isMd = useMediaQuery("(max-width:992px)");
@@ -37,6 +37,7 @@ function Hire() {
           {hirePage.map((post: any) => (
             <div key={post.id}>
               <Box sx={{
+                paddingRight:isSmallScreen?'20px':'0px' ,
                 paddingLeft: {xs:"16px",sm:"35px",md:"35px",lg:"25px",xl:"20px"},
                 paddingTop:{xs:"55px",sm:"72.19px",md:"72.19px",lg:"215px",xl:"283px"} 
             }}>
@@ -60,7 +61,7 @@ function Hire() {
                   {post.data.heading}
                 </Typography>
               </Box>
-              <Box sx={{  paddingLeft: {xs:"16px",sm:"35px",md:"35px",lg:"25px",xl:"20px"}, }}>
+              <Box sx={{  paddingLeft: {xs:"16px",sm:"35px",md:"35px",lg:"25px",xl:"20px"},paddingRight:isSmallScreen?'20px':'0px' }}>
                 <Typography
                   sx={{
                     fontFamily: "Poppins",
@@ -87,7 +88,9 @@ function Hire() {
                   flexDirection:isSmallScreen?"column":"row",
                   
                   gap: "24px",
-                  paddingLeft: {xs:"16px",sm:"35px",md:"35px",lg:"25px",xl:"20px"},
+                  paddingLeft: {xs:"12px",sm:"35px",md:"35px",lg:"25px",xl:"20px"},
+                  paddingRight:isSmallScreen?'12px':'0px',
+                  
                   paddingTop: {xs:"25px",sm:"30px",md:"30px",lg:"25px",xl:"25px"},
                 }}
               >
@@ -100,7 +103,7 @@ function Hire() {
                       color: "#FFFFFF",
                       width:isSmallScreen?'100%':'auto',
                       // padding: "18px 58px 18px 59px",
-                      padding:{lg:'18px 73px 18px 72px'},
+                      padding:{lg:'18px 73px 18px 72px', xs:'18px 169px 18px 167px'},
                       fontWeight:500,
                       fontFamily:'Poppins',
                       fontSize: { xs: "16px", sm: "12px",md:"12px", lg: "16px", xl: "16px" },
@@ -129,7 +132,7 @@ function Hire() {
                       width:isSmallScreen?'100%':'auto',
                       border: "1px solid #0A0A0A",
                       // padding: "18px 38px 18px 38px",
-                      padding:{lg:'18px 38px 18px 38px'},
+                      padding:{lg:'18px 38px 18px 38px', xs:'18px 134px 18px 133px'},
                       fontWeight:500,
                       fontFamily:'Poppins',
                       fontSize: { xs: "16px", sm: "12px",md:"12px", lg: "16px", xl: "16px" },

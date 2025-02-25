@@ -1,6 +1,6 @@
 "use client";
 
-import { Button, Checkbox, Grid, Typography, useMediaQuery } from "@mui/material";
+import { Box, Button, Checkbox, Grid, Typography, useMediaQuery } from "@mui/material";
 import { useEffect, useState } from "react";
 import { client } from "../../../lib/prismic-configuration";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
@@ -20,24 +20,24 @@ function Subscription() {
   const handleClick = (index:any) => {
     setClickedIndex(index); 
   };
+  const isSmallScreen = useMediaQuery("(max-width:440px)");
+
   const isXl = useMediaQuery("(max-width:1920px)");
-  const isLg = useMediaQuery("(max-width:1360px)");
-  const isMd = useMediaQuery("(max-width:992px)");
-  const isSm = useMediaQuery("(max-width:768px)");
-  const isXs = useMediaQuery("(max-width:576px)");
+  const isLg = useMediaQuery("(max-width:1440px)");
+  const isMd = useMediaQuery("(max-width:1280px)");
+  const isSm = useMediaQuery("(max-width:834px)");
+  const isXs = useMediaQuery("(max-width:440px)");
 
   const getDimensions = () => {
-    if (isXs) return { width: "150px", height: "250px" };
-    if (isSm) return { width: "200px", height: "320px" };
-    if (isMd) return { width: "250px", height: "400px" };
-    if (isLg) return { width: "283.55px", height: "433px" };
-    if (isXl) return { width: "283.55px", height: "433px" };
+    if (isXs) return { width: "400px", height: "555px" };//mobile
+    if (isSm) return { width: "251px", height: "440px" };//tab
+    if (isMd) return { width: "454px", height: "695px" };//laptop
+    if (isLg) return { width: "404px", height: "645px" };//desktop
+    if (isXl) return { width: "430px", height: "685px" };
     return { width: "283.55px", height: "433px" };
   };
 
   const dimensions = getDimensions();
-
-  const gridItems = [1, 2, 3];
   return (
     <>
       <div>
@@ -95,6 +95,7 @@ function Subscription() {
                     lg: "54px",                         
                     xl: "67.5px",
                   },
+                  paddingLeft:isSmallScreen?'20px':'0px',
                   color: "#0083C3",
                 }}
               >
@@ -122,6 +123,7 @@ function Subscription() {
                     md:"21px",
                     lg: "24px",
                     xl: "27px",
+                    paddingLeft:isSmallScreen?'20px':'0px',
                   },
                   color: "#0A0A0A",
                 }}
@@ -206,7 +208,7 @@ function Subscription() {
                   xl: "21px",
                 },
                 color:'#0A0A0A',
-                paddingRight:'122px'
+                paddingRight:{xs:'11px',lg:'82px'}
               }}>{post.data.billed_yearly}</Typography>
               </div>
           </div>
@@ -214,21 +216,22 @@ function Subscription() {
       </div>
       <Grid
         container
-        style={{
-          // display: "flex",
-          // justifyContent: "center",
-          // alignItems: "center",
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
           paddingTop:'32px',
-          paddingLeft:'24px',
-          paddingRight: '24px',
-          gap:'30px'
+          // paddingLeft:'24px',
+          // paddingRight: '24px',
+          gap:{xl:'52px',lg:'14px',sm:'21px',md:'21px',xs:'25px'}
         }}
       >
         
-        <Grid item lg={3.8} sx={{border: '0.5px solid #000000',borderRadius:'24px'}}>
+        <Grid item lg={3.5} sx={{border: '0.5px solid #000000',borderRadius:'24px',
+          width:dimensions.width,
+          height:dimensions.height}}>
           {subscriptionPage.map((post: any) => (
-            <div key={post.id}>
-              <div style={{padding:'14px'}}>
+            <div key={post.id} style={{padding:'14px',display:'flex',flexDirection:'column'}}>
                 <Typography
                   sx={{
                     fontFamily: "Poppins",
@@ -358,11 +361,14 @@ function Subscription() {
                   </span>
                   {post.data.standard_job_posting}
                 </Typography>
-                <div style={{ paddingTop: "268px",display:'flex',
+                {/* <Box sx={{ 
+                  // paddingTop: "268px",
+                  paddingTop:{xs:'131px',sm:'45px',md:'45px',lg:'165px',xl:'268px'},
+                  display:'flex',
                       justifyContent:'center',
-                      textAlign:'center'}}>
+                      textAlign:'center'}}> */}
                   <Button
-                    style={{
+                    sx={{
                       textTransform: "none",
                       color: "#0A0A0A",
                       border: "1px solid #0A0A0A",
@@ -371,9 +377,11 @@ function Subscription() {
                       fontWeight: 500,
                       fontSize: "16px",
                       lineHeight: "24px",
-                      width:'400px',
+                      // width:'400px',
                       paddingTop:'18px',
-                      paddingBottom:'18px'
+                      paddingBottom:'18px',
+                      // paddingBottom:{xs:'25px',sm:'22.98px',md:'22.98px',lg:'20px',xl:'14px'},
+                      marginTop:{xs:'125px',sm:'45px',md:'210px',lg:'210px',xl:'290px'},
                       
                     }}
                   >
@@ -382,15 +390,13 @@ function Subscription() {
                       <ArrowForwardIcon />
                     </span>
                   </Button>
-                </div>
-              </div>
+                {/* </Box> */}
             </div>
           ))}
         </Grid>
-        <Grid item lg={3.8} sx={{border: '0.5px solid #000000',borderRadius:'24px'}}>
+        <Grid item lg={3.5} sx={{border: '0.5px solid #000000',borderRadius:'24px',width:dimensions.width,height:dimensions.height}}>
           {subscriptionPage.map((post: any) => (
-            <div key={post.id}>
-               <div style={{padding:'14px'}}>
+            <div key={post.id} style={{padding:'14px'}}>
                 <Typography  sx={{
                     fontFamily: "Poppins",
                     fontWeight: 400,
@@ -542,11 +548,14 @@ function Subscription() {
                   </span>
                   {post.data.basic_analytics_dashboard}
                 </Typography>
-                <div style={{ paddingTop: "220px",display:'flex',
+                {/* <Box sx={{ 
+                  // paddingTop: "220px",
+                  paddingTop:{xs:'96px',sm:'20px',md:'20px',lg:'130px',xl:'233px'},
+                  display:'flex',
                       justifyContent:'center',
-                      textAlign:'center' }}>
+                      textAlign:'center' }}> */}
                   <Button
-                    style={{
+                    sx={{
                       textTransform: "none",
                       color: "#0A0A0A",
                       border: "1px solid #0A0A0A",
@@ -555,9 +564,12 @@ function Subscription() {
                       fontWeight: 500,
                       fontSize: "16px",
                       lineHeight: "24px",
-                      width:'400px',
+                      // width:'400px',
+                      width:'100%',
                       paddingTop:'18px',
-                      paddingBottom:'18px'
+                      paddingBottom:'18px',
+                      // paddingBottom:{xs:'25px',sm:'22.98px',md:'22.98px',lg:'20px',xl:'14px'},
+                      marginTop:{xs:'96px',sm:'20px',md:'168px',lg:'168px',xl:'209px'},
                     }}
                   >
                     {post.data.try_for_free}
@@ -565,15 +577,13 @@ function Subscription() {
                       <ArrowForwardIcon />
                     </span>
                   </Button>
-                </div>
-              </div>
+                {/* </Box> */}
             </div>
           ))}
         </Grid>
-        <Grid item lg={3.8} sx={{border: '0.5px solid #000000',borderRadius:'24px'}}>
+        <Grid item lg={3.5} sx={{border: '0.5px solid #000000',borderRadius:'24px',width:dimensions.width,height:dimensions.height}}>
           {subscriptionPage.map((post: any) => (
-            <div key={post.id}>
-               <div style={{padding:'14px'}}>
+            <div key={post.id} style={{padding:'14px'}}>
                 <Typography sx={{
                     fontFamily: "Poppins",
                     fontWeight: 400,
@@ -717,11 +727,14 @@ function Subscription() {
                   </span>
                   {post.data.advanced_analytics}
                 </Typography>
-                <div style={{ paddingTop: "173px",display:'flex',
+                {/* <Box sx={{
+                  //  paddingTop: "173px",
+                  paddingTop:{xs:'26px',sm:'45px',md:'45px',lg:'60px',xl:'163px'},
+                   display:'flex',
                       justifyContent:'center',
-                      textAlign:'center' }}>
+                      textAlign:'center' }}> */}
                   <Button
-                    style={{
+                    sx={{
                       textTransform: "none",
                       color: "#0A0A0A",
                       border: "1px solid #0A0A0A",
@@ -730,9 +743,12 @@ function Subscription() {
                       fontWeight: 500,
                       fontSize: "16px",
                       lineHeight: "24px",
-                      width:'400px',
+                      // width:'400px',
+                      width:'100%',
                       paddingTop:'18px',
-                      paddingBottom:'18px'
+                      paddingBottom:'18px',
+                      // paddingBottom:{xs:'25px',sm:'22.98px',md:'22.98px',lg:'20px',xl:'14px'},
+                      marginTop:{xs:'26px',sm:'45px',md:'93px',lg:'93px',xl:'205px'},
                     }}
                   >
                     {post.data.contact_us}
@@ -740,8 +756,7 @@ function Subscription() {
                       <ArrowForwardIcon />
                     </span>
                   </Button>
-                </div>
-              </div>
+                {/* </Box> */}
             </div>
           ))}
         </Grid>

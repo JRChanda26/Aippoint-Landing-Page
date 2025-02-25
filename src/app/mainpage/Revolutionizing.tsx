@@ -1,6 +1,6 @@
 "use client";
 
-import { Grid, Typography, useMediaQuery } from "@mui/material";
+import { Box, Grid, Typography, useMediaQuery } from "@mui/material";
 import { useEffect, useState } from "react";
 import { client } from "../../../lib/prismic-configuration";
 
@@ -13,7 +13,7 @@ function Revolutionizing() {
     };
     fetchData();
   }, []);
-  const isSmallScreen = useMediaQuery("(max-width:600px)");
+  const isSmallScreen = useMediaQuery("(max-width:440px)");
   return (
     <>
        <div style={{paddingTop:'75px'}}>
@@ -55,6 +55,7 @@ function Revolutionizing() {
                 flexDirection: "column",
                 alignItems: "center",
                 paddingTop: "25px",
+                
               }}
             >
               <Typography
@@ -72,6 +73,7 @@ function Revolutionizing() {
                     xl: "67.5px",
                   },
                   color: "#0083C3",
+                  paddingLeft:isSmallScreen?'20px':'0px'
                 }}
               >
                 {post.data.top_heading}
@@ -100,6 +102,7 @@ function Revolutionizing() {
                     xl: "27px",
                   },
                   color: "#0A0A0A",
+                  paddingLeft:isSmallScreen?'20px':'0px'
                 }}
               >
                 {post.data.top_content}
@@ -110,31 +113,33 @@ function Revolutionizing() {
       </div>
       <Grid
         container
-        spacing={0}
-        sx={{ paddingTop: "17px", gap: "32px", paddingLeft: "24px" }}
+        spacing={1}
+        sx={{ paddingTop: "17px", gap: {sx:"10px",lg:"32px",md:'32px'}, paddingLeft: {lg:"24px",xs:'20px'} }}
       >
         <Grid
           item
-          lg={2.7}
-          sx={{ borderRadius: "24px", background: "#FAFAFA" }}
+          lg={2.7} 
+          xs={6}
+          sx={{ borderRadius: "24px", background: "#FAFAFA", }}
+          
         >
           {revolutionizingPage.map((post: any) => (
             <div key={post.id} style={{ textAlign: "center" }}>
-              <div
-                style={{
+              <Box
+                sx={{
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
-                  paddingTop: "52px",
-                  paddingBottom: "49px",
+                  paddingTop: {lg:"52px",xs:'29px'},
+                  paddingBottom:{ lg:"49px",xs:'11px'},
                   // width:'100px',
                   // background:'red',
                 }}
               >
-                <div
-                  style={{
+                <Box
+                  sx={{
                     background: "#F4F4F4",
-                    padding: "28px 45px",
+                    padding: {lg:"28px 45px",xs:'25px 33px 25px 33px'},
                     borderRadius: "12px",
                   }}
                 >
@@ -150,14 +155,14 @@ function Revolutionizing() {
                       // onClick={handleNavigation}
                     />
                   )}
-                </div>
-              </div>
-              <div
-                style={{
+                </Box>
+              </Box>
+              <Box
+                sx={{
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
-                  paddingBottom: "51px",
+                  paddingBottom: {lg:"51px",xs:'29px'},
                 }}
               >
                 <Typography
@@ -178,30 +183,34 @@ function Revolutionizing() {
                 >
                   {post.data.ai_powered}
                 </Typography>
-              </div>
+              </Box>
             </div>
           ))}
         </Grid>
         <Grid
           item
           lg={2.7}
+          xs={6}
           sx={{ borderRadius: "24px", background: "#FAFAFA" }}
         >
           {revolutionizingPage.map((post: any) => (
             <div key={post.id} style={{textAlign:'center'}}>
-              <div
-                style={{
+              <Box
+                sx={{
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
-                  paddingTop: "52px",
-                  paddingBottom: "49px",
+                  // paddingTop: "52px",
+                  // paddingBottom: "49px",
+                  paddingTop: {lg:"52px",xs:'29px'},
+                  paddingBottom:{ lg:"49px",xs:'11px'},
                 }}
               >
-                 <div
-                  style={{
+                 <Box
+                  sx={{
                     background: "#F4F4F4",
-                    padding: "28px 45px",
+                    // padding: "28px 45px",
+                    padding: {lg:"28px 45px",xs:'25px 33px 25px 33px'},
                     borderRadius: "12px",
                   }}
                 >
@@ -212,18 +221,19 @@ function Revolutionizing() {
                     alt={post.data.intelligent_image.alt || "Image"}
                     style={{
                       width: isSmallScreen?"40px": "99.91px",
-                      height:isSmallScreen?"50": "100px",
+                      height:isSmallScreen?"50px": "100px",
                     }}
                     // onClick={handleNavigation}
                   />
                 )}
-                </div>
-              </div>
-              <div
-                style={{
+                </Box>
+              </Box>
+              <Box
+                sx={{
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
+                  paddingBottom: {lg:"51px",xs:'29px'},
                 }}
               >
                 <Typography
@@ -244,30 +254,34 @@ function Revolutionizing() {
                 >
                   {post.data.intelligent}
                 </Typography>
-              </div>
+              </Box>
             </div>
           ))}
         </Grid>
         <Grid
           item
           lg={2.7}
+          xs={6}
           sx={{ borderRadius: "24px", background: "#FAFAFA" }}
         >
           {revolutionizingPage.map((post: any) => (
             <div key={post.id} style={{textAlign:'center'}}>
-              <div
-                style={{
+              <Box
+                sx={{
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
-                  paddingTop: "52px",
-                  paddingBottom: "49px",
+                  // paddingTop: "52px",
+                  // paddingBottom: "49px",
+                  paddingTop: {lg:"52px",xs:'29px'},
+                  paddingBottom:{ lg:"49px",xs:'11px'},
                 }}
               >
-                <div
-                  style={{
+                <Box
+                  sx={{
                     background: "#F4F4F4",
-                    padding: "28px 45px",
+                    // padding: "28px 45px",
+                    padding: {lg:"28px 45px",xs:'25px 33px 25px 33px'},
                     borderRadius: "12px",
                   }}
                 >
@@ -283,13 +297,14 @@ function Revolutionizing() {
                     // onClick={handleNavigation}
                   />
                 )}
-                </div>
-              </div>
-              <div
-                style={{
+                </Box>
+              </Box>
+              <Box
+                sx={{
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
+                  paddingBottom: {lg:"51px",xs:'29px'},
                 }}
               >
                 <Typography
@@ -310,30 +325,34 @@ function Revolutionizing() {
                 >
                   {post.data.job_description}
                 </Typography>
-              </div>
+              </Box>
             </div>
           ))}
         </Grid>
         <Grid
           item
           lg={2.7}
+          xs={6}
           sx={{ borderRadius: "24px", background: "#FAFAFA" }}
         >
           {revolutionizingPage.map((post: any) => (
             <div key={post.id} style={{textAlign:'center'}}>
-              <div
-                style={{
+              <Box
+                sx={{
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
-                  paddingTop: "52px",
-                  paddingBottom: "49px",
+                  // paddingTop: "52px",
+                  // paddingBottom: "49px",
+                  paddingTop: {lg:"52px",xs:'29px'},
+                  paddingBottom:{ lg:"49px",xs:'11px'},
                 }}
               >
-                <div
-                  style={{
+                <Box
+                  sx={{
                     background: "#F4F4F4",
-                    padding: "28px 45px",
+                    // padding: "28px 45px",
+                    padding: {lg:"28px 45px",xs:'25px 33px 25px 33px'},
                     borderRadius: "12px",
                   }}
                 >
@@ -349,13 +368,14 @@ function Revolutionizing() {
                     // onClick={handleNavigation}
                   />
                 )}
-                </div>
-              </div>
-              <div
-                style={{
+                </Box>
+              </Box>
+              <Box
+                sx={{
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
+                  paddingBottom: {lg:"51px",xs:'29px'},
                 }}
               >
                 <Typography
@@ -376,7 +396,7 @@ function Revolutionizing() {
                 >
                   {post.data.ai_driven}
                 </Typography>
-              </div>
+              </Box>
             </div>
           ))}
         </Grid>
@@ -393,19 +413,22 @@ function Revolutionizing() {
         >
           {revolutionizingPage.map((post: any) => (
             <div key={post.id} style={{textAlign:'center'}}>
-              <div
-                style={{
+              <Box
+                sx={{
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
-                  paddingTop: "52px",
-                  paddingBottom: "49px",
+                  // paddingTop: "52px",
+                  // paddingBottom: "49px",
+                  paddingTop: {lg:"52px",xs:'29px'},
+                  paddingBottom:{ lg:"49px",xs:'11px'},
                 }}
               >
-                <div
-                  style={{
+                <Box
+                  sx={{
                     background: "#F4F4F4",
-                    padding: "28px 45px",
+                    // padding: "28px 45px",
+                    padding: {lg:"28px 45px",xs:'25px 33px 25px 33px'},
                     borderRadius: "12px",
                   }}
                 >
@@ -425,14 +448,15 @@ function Revolutionizing() {
                     // onClick={handleNavigation}
                   />
                 )}
-                </div>
-              </div>
-              <div
-                style={{
+                </Box>
+              </Box>
+              <Box
+                sx={{
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
                   // paddingBottom: "51px",
+                  // paddingBottom: {xs:'29px'},
                 }}
               >
                 <Typography
@@ -456,7 +480,7 @@ function Revolutionizing() {
                 >
                   {post.data.ai_powered_shortlisting}
                 </Typography>
-              </div>
+              </Box>
             </div>
           ))}
         </Grid>
@@ -467,20 +491,23 @@ function Revolutionizing() {
         >
           {revolutionizingPage.map((post: any) => (
             <div key={post.id} style={{textAlign:'center'}}>
-              <div
-                style={{
+              <Box
+                sx={{
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
-                  paddingTop: "52px",
-                  paddingBottom: "49px",
+                  // paddingTop: "52px",
+                  // paddingBottom: "49px",
+                  paddingTop: {lg:"52px",xs:'29px'},
+                  paddingBottom:{ lg:"49px",xs:'11px'},
                   
                 }}
               >
-                <div
-                  style={{
+                <Box
+                  sx={{
                     background: "#F4F4F4",
-                    padding: "28px 45px",
+                    // padding: "28px 45px",
+                    padding: {lg:"28px 45px",xs:'25px 33px 25px 33px'},
                     borderRadius: "12px",
                   }}
                 >
@@ -496,8 +523,8 @@ function Revolutionizing() {
                     // onClick={handleNavigation}
                   />
                 )}
-                </div>
-              </div>
+                </Box>
+              </Box>
               <div
                 style={{
                   display: "flex",
@@ -536,19 +563,22 @@ function Revolutionizing() {
         >
           {revolutionizingPage.map((post: any) => (
             <div key={post.id} style={{textAlign:'center'}}>
-              <div
-                style={{
+              <Box
+                sx={{
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
-                  paddingTop: "52px",
-                  paddingBottom: "49px",
+                  // paddingTop: "52px",
+                  // paddingBottom: "49px",
+                  paddingTop: {lg:"52px",xs:'29px'},
+                  paddingBottom:{ lg:"49px",xs:'11px'},
                 }}
               >
-                <div
-                  style={{
+                <Box
+                  sx={{
                     background: "#F4F4F4",
-                    padding: "28px 45px",
+                    // padding: "28px 45px",
+                    padding: {lg:"28px 45px",xs:'25px 33px 25px 33px'},
                     borderRadius: "12px",
                   }}
                 >
@@ -566,8 +596,8 @@ function Revolutionizing() {
                     // onClick={handleNavigation}
                   />
                 )}
-                </div>
-              </div>
+                </Box>
+              </Box>
               <div
                 style={{
                   display: "flex",
@@ -604,19 +634,22 @@ function Revolutionizing() {
         >
           {revolutionizingPage.map((post: any) => (
             <div key={post.id} style={{textAlign:'center'}}>
-              <div
-                style={{
+             <Box
+                sx={{
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
-                  paddingTop: "52px",
-                  paddingBottom: "49px",
+                  // paddingTop: "52px",
+                  // paddingBottom: "49px",
+                  paddingTop: {lg:"52px",xs:'29px'},
+                  paddingBottom:{ lg:"49px",xs:'11px'},
                 }}
               >
-                <div
-                  style={{
+                <Box
+                  sx={{
                     background: "#F4F4F4",
-                    padding: "28px 45px",
+                    // padding: "28px 45px",
+                    padding: {lg:"28px 45px",xs:'25px 33px 25px 33px'},
                     borderRadius: "12px",
                   }}
                 >
@@ -632,9 +665,9 @@ function Revolutionizing() {
                     // onClick={handleNavigation}
                   />
                 )}
-                </div>
-              </div>
-              <div
+                </Box>
+              </Box>
+              <Box
                 style={{
                   display: "flex",
                   justifyContent: "center",
@@ -659,7 +692,7 @@ function Revolutionizing() {
                 >
                   {post.data.seamless}
                 </Typography>
-              </div>
+              </Box>
             </div>
           ))}
         </Grid>

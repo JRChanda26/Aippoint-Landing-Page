@@ -63,25 +63,25 @@ function Contact() {
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
   const [statusMessage, setStatusMessage] = useState("");
-  
+
   const [openSnackbar, setOpenSnackbar] = useState(false);
   const [status, setStatus] = useState<number | null>(null);
-  
+
   const handleCloseSnackbar = () => {
     setOpenSnackbar(false);
   };
-  
+
   type Errors = {
     fullname?: string;
     email?: string;
     phone?: string;
     message?: string;
   };
-  
+
   const [errors, setErrors] = useState<Errors>({});
-  
+
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  
+
   const validateFields = (): Errors => {
     const newErrors: Errors = {};
     if (!fullname) newErrors.fullname = "Full name is required";
@@ -95,10 +95,10 @@ function Contact() {
     // if (!captchaVerified) newErrors.captcha = "Captcha is required";
     return newErrors;
   };
-  
+
   const handleSubmit = async (e: any) => {
     e.preventDefault();
-  
+
     // Check for errors
     const newErrors = validateFields();
     if (Object.keys(newErrors).length > 0) {
@@ -107,7 +107,7 @@ function Contact() {
     } else {
       setErrors({});
     }
-  
+
     const formData = {
       fullname,
       email,
@@ -115,7 +115,7 @@ function Contact() {
       message,
       // captcha: captchaVerified,
     };
-  
+
     try {
       const response = await fetch("/api/contact", {
         method: "POST",
@@ -124,14 +124,14 @@ function Contact() {
         },
         body: JSON.stringify(formData),
       });
-  
+
       const result = await response.json();
       setStatusMessage(result.temp);
       setOpenSnackbar(true);
-  
+
       const statusCode = response.status;
       setStatus(statusCode);
-  
+
       setFullname("");
       setEmail("");
       setPhone("");
@@ -140,8 +140,6 @@ function Contact() {
       console.error("Error saving contact:", error);
     }
   };
-  
-
 
   return (
     <div>
@@ -151,7 +149,7 @@ function Contact() {
           lg={12}
           sx={{
             textAlign: "center",
-            marginTop:'120px'
+            marginTop: "120px",
           }}
         >
           <Typography
@@ -167,8 +165,61 @@ function Contact() {
           >
             {contactPage[0]?.data.heading}
           </Typography>
-          <Typography sx={title}> {contactPage[0]?.data.title}</Typography>
-          <Typography sx={description}>
+          <Typography
+            //  sx={title}
+            sx={{
+              fontFamily: "Poppins",
+              fontWeight: 700,
+              // fontSize: "45px",
+              // lineHeight: "67.5px",
+              fontSize: {
+                xs: "24px",
+                sm: "32px",
+                md: "32px",
+                lg: "36px",
+                xl: "45px",
+              },
+              lineHeight: {
+                xs: "36px",
+                sm: "48px",
+                md: "48px",
+                lg: "54px",
+                xl: "67.5px",
+              },
+              letterSpacing: "0%",
+              color: "#0083C3",
+              paddingTop: "25px",
+            }}
+          >
+            {" "}
+            {contactPage[0]?.data.title}
+          </Typography>
+          <Typography
+            //  sx={description}
+            sx={{
+              fontFamily: "Poppins",
+              fontWeight: 400,
+              // fontSize: "18px",
+              // lineHeight: "27px",
+              letterSpacing: "0%",
+              color: "#0A0A0A",
+              paddingTop: "25px",
+              fontSize: {
+                xs: "14px",
+                sm: "14px",
+                md: "14px",
+                lg: "16px",
+                xl: "18px",
+              },
+              lineHeight: {
+                xs: "21px",
+                sm: "21px",
+                md: "21px",
+                lg: "24px",
+                xl: "27px",
+              },
+            }}
+          >
             {" "}
             {contactPage[0]?.data.description}
           </Typography>
@@ -203,19 +254,36 @@ function Contact() {
                 textAlign: "left",
               }}
             >
-              <Typography sx={labels}>
+              <Typography
+                //  sx={labels}
+                sx={{
+                  fontFamily: "Poppins",
+                  fontWeight: 700,
+                  // fontSize: "18px",
+                  // lineHeight: "27px",
+                  fontSize: { xs: "14px", sm: "18px",md:"18px", lg: "18px", xl: "18px" },
+                  lineHeight: {
+                    xs: "21px",
+                    sm: "27px",
+                    md:"27px",
+                    lg: "27px",                         
+                    xl: "27px",
+                  },
+                  letterSpacing: "0%",
+                }}
+              >
                 {" "}
                 {contactPage[0]?.data.full_name_label}
               </Typography>
               <TextField
-               name="fullname"
-               value={fullname}
-               onChange={(e) => setFullname(e.target.value)}
-               type="text"
-               fullWidth
-               autoComplete="off"
-               error={!!errors.fullname}
-               helperText={errors.fullname}
+                name="fullname"
+                value={fullname}
+                onChange={(e) => setFullname(e.target.value)}
+                type="text"
+                fullWidth
+                autoComplete="off"
+                error={!!errors.fullname}
+                helperText={errors.fullname}
                 placeholder="Enter your full name"
                 sx={{
                   "& fieldset": { border: "none" },
@@ -223,18 +291,30 @@ function Contact() {
                   borderRadius: "12px",
                 }}
               />
-              <Typography sx={labels}>
+              <Typography 
+              // sx={labels}
+              sx={{
+                fontSize: { xs: "14px", sm: "18px",md:"18px", lg: "18px", xl: "18px" },
+                lineHeight: {
+                  xs: "21px",
+                  sm: "27px",
+                  md:"27px",
+                  lg: "27px",                         
+                  xl: "27px",
+                },
+              }}
+              >
                 {contactPage[0]?.data.email_label}
               </Typography>
               <TextField
-               name="email"
-               value={email}
-               onChange={(e) => setEmail(e.target.value)}
-               type="text"
-               fullWidth
-               autoComplete="off"
-               error={!!errors.email}
-               helperText={errors.email}
+                name="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                type="text"
+                fullWidth
+                autoComplete="off"
+                error={!!errors.email}
+                helperText={errors.email}
                 placeholder="Enter your valid and working email address"
                 sx={{
                   "& fieldset": { border: "none" },
@@ -242,18 +322,30 @@ function Contact() {
                   borderRadius: "12px",
                 }}
               />
-              <Typography sx={labels}>
+              <Typography 
+              // sx={labels}
+              sx={{
+                fontSize: { xs: "14px", sm: "18px",md:"18px", lg: "18px", xl: "18px" },
+                lineHeight: {
+                  xs: "21px",
+                  sm: "27px",
+                  md:"27px",
+                  lg: "27px",                         
+                  xl: "27px",
+                },
+              }}
+              >
                 {contactPage[0]?.data.phone_label}
               </Typography>
               <TextField
-               name="phone"
-               value={phone}
-               onChange={(e) => setPhone(e.target.value)}
-               type="text"
-               fullWidth
-               autoComplete="off"
-               error={!!errors.phone}
-               helperText={errors.phone}
+                name="phone"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+                type="text"
+                fullWidth
+                autoComplete="off"
+                error={!!errors.phone}
+                helperText={errors.phone}
                 placeholder="+91 9100876754"
                 sx={{
                   "& fieldset": { border: "none" },
@@ -261,18 +353,30 @@ function Contact() {
                   borderRadius: "12px",
                 }}
               />
-              <Typography sx={labels}>
+              <Typography 
+              // sx={labels}
+              sx={{
+                fontSize: { xs: "14px", sm: "18px",md:"18px", lg: "18px", xl: "18px" },
+                lineHeight: {
+                  xs: "21px",
+                  sm: "27px",
+                  md:"27px",
+                  lg: "27px",                         
+                  xl: "27px",
+                },
+              }}
+              >
                 {contactPage[0]?.data.message_label}
               </Typography>
               <TextField
-               name="message"
-               value={message}
-               onChange={(e) => setMessage(e.target.value)}
-               type="text"
-               fullWidth
-               autoComplete="off"
-               error={!!errors.message}
-               helperText={errors.message}
+                name="message"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                type="text"
+                fullWidth
+                autoComplete="off"
+                error={!!errors.message}
+                helperText={errors.message}
                 placeholder="Type your message or note here..."
                 multiline
                 minRows={4}
@@ -288,9 +392,17 @@ function Contact() {
               sx={{
                 background: "#0083C3",
                 color: "#FFFFFF",
-                fontSize: "16px",
                 fontWeight: 500,
-                lineHeight: "24px",
+                // fontSize: "16px",
+                // lineHeight: "24px",
+                fontSize: { xs: "16px", sm: "16px",md:"16px", lg: "16px", xl: "16px" },
+                lineHeight: {
+                  xs: "24px",
+                  sm: "24px",
+                  md:"24px",
+                  lg: "24px",                         
+                  xl: "24px",
+                },
                 letterSpacing: "0%",
                 fontFamily: "Poppins",
                 textTransform: "none",

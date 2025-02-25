@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { client } from "../../../lib/prismic-configuration";
-import { Button, Grid, Typography } from "@mui/material";
+import { Button, Grid, Typography, useMediaQuery } from "@mui/material";
 
 function Footer() {
   const [footerPage, setFooterPage] = useState<any[]>([]);
@@ -29,6 +29,22 @@ function Footer() {
     lineHeight: "24px",
     fontFamily: "Poppins",
   };
+  const isXl = useMediaQuery("(max-width:1920px)");
+  const isLg = useMediaQuery("(max-width:1360px)");
+  const isMd = useMediaQuery("(max-width:992px)");
+  const isSm = useMediaQuery("(max-width:768px)");
+  const isXs = useMediaQuery("(max-width:576px)");
+
+  const getDimensions = () => {
+    if (isXs) return { width: "108.46px", height: "30px" };
+    if (isSm) return { width: "108.46px", height: "30px" };
+    if (isMd) return { width: "108.46px", height: "30px" };
+    if (isLg) return { width: "166.30px", height: "46px" };
+    if (isXl) return { width: "166.30px", height: "46px" };
+    return { width: "283.55px", height: "433px" };
+  };
+
+  const dimensions = getDimensions();
 
   return (
     <div>
@@ -55,8 +71,10 @@ function Footer() {
                 src={footerPage[0]?.data.footer_logo.url || undefined}
                 alt={footerPage[0]?.data.footer_logo.alt || "Image"}
                 style={{
-                  width: "166px",
-                  height: "46px",
+                  // width: "166px",
+                  // height: "46px",
+                  width: dimensions.width,
+                  height: dimensions.height,
                 }}
               />
             )}
@@ -69,22 +87,165 @@ function Footer() {
               paddingTop: "23px",
             }}
           >
-            <Typography style={heading}>
+            <Typography
+              // style={heading}
+              sx={{
+                color: "#FFFFFF",
+                fontWeight: 500,
+                // fontSize: "16px",
+                // lineHeight: "24px",
+                fontSize: {
+                  xs: "14px",
+                  sm: "14px",
+                  md: "14px",
+                  lg: "16px",
+                  xl: "16px",
+                },
+                lineHeight: {
+                  xs: "21px",
+                  sm: "21px",
+                  md: "21px",
+                  lg: "24px",
+                  xl: "24px",
+                },
+                fontFamily: "Poppins",
+              }}
+            >
               {footerPage[0]?.data.quick_links}
             </Typography>
-            <Typography style={{ paddingTop: "9px", ...subHeading }}>
+            <Typography
+              sx={{
+                paddingTop: "9px",
+                //  ...subHeading
+                color: "#FFFFFF",
+                fontWeight: 300,
+                // fontSize: "16px",
+                // lineHeight: "24px",
+                fontFamily: "Poppins",
+                fontSize: {
+                  xs: "14px",
+                  sm: "14px",
+                  md: "14px",
+                  lg: "16px",
+                  xl: "16px",
+                },
+                lineHeight: {
+                  xs: "21px",
+                  sm: "21px",
+                  md: "21px",
+                  lg: "24px",
+                  xl: "24px",
+                },
+              }}
+            >
               {footerPage[0]?.data.home}
             </Typography>
-            <Typography style={subHeading}>
+            <Typography 
+            // style={subHeading}
+            sx={{
+              //  ...subHeading
+              color: "#FFFFFF",
+              fontWeight: 300,
+              // fontSize: "16px",
+              // lineHeight: "24px",
+              fontFamily: "Poppins",
+              fontSize: {
+                xs: "14px",
+                sm: "14px",
+                md: "14px",
+                lg: "16px",
+                xl: "16px",
+              },
+              lineHeight: {
+                xs: "21px",
+                sm: "21px",
+                md: "21px",
+                lg: "24px",
+                xl: "24px",
+              },
+            }}
+            >
               {footerPage[0]?.data.features}
             </Typography>
-            <Typography style={subHeading}>
+            <Typography 
+            // style={subHeading}
+            sx={{
+              //  ...subHeading
+              color: "#FFFFFF",
+              fontWeight: 300,
+              // fontSize: "16px",
+              // lineHeight: "24px",
+              fontFamily: "Poppins",
+              fontSize: {
+                xs: "14px",
+                sm: "14px",
+                md: "14px",
+                lg: "16px",
+                xl: "16px",
+              },
+              lineHeight: {
+                xs: "21px",
+                sm: "21px",
+                md: "21px",
+                lg: "24px",
+                xl: "24px",
+              },
+            }}
+            >
               {footerPage[0]?.data.pricing}
             </Typography>
-            <Typography style={subHeading}>
+            <Typography 
+            // style={subHeading}
+            sx={{
+              //  ...subHeading
+              color: "#FFFFFF",
+              fontWeight: 300,
+              // fontSize: "16px",
+              // lineHeight: "24px",
+              fontFamily: "Poppins",
+              fontSize: {
+                xs: "14px",
+                sm: "14px",
+                md: "14px",
+                lg: "16px",
+                xl: "16px",
+              },
+              lineHeight: {
+                xs: "21px",
+                sm: "21px",
+                md: "21px",
+                lg: "24px",
+                xl: "24px",
+              },
+            }}
+            >
               {footerPage[0]?.data.faq}
             </Typography>
-            <Typography style={subHeading}>
+            <Typography 
+            // style={subHeading}
+            sx={{
+              //  ...subHeading
+              color: "#FFFFFF",
+              fontWeight: 300,
+              // fontSize: "16px",
+              // lineHeight: "24px",
+              fontFamily: "Poppins",
+              fontSize: {
+                xs: "14px",
+                sm: "14px",
+                md: "14px",
+                lg: "16px",
+                xl: "16px",
+              },
+              lineHeight: {
+                xs: "21px",
+                sm: "21px",
+                md: "21px",
+                lg: "24px",
+                xl: "24px",
+              },
+            }}
+            >
               {footerPage[0]?.data.contact_us}
             </Typography>
           </Grid>
@@ -96,7 +257,30 @@ function Footer() {
               paddingTop: "23px",
             }}
           >
-            <Typography style={heading}>
+            <Typography 
+            // style={heading}
+            sx={{
+              color: "#FFFFFF",
+              fontWeight: 500,
+              // fontSize: "16px",
+              // lineHeight: "24px",
+              fontSize: {
+                xs: "14px",
+                sm: "14px",
+                md: "14px",
+                lg: "16px",
+                xl: "16px",
+              },
+              lineHeight: {
+                xs: "21px",
+                sm: "21px",
+                md: "21px",
+                lg: "24px",
+                xl: "24px",
+              },
+              fontFamily: "Poppins",
+            }}
+            >
               {footerPage[0]?.data.reach_out_to_us}
             </Typography>
             <Grid
@@ -136,7 +320,31 @@ function Footer() {
                     }}
                   />
                 )}
-                <Typography style={subHeading}>
+                <Typography 
+                // style={subHeading}
+                sx={{
+                  //  ...subHeading
+                  color: "#FFFFFF",
+                  fontWeight: 300,
+                  // fontSize: "16px",
+                  // lineHeight: "24px",
+                  fontFamily: "Poppins",
+                  fontSize: {
+                    xs: "14px",
+                    sm: "14px",
+                    md: "14px",
+                    lg: "16px",
+                    xl: "16px",
+                  },
+                  lineHeight: {
+                    xs: "21px",
+                    sm: "21px",
+                    md: "21px",
+                    lg: "24px",
+                    xl: "24px",
+                  },
+                }}
+                >
                   {footerPage[0]?.data.email}
                 </Typography>
               </Grid>
@@ -169,7 +377,31 @@ function Footer() {
                     }}
                   />
                 )}
-                <Typography style={subHeading}>
+                <Typography
+                //  style={subHeading}
+                sx={{
+                  //  ...subHeading
+                  color: "#FFFFFF",
+                  fontWeight: 300,
+                  // fontSize: "16px",
+                  // lineHeight: "24px",
+                  fontFamily: "Poppins",
+                  fontSize: {
+                    xs: "14px",
+                    sm: "14px",
+                    md: "14px",
+                    lg: "16px",
+                    xl: "16px",
+                  },
+                  lineHeight: {
+                    xs: "21px",
+                    sm: "21px",
+                    md: "21px",
+                    lg: "24px",
+                    xl: "24px",
+                  },
+                }}
+                 >
                   {footerPage[0]?.data.phone}
                 </Typography>
               </Grid>
@@ -183,13 +415,86 @@ function Footer() {
               paddingTop: "23px",
             }}
           >
-            <Typography style={heading}>
+            <Typography 
+            // style={heading}
+            sx={{
+              color: "#FFFFFF",
+              fontWeight: 500,
+              // fontSize: "16px",
+              // lineHeight: "24px",
+              fontSize: {
+                xs: "14px",
+                sm: "14px",
+                md: "14px",
+                lg: "16px",
+                xl: "16px",
+              },
+              lineHeight: {
+                xs: "21px",
+                sm: "21px",
+                md: "21px",
+                lg: "24px",
+                xl: "24px",
+              },
+              fontFamily: "Poppins",
+            }}
+            >
               {footerPage[0]?.data.follow_us}
             </Typography>
-            <Typography style={{ paddingTop: "9px", ...subHeading }}>
+            <Typography 
+            // style={{ paddingTop: "9px", ...subHeading }}
+            sx={{
+              //  ...subHeading
+              paddingTop: "9px",
+              color: "#FFFFFF",
+              fontWeight: 300,
+              // fontSize: "16px",
+              // lineHeight: "24px",
+              fontFamily: "Poppins",
+              fontSize: {
+                xs: "14px",
+                sm: "14px",
+                md: "14px",
+                lg: "16px",
+                xl: "16px",
+              },
+              lineHeight: {
+                xs: "21px",
+                sm: "21px",
+                md: "21px",
+                lg: "24px",
+                xl: "24px",
+              },
+            }}
+            >
               {footerPage[0]?.data.linkedin_text}
             </Typography>
-            <Typography style={subHeading}>
+            <Typography 
+            // style={subHeading}
+            sx={{
+              //  ...subHeading
+              color: "#FFFFFF",
+              fontWeight: 300,
+              // fontSize: "16px",
+              // lineHeight: "24px",
+              fontFamily: "Poppins",
+              fontSize: {
+                xs: "14px",
+                sm: "14px",
+                md: "14px",
+                lg: "16px",
+                xl: "16px",
+              },
+              lineHeight: {
+                xs: "21px",
+                sm: "21px",
+                md: "21px",
+                lg: "24px",
+                xl: "24px",
+              },
+            }}
+
+            >
               {footerPage[0]?.data.facebook_text}
             </Typography>
           </Grid>
@@ -201,22 +506,104 @@ function Footer() {
               paddingTop: "23px",
             }}
           >
-            <Typography style={heading}>{footerPage[0]?.data.legal}</Typography>
-            <Typography style={{ paddingTop: "9px", ...subHeading }}>
+            <Typography 
+            // style={heading}
+            sx={{
+              color: "#FFFFFF",
+              fontWeight: 500,
+              // fontSize: "16px",
+              // lineHeight: "24px",
+              fontSize: {
+                xs: "14px",
+                sm: "14px",
+                md: "14px",
+                lg: "16px",
+                xl: "16px",
+              },
+              lineHeight: {
+                xs: "21px",
+                sm: "21px",
+                md: "21px",
+                lg: "24px",
+                xl: "24px",
+              },
+              fontFamily: "Poppins",
+            }}
+            >{footerPage[0]?.data.legal}</Typography>
+            <Typography
+            //  style={{ paddingTop: "9px", ...subHeading }}
+            sx={{
+              //  ...subHeading
+              paddingTop: "9px",
+              color: "#FFFFFF",
+              fontWeight: 300,
+              // fontSize: "16px",
+              // lineHeight: "24px",
+              fontFamily: "Poppins",
+              fontSize: {
+                xs: "14px",
+                sm: "14px",
+                md: "14px",
+                lg: "16px",
+                xl: "16px",
+              },
+              lineHeight: {
+                xs: "21px",
+                sm: "21px",
+                md: "21px",
+                lg: "24px",
+                xl: "24px",
+              },
+            }}
+
+             >
               {footerPage[0]?.data.privacy_policy}
             </Typography>
-            <Typography style={subHeading}>
+            <Typography 
+            // style={subHeading}
+            sx={{
+              //  ...subHeading
+              color: "#FFFFFF",
+              fontWeight: 300,
+              // fontSize: "16px",
+              // lineHeight: "24px",
+              fontFamily: "Poppins",
+              fontSize: {
+                xs: "14px",
+                sm: "14px",
+                md: "14px",
+                lg: "16px",
+                xl: "16px",
+              },
+              lineHeight: {
+                xs: "21px",
+                sm: "21px",
+                md: "21px",
+                lg: "24px",
+                xl: "24px",
+              },
+            }}
+
+            >
               {footerPage[0]?.data.terms_and_conditions}
             </Typography>
           </Grid>
           <Grid item lg={2} sx={{ textAlign: "center", paddingTop: "33px" }}>
             <Button
-              style={{
+              sx={{
                 background: "#FFFFFF",
                 color: "#0083C3",
                 fontWeight: 500,
-                fontSize: "16px",
-                lineHeight: "24px",
+                // fontSize: "16px",
+                // lineHeight: "24px",
+                fontSize: { xs: "16px", sm: "14px",md:"14px", lg: "16px", xl: "16px" },
+                lineHeight: {
+                  xs: "24px",
+                  sm: "21px",
+                  md:"21px",
+                  lg: "24px",                         
+                  xl: "24px",
+                },
                 fontFamily: "Poppins",
                 textTransform: "none",
                 borderRadius: "12px",
