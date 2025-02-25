@@ -1,5 +1,5 @@
 "use client";
-import { Grid, Typography } from "@mui/material";
+import { Box, Grid, Typography, useMediaQuery } from "@mui/material";
 import { useEffect, useState } from "react";
 import { client } from "../../../lib/prismic-configuration";
 function Ourvalueproposition() {
@@ -13,8 +13,10 @@ function Ourvalueproposition() {
     };
     fetchData();
   }, []);
+  const isSmallScreen = useMediaQuery("(max-width:440px)");
+
   return (
-    <>
+    <div style={{paddingLeft:isSmallScreen?'20px':'0px'}}>
       <div style={{paddingTop:'65px'}}>
         {ourvaluePage.map((post: any) => (
           <div key={post.id}>
@@ -141,8 +143,9 @@ function Ourvalueproposition() {
                   {post.data.hiring_process}
                 </Typography>
               </div>
-              <div style={{ 
+              <Box sx={{ 
                 // paddingTop: "50px",
+                paddingTop:isSmallScreen?'25px':'0px',
                  paddingLeft: "29px" }}>
                 <Typography
                   sx={{
@@ -163,9 +166,10 @@ function Ourvalueproposition() {
                 >
                   {post.data.faster_hiring_heading}
                 </Typography>
-              </div>
+              </Box>
               <div style={{ 
                 // paddingTop: "50px",
+                paddingTop:isSmallScreen?'25px':'0px',
                  paddingLeft: "29px" }}>
                 <Typography
                   sx={{
@@ -182,7 +186,7 @@ function Ourvalueproposition() {
                       xl: "27px",
                     },
                     color: "#0A0A0A",
-                    paddingRight: "233px",
+                    paddingRight: {lg:"233px",md:'233px',xl:'233px',xs:'144px'},
                   }}
                 >
                   {post.data.faster_hiring_content}
@@ -195,6 +199,7 @@ function Ourvalueproposition() {
                   // paddingTop: "50px",
                   paddingLeft: "29px",
                   // paddingBottom: "38px",
+                  paddingTop:isSmallScreen?'25px':'0px',
                 }}
               >
                 <Typography
@@ -261,7 +266,7 @@ function Ourvalueproposition() {
               </div>
               <div style={{
                 //  paddingTop: "41px",
-                  paddingLeft: "29px" }}>
+                  paddingLeft: "29px",paddingTop:isSmallScreen?'25px':'0px', }}>
                 <Typography
                   sx={{
                     fontFamily: "Poppins",
@@ -284,7 +289,7 @@ function Ourvalueproposition() {
               </div>
               <div style={{ 
                 // paddingTop: "41px", 
-                paddingLeft: "29px" }}>
+                paddingLeft: "29px",paddingTop:isSmallScreen?'25px':'0px', }}>
                 <Typography
                   sx={{
                     fontFamily: "Poppins",
@@ -313,6 +318,7 @@ function Ourvalueproposition() {
                   // paddingTop: "50px",
                   paddingLeft: "29px",
                   // paddingBottom: "38px",
+                  paddingTop:isSmallScreen?'25px':'0px',
                 }}
               >
                 <Typography
@@ -380,7 +386,7 @@ function Ourvalueproposition() {
               </div>
               <div style={{
                 //  paddingTop: "41px", 
-                 paddingLeft: "29px" }}>
+                 paddingLeft: "29px" ,paddingTop:isSmallScreen?'25px':'0px',}}>
                 <Typography
                   sx={{
                     fontFamily: "Poppins",
@@ -403,6 +409,7 @@ function Ourvalueproposition() {
               </div>
               <div style={{
                 //  paddingTop: "41px", 
+                paddingTop:isSmallScreen?'25px':'0px',
                  paddingLeft: "29px" }}>
                 <Typography
                   sx={{
@@ -432,6 +439,7 @@ function Ourvalueproposition() {
                   // paddingTop: "50px",
                   paddingLeft: "29px",
                   // paddingBottom: "38px",
+                  paddingTop:isSmallScreen?'25px':'0px',
                 }}
               >
                 <Typography
@@ -492,6 +500,7 @@ function Ourvalueproposition() {
               </div>
               <div style={{
                 //  paddingTop: "50px", 
+                paddingTop:isSmallScreen?'25px':'0px',
                  paddingLeft: "29px" }}>
                 <Typography
                   sx={{
@@ -515,6 +524,7 @@ function Ourvalueproposition() {
               </div>
               <div style={{
                 //  paddingTop: "50px",
+                paddingTop:isSmallScreen?'25px':'0px',
                   paddingLeft: "29px" }}>
                 <Typography
                   sx={{
@@ -531,7 +541,8 @@ function Ourvalueproposition() {
                       xl: "27px",
                     },
                     color: "#0A0A0A",
-                    paddingRight: "233px",
+                    // paddingRight: "233px",
+                    paddingRight: {lg:"233px",md:'233px',xl:'233px',xs:'144px'},
                   }}
                 >
                   {post.data.ai_assistance_content}
@@ -544,6 +555,7 @@ function Ourvalueproposition() {
                   // paddingTop: "50px",
                   paddingLeft: "29px",
                   // paddingBottom: "38px",
+                  paddingTop:isSmallScreen?'25px':'0px',
                 }}
               >
                 <Typography
@@ -582,7 +594,7 @@ function Ourvalueproposition() {
           ))}
         </Grid>
       </Grid>
-    </>
+    </div>
   );
 }
 export default Ourvalueproposition;

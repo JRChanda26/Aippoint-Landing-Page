@@ -22,7 +22,7 @@ function Header() {
     fetchData();
   }, []);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-  const isSmallScreen = useMediaQuery("(max-width:600px)");
+  const isSmallScreen = useMediaQuery("(max-width:440px)");
   const toggleDrawer = (open: boolean) => () => {
     setIsDrawerOpen(open);
   };
@@ -33,7 +33,7 @@ function Header() {
           {headerPage.map((post: any) => (
             <div
               key={post.id}
-              style={{ paddingLeft: "24px", paddingTop: "12px" ,display: "flex", width: "100%",justifyContent:'space-between' }}
+              style={{ paddingLeft: "20px", paddingTop: "12px" ,display: "flex", width: "100%",justifyContent:'space-between' ,paddingRight:'20px'}}
             >
               {post?.data.header_logo && (
                 // eslint-disable-next-line @next/next/no-img-element
@@ -221,7 +221,7 @@ function Header() {
                     background: "#0083C3",
                     color: "#FFFFFF",
                     textTransform: "none",
-                    padding: { lg: "18px 73px 18px 72px" },
+                    padding: {  lg:"12px 54px 11px 53px",xl:'18px 73px 18px 72px'},
                     fontWeight: 500,
                     fontFamily: "Poppins",
                     fontSize: {
@@ -251,10 +251,11 @@ function Header() {
                 </Button>
                 <Button
                   sx={{
-                    background: "#0083C3",
-                    color: "#FFFFFF",
+                    // background: "#0083C3",
+                    border: '1px solid #0A0A0A',
+                    color: "#0A0A0A",
                     textTransform: "none",
-                    padding: { lg: "18px 38px 18px 38px" },
+                    padding: { lg:"12px 19px 11px 19px",xl:'18px 38px 18px 38px'},
                     fontWeight: 500,
                     fontFamily: "Poppins",
                     fontSize: {
