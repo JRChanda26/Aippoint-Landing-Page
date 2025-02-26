@@ -10,8 +10,8 @@ import {
 import React, { useEffect, useState } from "react";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { client } from "../../../lib/prismic-configuration";
-import Footer from "../mainpage/footer";
 import Header from "../mainpage/header";
+import Footer from "../mainpage/footer";
 
 function Faq() {
   const [faqPage, setFaqPage] = useState<any[]>([]);
@@ -94,20 +94,10 @@ function Faq() {
 
 
   return (
-    <div style={{paddingTop:'50px'}}>
-         <div>
-        <Header/>
-      </div>
-      <Grid container>
-        <Grid
-          item
-          lg={12}
-          sx={{
-            textAlign: "center",
-            marginTop: "70px",
-          }}
-        >
-          <Typography
+    <>
+    <Header/>
+    <div style={{paddingTop:'50px',textAlign:'center'}}>
+       <Typography
             sx={{
               border: "1px solid #0083C3",
               borderRadius: "100px",
@@ -139,7 +129,31 @@ function Faq() {
             color: "#0083C3",         
             paddingTop: "25px",}}
           > {faqPage[0]?.data.title}</Typography>
-        </Grid>
+      <Grid container>
+        {/* <Grid
+          item
+          lg={12}
+          sx={{
+            textAlign: "center",
+            marginTop: "70px",
+            paddingLeft:{sm:'200px'},
+          }}
+        > */}
+          {/* <Typography
+            sx={{
+              border: "1px solid #0083C3",
+              borderRadius: "100px",
+              width: "155px",
+              display: "inline-block",
+              //   margin: "0 auto",
+              padding: "17px",
+              ...heading,
+            }}
+          >
+            {faqPage[0]?.data.heading}
+          </Typography> */}
+         
+        {/* </Grid> */}
         <Grid
           item
           xs={12}
@@ -223,10 +237,11 @@ function Faq() {
           ))}
         </Grid>
       </Grid>
-      <div style={{paddingTop:'15px'}}>
+    </div>
+    <div style={{paddingTop:'15px'}}>
         <Footer/>
       </div>
-    </div>
+    </>
   );
 }
 

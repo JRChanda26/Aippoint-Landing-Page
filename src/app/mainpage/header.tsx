@@ -86,13 +86,14 @@ function Header() {
           >
             <div style={{ width: 250, padding: "20px" }}>
               {headerPage.map((post: any) => (
-                <div key={post.id} style={{ marginBottom: "10px" }}>
+                <div key={post.id}>
                   <Typography
                     style={{
                       fontFamily: "Poppins",
                       fontWeight: 300,
                       fontSize: "16px",
                       lineHeight: "24px",
+                      paddingBottom:'10px'
                     }}
                     onClick={handleNavigation}
                   >
@@ -104,6 +105,7 @@ function Header() {
                       fontWeight: 300,
                       fontSize: "16px",
                       lineHeight: "24px",
+                       paddingBottom:'10px'
                     }}
                     onClick={handleFeatureNavigation}
                   >
@@ -115,6 +117,7 @@ function Header() {
                       fontWeight: 300,
                       fontSize: "16px",
                       lineHeight: "24px",
+                       paddingBottom:'10px'
                     }}
                     onClick={handlePricingNavigation}
                   >
@@ -126,6 +129,7 @@ function Header() {
                       fontWeight: 300,
                       fontSize: "16px",
                       lineHeight: "24px",
+                       paddingBottom:'10px'
                     }}
                     onClick={handleFaqNavigation}
                   >
@@ -137,6 +141,7 @@ function Header() {
                       fontWeight: 300,
                       fontSize: "16px",
                       lineHeight: "24px",
+                       paddingBottom:'10px'
                     }}
                     onClick={handleContactNavigation}
                   >
@@ -171,7 +176,7 @@ function Header() {
               </div>
             ))}
           </Grid>
-          <Grid item lg={6} md={6} sm={6} xl={7}>
+          <Grid item lg={6} md={6} sm={6} xl={7} sx={{paddingTop:{sm:'5px'}}}>
             {headerPage.map((post: any) => (
               <div
                 key={post.id}
@@ -239,7 +244,7 @@ function Header() {
               </div>
             ))}
           </Grid>
-          <Grid item lg={3.5} md={4} sm={4} xl={3} >
+          <Grid item lg={3.5} md={4} sm={4} xl={3} sx={{paddingTop:{sm:'10px'}}} >
             {headerPage.map((post: any) => (
               <div
                 key={post.id}

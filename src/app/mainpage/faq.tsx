@@ -92,19 +92,8 @@ function Faq() {
 
 
   return (
-    <div style={{paddingTop:'50px'}}>
-      <Grid container>
-        <Grid
-          item
-          lg={12}
-          sx={{
-            textAlign: "center",
-            marginTop: "70px",
-            paddingLeft:{sm:'200px'},
-            
-          }}
-        >
-          <Typography
+    <div style={{paddingTop:'50px',textAlign:'center'}}>
+       <Typography
             sx={{
               border: "1px solid #0083C3",
               borderRadius: "100px",
@@ -136,7 +125,31 @@ function Faq() {
             color: "#0083C3",         
             paddingTop: "25px",}}
           > {faqPage[0]?.data.title}</Typography>
-        </Grid>
+      <Grid container>
+        {/* <Grid
+          item
+          lg={12}
+          sx={{
+            textAlign: "center",
+            marginTop: "70px",
+            paddingLeft:{sm:'200px'},
+          }}
+        > */}
+          {/* <Typography
+            sx={{
+              border: "1px solid #0083C3",
+              borderRadius: "100px",
+              width: "155px",
+              display: "inline-block",
+              //   margin: "0 auto",
+              padding: "17px",
+              ...heading,
+            }}
+          >
+            {faqPage[0]?.data.heading}
+          </Typography> */}
+         
+        {/* </Grid> */}
         <Grid
           item
           xs={12}

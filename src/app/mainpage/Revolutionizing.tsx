@@ -476,7 +476,9 @@ function Revolutionizing() {
                       xl: "45px",
                     },
                     textAlign:'center',
-                    paddingBottom: "51px",
+                    paddingBottom:'30px',
+                    paddingLeft:{xs:'20px'},
+                    paddingRight:{xs:'20px'}
                    
                   }}
                 >
@@ -550,7 +552,9 @@ function Revolutionizing() {
                       lg: "24px",
                       xl: "45px",
                     },
-                    paddingBottom:'30px'
+                    paddingBottom:'30px',
+                    paddingLeft:{xs:'20px'},
+                    paddingRight:{xs:'20px'}
                   }}
                 >
                   {post.data.smart_interview}
@@ -623,6 +627,9 @@ function Revolutionizing() {
                       lg: "24px",
                       xl: "45px",
                     },
+                    paddingBottom:'30px',
+                    paddingLeft:{xs:'20px'},
+                    paddingRight:{xs:'20px'}
                   }}
                 >
                   {post.data.video_analytics}
@@ -693,6 +700,9 @@ function Revolutionizing() {
                       lg: "24px",
                       xl: "45px",
                     },
+                    paddingBottom:'30px',
+                    paddingLeft:{xs:'20px'},
+                    paddingRight:{xs:'20px'}
                   }}
                 >
                   {post.data.seamless}
