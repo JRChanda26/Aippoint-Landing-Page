@@ -10,6 +10,8 @@ import {
 import React, { useEffect, useState } from "react";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { client } from "../../../lib/prismic-configuration";
+import Footer from "../mainpage/footer";
+import Header from "../mainpage/header";
 
 function Faq() {
   const [faqPage, setFaqPage] = useState<any[]>([]);
@@ -93,6 +95,9 @@ function Faq() {
 
   return (
     <div style={{paddingTop:'50px'}}>
+         <div>
+        <Header/>
+      </div>
       <Grid container>
         <Grid
           item
@@ -100,8 +105,6 @@ function Faq() {
           sx={{
             textAlign: "center",
             marginTop: "70px",
-            paddingLeft:{sm:'200px'},
-            
           }}
         >
           <Typography
@@ -220,6 +223,9 @@ function Faq() {
           ))}
         </Grid>
       </Grid>
+      <div style={{paddingTop:'15px'}}>
+        <Footer/>
+      </div>
     </div>
   );
 }

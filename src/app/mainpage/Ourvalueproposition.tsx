@@ -56,6 +56,7 @@ function Ourvalueproposition() {
                 flexDirection: "column",
                 alignItems: "center",
                 paddingTop: "25px",
+                
               }}
             >
               <Typography
@@ -64,6 +65,8 @@ function Ourvalueproposition() {
                   fontWeight: 700,
                   // fontSize: "45px",
                   // lineHeight: "67.5px",
+                  paddingLeft:{sm:'30px'},
+                  paddingRight:{sm:'30px'},
                   fontSize: { xs: "24px", sm: "32px",md:"32px", lg: "36px", xl: "45px" },
                   lineHeight: {
                     xs: "36px",
@@ -92,6 +95,8 @@ function Ourvalueproposition() {
                   fontWeight: 400,
                   // fontSize: "18px",
                   // lineHeight: "27px",
+                  paddingLeft:{sm:'30px'},
+                  paddingRight:{sm:'30px'},
                   fontSize: { xs: "14px", sm: "14px",md:"14px", lg: "16px", xl: "18px" },
                   lineHeight: {
                     xs: "21px",

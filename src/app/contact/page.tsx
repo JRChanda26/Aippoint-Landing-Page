@@ -10,6 +10,8 @@ import {
 import React, { useEffect, useState } from "react";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { client } from "../../../lib/prismic-configuration";
+import Footer from "../mainpage/footer";
+import Header from "../mainpage/header";
 
 function Contact() {
   const [contactPage, setContactPage] = useState<any[]>([]);
@@ -143,6 +145,7 @@ function Contact() {
 
   return (
     <div>
+        <Header/>
       <Grid container>
         <Grid
           item
@@ -150,7 +153,6 @@ function Contact() {
           sx={{
             textAlign: "center",
             marginTop: "120px",
-            paddingLeft:{sm:'70px'}
           }}
         >
           <Typography
@@ -234,7 +236,6 @@ function Contact() {
             justifyContent: "center",
             padding: "20px",
             gap: "10px",
-            paddingLeft:{sm:'70px'}
           }}
         >
           <Grid
@@ -448,6 +449,7 @@ function Contact() {
           </Grid>
         </Grid>
       </Grid>
+      <Footer/>
     </div>
   );
 }

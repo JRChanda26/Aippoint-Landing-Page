@@ -3,6 +3,8 @@
 import { Box, Grid, Typography, useMediaQuery } from "@mui/material";
 import { useEffect, useState } from "react";
 import { client } from "../../../lib/prismic-configuration";
+import Footer from "../mainpage/footer";
+import Header from "../mainpage/header";
 
 function Revolutionizing() {
   const [revolutionizingPage, setRevolutionizingPage] = useState([]);
@@ -16,6 +18,7 @@ function Revolutionizing() {
   const isSmallScreen = useMediaQuery("(max-width:440px)");
   return (
     <>
+    <Header/>
        <div style={{paddingTop:'75px'}}>
         {revolutionizingPage.map((post: any) => (
           <div key={post.id}>
@@ -102,8 +105,7 @@ function Revolutionizing() {
                     xl: "27px",
                   },
                   color: "#0A0A0A",
-                  paddingLeft:isSmallScreen?'20px':'0px',
-                  paddingRight:{sm:'30px'},
+                  paddingLeft:isSmallScreen?'20px':'0px'
                 }}
               >
                 {post.data.top_content}
@@ -151,7 +153,7 @@ function Revolutionizing() {
                       alt={post.data.ai_powered_image.alt || "Image"}
                       style={{
                         width: isSmallScreen?"40px":"80px",
-                        height:isSmallScreen?"50px": "100px",
+                        height:isSmallScreen?"50": "100px",
                       }}
                       // onClick={handleNavigation}
                     />
@@ -293,7 +295,7 @@ function Revolutionizing() {
                     alt={post.data.job_description_image.alt || "Image"}
                     style={{
                       width: isSmallScreen?"40px": "80px",
-                      height:isSmallScreen?"50px": "100px",
+                      height:isSmallScreen?"50": "100px",
                     }}
                     // onClick={handleNavigation}
                   />
@@ -364,7 +366,7 @@ function Revolutionizing() {
                     alt={post.data.ai_driven_image.alt || "Image"}
                     style={{
                       width: isSmallScreen?"40px": "80px",
-                      height:isSmallScreen?"50px": "100px",
+                      height:isSmallScreen?"50": "100px",
                     }}
                     // onClick={handleNavigation}
                   />
@@ -444,7 +446,7 @@ function Revolutionizing() {
                       // width: "99.48px",
                       // height: "79px",
                       width: isSmallScreen?"40px": "98.76px",
-                      height:isSmallScreen?"50px": "100px",
+                      height:isSmallScreen?"50": "100px",
                     }}
                     // onClick={handleNavigation}
                   />
@@ -519,7 +521,7 @@ function Revolutionizing() {
                     alt={post.data.smart_interview_image.alt || "Image"}
                     style={{
                       width: isSmallScreen?"40px": "98.76px",
-                      height:isSmallScreen?"50px": "100px",
+                      height:isSmallScreen?"50": "100px",
                     }}
                     // onClick={handleNavigation}
                   />
@@ -592,7 +594,7 @@ function Revolutionizing() {
                       // width: "100px",
                       // height: "77.27px",
                       width: isSmallScreen?"40px": "98.76px",
-                      height:isSmallScreen?"50px": "100px",
+                      height:isSmallScreen?"50": "100px",
                     }}
                     // onClick={handleNavigation}
                   />
@@ -661,7 +663,7 @@ function Revolutionizing() {
                     alt={post.data.seamless_image.alt || "Image"}
                     style={{
                       width: isSmallScreen?"40px": "99.95px",
-                      height:isSmallScreen?"50px": "111px",
+                      height:isSmallScreen?"50": "111px",
                     }}
                     // onClick={handleNavigation}
                   />
@@ -698,6 +700,9 @@ function Revolutionizing() {
           ))}
         </Grid>
       </Grid>
+      <div>
+        <Footer/>
+      </div>
     </>
   );
 }

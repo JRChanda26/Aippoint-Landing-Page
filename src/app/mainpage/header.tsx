@@ -10,6 +10,7 @@ import {
   useMediaQuery,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
+import { useRouter } from "next/navigation";
 
 function Header() {
   const [headerPage, setHeaderPage] = useState<any[]>([]);
@@ -26,6 +27,24 @@ function Header() {
   const toggleDrawer = (open: boolean) => () => {
     setIsDrawerOpen(open);
   };
+  const router = useRouter();
+  const handleNavigation = () => {
+    router.push("/");
+  };
+
+  const handleContactNavigation = () => {
+    router.push("/contact");
+  };
+  const handlePricingNavigation = () => {
+    router.push("/pricing");
+  };
+  const handleFeatureNavigation = () => {
+    router.push("/feature");
+  };
+  const handleFaqNavigation = () => {
+    router.push("/faq");
+  };
+ 
   return (
     <>
       {isSmallScreen ? (
@@ -45,7 +64,7 @@ function Header() {
                     height: "30px",
                     cursor: "pointer",
                   }}
-                  // onClick={handleNavigation}
+                  onClick={handleNavigation}
                 />
               )}
 
@@ -75,6 +94,7 @@ function Header() {
                       fontSize: "16px",
                       lineHeight: "24px",
                     }}
+                    onClick={handleNavigation}
                   >
                     {post.data.home}
                   </Typography>
@@ -85,6 +105,7 @@ function Header() {
                       fontSize: "16px",
                       lineHeight: "24px",
                     }}
+                    onClick={handleFeatureNavigation}
                   >
                     {post.data.features}
                   </Typography>
@@ -95,6 +116,7 @@ function Header() {
                       fontSize: "16px",
                       lineHeight: "24px",
                     }}
+                    onClick={handlePricingNavigation}
                   >
                     {post.data.pricing}
                   </Typography>
@@ -105,6 +127,7 @@ function Header() {
                       fontSize: "16px",
                       lineHeight: "24px",
                     }}
+                    onClick={handleFaqNavigation}
                   >
                     {post.data.faq}
                   </Typography>
@@ -115,6 +138,7 @@ function Header() {
                       fontSize: "16px",
                       lineHeight: "24px",
                     }}
+                    onClick={handleContactNavigation}
                   >
                     {post.data.contact}
                   </Typography>
@@ -125,7 +149,7 @@ function Header() {
         </div>
       ) : (
         <Grid container style={{ paddingTop: "20px" }}>
-          <Grid item sm={2} md={2} lg={2}>
+          <Grid item lg={2.3} sm={2} md={2} xl={2}>
             {headerPage.map((post: any) => (
               <div
                 key={post.id}
@@ -141,13 +165,13 @@ function Header() {
                       height: isSmallScreen ? "30px" : "46px",
                       cursor: "pointer",
                     }}
-                    // onClick={handleNavigation}
+                    onClick={handleNavigation}
                   />
                 )}
               </div>
             ))}
           </Grid>
-          <Grid item lg={6}>
+          <Grid item lg={6} md={6} sm={6} xl={7}>
             {headerPage.map((post: any) => (
               <div
                 key={post.id}
@@ -164,6 +188,7 @@ function Header() {
                     fontSize: "16px",
                     lineHeight: "24px",
                   }}
+                  onClick={handleNavigation}
                 >
                   {post.data.home}
                 </Typography>
@@ -174,6 +199,7 @@ function Header() {
                     fontSize: "16px",
                     lineHeight: "24px",
                   }}
+                  onClick={handleFeatureNavigation}
                 >
                   {post.data.features}
                 </Typography>
@@ -184,6 +210,7 @@ function Header() {
                     fontSize: "16px",
                     lineHeight: "24px",
                   }}
+                  onClick={handlePricingNavigation}
                 >
                   {post.data.pricing}
                 </Typography>
@@ -194,6 +221,7 @@ function Header() {
                     fontSize: "16px",
                     lineHeight: "24px",
                   }}
+                  onClick={handleFaqNavigation}
                 >
                   {post.data.faq}
                 </Typography>
@@ -204,13 +232,14 @@ function Header() {
                     fontSize: "16px",
                     lineHeight: "24px",
                   }}
+                  onClick={handleContactNavigation}
                 >
                   {post.data.contact}
                 </Typography>
               </div>
             ))}
           </Grid>
-          <Grid item lg={4}>
+          <Grid item lg={3.5} md={4} sm={4} xl={3} >
             {headerPage.map((post: any) => (
               <div
                 key={post.id}
@@ -221,7 +250,7 @@ function Header() {
                     background: "#0083C3",
                     color: "#FFFFFF",
                     textTransform: "none",
-                    padding: {  lg:"12px 54px 11px 53px",xl:'18px 73px 18px 72px'},
+                    padding: {  lg:"12px 54px 11px 53px",xl:'18px 73px 18px 72px',md:"9px 37px 9px 37px",sm:"9px 37px 9px 37px"},
                     fontWeight: 500,
                     fontFamily: "Poppins",
                     fontSize: {
@@ -255,7 +284,7 @@ function Header() {
                     border: '1px solid #0A0A0A',
                     color: "#0A0A0A",
                     textTransform: "none",
-                    padding: { lg:"12px 19px 11px 19px",xl:'18px 38px 18px 38px'},
+                    padding: { lg:"12px 19px 11px 19px",xl:'18px 38px 18px 38px',md:"9px 11px 9px 11px",sm:"9px 11px 9px 11px"},
                     fontWeight: 500,
                     fontFamily: "Poppins",
                     fontSize: {
