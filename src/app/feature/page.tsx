@@ -105,7 +105,8 @@ function Revolutionizing() {
                     xl: "27px",
                   },
                   color: "#0A0A0A",
-                  paddingLeft:isSmallScreen?'20px':'0px'
+                  paddingLeft:isSmallScreen?'20px':'0px',
+                  paddingRight:{sm:'30px'},
                 }}
               >
                 {post.data.top_content}
@@ -153,7 +154,7 @@ function Revolutionizing() {
                       alt={post.data.ai_powered_image.alt || "Image"}
                       style={{
                         width: isSmallScreen?"40px":"80px",
-                        height:isSmallScreen?"50": "100px",
+                        height:isSmallScreen?"50px": "100px",
                       }}
                       // onClick={handleNavigation}
                     />
@@ -295,7 +296,7 @@ function Revolutionizing() {
                     alt={post.data.job_description_image.alt || "Image"}
                     style={{
                       width: isSmallScreen?"40px": "80px",
-                      height:isSmallScreen?"50": "100px",
+                      height:isSmallScreen?"50px": "100px",
                     }}
                     // onClick={handleNavigation}
                   />
@@ -366,7 +367,7 @@ function Revolutionizing() {
                     alt={post.data.ai_driven_image.alt || "Image"}
                     style={{
                       width: isSmallScreen?"40px": "80px",
-                      height:isSmallScreen?"50": "100px",
+                      height:isSmallScreen?"50px": "100px",
                     }}
                     // onClick={handleNavigation}
                   />
@@ -406,12 +407,13 @@ function Revolutionizing() {
       </Grid>
       <Grid
         container
-        spacing={0}
-        sx={{ paddingTop: "29px", gap: "32px", paddingLeft: "24px" }}
+        spacing={1}
+        sx={{ paddingTop: "29px",gap: {sx:"10px",lg:"32px",md:'32px'}, paddingLeft: {lg:"24px",xs:'20px'}}}
       >
         <Grid
           item
           lg={2.7}
+          xs={6}
           sx={{ borderRadius: "24px", background: "#FAFAFA" }}
         >
           {revolutionizingPage.map((post: any) => (
@@ -446,7 +448,7 @@ function Revolutionizing() {
                       // width: "99.48px",
                       // height: "79px",
                       width: isSmallScreen?"40px": "98.76px",
-                      height:isSmallScreen?"50": "100px",
+                      height:isSmallScreen?"50px": "100px",
                     }}
                     // onClick={handleNavigation}
                   />
@@ -490,6 +492,7 @@ function Revolutionizing() {
         <Grid
           item
           lg={2.7}
+          xs={6}
           sx={{ borderRadius: "24px", background: "#FAFAFA" }}
         >
           {revolutionizingPage.map((post: any) => (
@@ -521,7 +524,7 @@ function Revolutionizing() {
                     alt={post.data.smart_interview_image.alt || "Image"}
                     style={{
                       width: isSmallScreen?"40px": "98.76px",
-                      height:isSmallScreen?"50": "100px",
+                      height:isSmallScreen?"50px": "100px",
                     }}
                     // onClick={handleNavigation}
                   />
@@ -562,6 +565,7 @@ function Revolutionizing() {
         <Grid
           item
           lg={2.7}
+          xs={6}
           sx={{ borderRadius: "24px", background: "#FAFAFA" }}
         >
           {revolutionizingPage.map((post: any) => (
@@ -594,7 +598,7 @@ function Revolutionizing() {
                       // width: "100px",
                       // height: "77.27px",
                       width: isSmallScreen?"40px": "98.76px",
-                      height:isSmallScreen?"50": "100px",
+                      height:isSmallScreen?"50px": "100px",
                     }}
                     // onClick={handleNavigation}
                   />
@@ -633,6 +637,7 @@ function Revolutionizing() {
         <Grid
           item
           lg={2.7}
+          xs={6}
           sx={{ borderRadius: "24px", background: "#FAFAFA" }}
         >
           {revolutionizingPage.map((post: any) => (
@@ -663,7 +668,7 @@ function Revolutionizing() {
                     alt={post.data.seamless_image.alt || "Image"}
                     style={{
                       width: isSmallScreen?"40px": "99.95px",
-                      height:isSmallScreen?"50": "111px",
+                      height:isSmallScreen?"50px": "111px",
                     }}
                     // onClick={handleNavigation}
                   />
