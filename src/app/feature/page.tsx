@@ -19,7 +19,7 @@ function Revolutionizing() {
   return (
     <>
     <Header/>
-       <div style={{paddingTop:'75px'}}>
+       <div style={{paddingTop:'47px'}}>
         {revolutionizingPage.map((post: any) => (
           <div key={post.id}>
             <div
