@@ -687,6 +687,17 @@ interface FooterDocumentData {
   button_text: prismic.KeyTextField;
 
   /**
+   * Button Text Trynow field in *Footer*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.button_text_trynow
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  button_text_trynow: prismic.KeyTextField;
+
+  /**
    * Slice Zone field in *Footer*
    *
    * - **Field Type**: Slice Zone

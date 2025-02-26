@@ -588,7 +588,8 @@ function Footer() {
               {footerPage[0]?.data.terms_and_conditions}
             </Typography>
           </Grid>
-          <Grid item lg={2} sx={{ textAlign: "center", paddingTop: "33px" }}>
+          <Grid item lg={2} sx={{ textAlign: "center", paddingTop: "33px"}}>
+            <div>
             <Button
               sx={{
                 background: "#FFFFFF",
@@ -607,11 +608,41 @@ function Footer() {
                 fontFamily: "Poppins",
                 textTransform: "none",
                 borderRadius: "12px",
-                padding: "18px 38px",
+                padding:{lg:'12px 65px 12px 65px',xs:'12px 100px 12px 100px',sm:'12px 100px 12px 100px',xl:'12px 100px 12px 100px',md:'12px 100px 12px 100px'},
+              }}
+              onClick={()=>{
+                window.location.href =
+                "https://aippoint.ai/aippoint-userinterface/";
+              }}
+            >
+              {footerPage[0]?.data.button_text_trynow}
+            </Button>
+            </div>
+            <div style={{paddingTop:'10px'}}>
+            <Button
+              sx={{
+                border: '1px solid #FFFFFF',
+                color: "#FFFFFF",
+                fontWeight: 500,
+                // fontSize: "16px",
+                // lineHeight: "24px",
+                fontSize: { xs: "16px", sm: "14px",md:"14px", lg: "16px", xl: "16px" },
+                lineHeight: {
+                  xs: "24px",
+                  sm: "21px",
+                  md:"21px",
+                  lg: "24px",                         
+                  xl: "24px",
+                },
+                fontFamily: "Poppins",
+                textTransform: "none",
+                borderRadius: "12px",
+                padding:{lg:'12px 30px 12px 30px',xs:'12px 60px 12px 60px',sm:'12px 60px 12px 60px',xl:'12px 60px 12px 60px'},
               }}
             >
               {footerPage[0]?.data.button_text}
             </Button>
+            </div>
           </Grid>
         </Grid>
       </Grid>

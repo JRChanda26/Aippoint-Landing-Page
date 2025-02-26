@@ -4,6 +4,8 @@ import { Box, Button, Checkbox, Grid, Typography, useMediaQuery } from "@mui/mat
 import { useEffect, useState } from "react";
 import { client } from "../../../lib/prismic-configuration";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import Footer from "../mainpage/footer";
+import Header from "../mainpage/header";
 
 function Subscription() {
   const [subscriptionPage, setSubscriptionPage] = useState([]);
@@ -30,7 +32,7 @@ function Subscription() {
 
   const getDimensions = () => {
     if (isXs) return { width: "400px", height: "auto" };//mobile
-    if (isSm) return { width: "400px", height: "auto" };//tab
+    if (isSm) return { width: "251px", height: "auto" };//tab
     if (isMd) return { width: "454px", height: "auto" };//laptop
     if (isLg) return { width: "404px", height: "auto" };//desktop
     if (isXl) return { width: "430px", height: "auto" };
@@ -40,7 +42,8 @@ function Subscription() {
   const dimensions = getDimensions();
   return (
     <>
-      <div>
+    <Header/>
+      <div >
         {subscriptionPage.map((post: any) => (
           <div key={post.id}>
             <div
@@ -227,7 +230,7 @@ function Subscription() {
         }}
       >
         
-        <Grid item lg={3.5} md={3} sx={{border: '0.5px solid #000000',borderRadius:'24px',
+        <Grid item lg={3.5} sx={{border: '0.5px solid #000000',borderRadius:'24px',
           width:dimensions.width,
           height:dimensions.height}}>
           {subscriptionPage.map((post: any) => (
@@ -394,7 +397,7 @@ function Subscription() {
             </div>
           ))}
         </Grid>
-        <Grid item lg={3.5} md={3} sx={{border: '0.5px solid #000000',borderRadius:'24px',width:dimensions.width,height:dimensions.height}}>
+        <Grid item lg={3.5} sx={{border: '0.5px solid #000000',borderRadius:'24px',width:dimensions.width,height:dimensions.height}}>
           {subscriptionPage.map((post: any) => (
             <div key={post.id} style={{padding:'14px'}}>
                 <Typography  sx={{
@@ -581,7 +584,7 @@ function Subscription() {
             </div>
           ))}
         </Grid>
-        <Grid item lg={3.5} md={3} sx={{border: '0.5px solid #000000',borderRadius:'24px',width:dimensions.width,height:dimensions.height}}>
+        <Grid item lg={3.5} sx={{border: '0.5px solid #000000',borderRadius:'24px',width:dimensions.width,height:dimensions.height}}>
           {subscriptionPage.map((post: any) => (
             <div key={post.id} style={{padding:'14px'}}>
                 <Typography sx={{
@@ -761,6 +764,8 @@ function Subscription() {
           ))}
         </Grid>
       </Grid>
+      <div style={{paddingTop:'15px'}}> <Footer/></div>
+     
     </>
   );
 }

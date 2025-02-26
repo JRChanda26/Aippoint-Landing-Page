@@ -142,6 +142,13 @@
           "placeholder": ""
         }
       },
+      "button_text_trynow": {
+        "type": "Text",
+        "config": {
+          "label": "Button Text Trynow",
+          "placeholder": ""
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
