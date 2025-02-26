@@ -17,11 +17,7 @@ function Subscription() {
     fetchData();
   }, []);
   const label = { inputProps: { "aria-label": "Checkbox demo" } };
-  const [clickedIndex, setClickedIndex] = useState(null);
 
-  const handleClick = (index:any) => {
-    setClickedIndex(index); 
-  };
   const isSmallScreen = useMediaQuery("(max-width:440px)");
 
   const isXl = useMediaQuery("(max-width:1920px)");
@@ -32,7 +28,7 @@ function Subscription() {
 
   const getDimensions = () => {
     if (isXs) return { width: "400px", height: "auto" };//mobile
-    if (isSm) return { width: "251px", height: "auto" };//tab
+    if (isSm) return { width: "400px", height: "auto" };//tab
     if (isMd) return { width: "454px", height: "auto" };//laptop
     if (isLg) return { width: "404px", height: "auto" };//desktop
     if (isXl) return { width: "430px", height: "auto" };
@@ -40,10 +36,16 @@ function Subscription() {
   };
 
   const dimensions = getDimensions();
+  const [activeIndex, setActiveIndex] = useState(null);
+  const handleSubscriptionClick = (index:any) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
+  
+  
   return (
     <>
-    <Header/>
-      <div >
+     <Header/>
+      <div>
         {subscriptionPage.map((post: any) => (
           <div key={post.id}>
             <div
@@ -154,7 +156,7 @@ function Subscription() {
               
             }}
           >
-            <div style={{  textAlign: "center",
+            <Box style={{  textAlign: "center",
               background: "#FFFFFF",
               display: "flex",
               justifyContent: "center",
@@ -193,10 +195,10 @@ function Subscription() {
                 color:'#FFFFFF',
                 background:'#0083C3',
                 borderRadius:'100px',
-                padding:'11px 18px'
+                padding:'11px 18px',
               }}>{post.data.save_up_to}</Typography>
-            </div>
-            <div style={{paddingLeft:'82px'}}>
+            </Box>
+            <Box sx={{paddingLeft:{lg:'82px',xs:'11px'}}}>
             <Typography sx={{
                 fontFamily:'Poppins',
                 fontWeight:500,
@@ -213,7 +215,7 @@ function Subscription() {
                 color:'#0A0A0A',
                 paddingRight:{xs:'11px',lg:'82px'}
               }}>{post.data.billed_yearly}</Typography>
-              </div>
+              </Box>
           </div>
         ))}
       </div>
@@ -230,11 +232,13 @@ function Subscription() {
         }}
       >
         
-        <Grid item lg={3.5} sx={{border: '0.5px solid #000000',borderRadius:'24px',
+        <Grid item lg={3.5} md={3} sx={{border: '0.5px solid #000000',borderRadius:'24px',
           width:dimensions.width,
-          height:dimensions.height}}>
-          {subscriptionPage.map((post: any) => (
-            <div key={post.id} style={{padding:'14px',display:'flex',flexDirection:'column'}}>
+          height:dimensions.height}} 
+          // onClick={handleSubscription1}
+          >
+          {subscriptionPage.map((post: any,index:any) => (
+            <div key={post.id} style={{padding:'14px',display:'flex',flexDirection:'column'}} onClick={()=>{handleSubscriptionClick(1)}}>
                 <Typography
                   sx={{
                     fontFamily: "Poppins",
@@ -268,7 +272,8 @@ function Subscription() {
                       lg: "27px",
                       xl: "30px",
                     },
-                    color:'#0A0A0A'
+                    // color:subscription1?'#0083C3':'#0A0A0A'
+                     color:activeIndex === 1 ?'#0083C3':'#0A0A0A'
                   }}
                 >
                   {post.data.starter}
@@ -287,7 +292,9 @@ function Subscription() {
                       lg: "54px",
                       xl: "72px",
                     },
-                    color:'#0A0A0A'
+                    // color:'#0A0A0A'
+                    //  color:subscription1?'#0083C3':'#0A0A0A'
+                    color:activeIndex === 1 ?'#0083C3':'#0A0A0A'
                   }}
                 >
                   {post.data.free}
@@ -373,8 +380,9 @@ function Subscription() {
                   <Button
                     sx={{
                       textTransform: "none",
-                      color: "#0A0A0A",
-                      border: "1px solid #0A0A0A",
+                       color: activeIndex === 1 ?'#fff':'#0A0A0A',
+                       background:activeIndex === 1?'#0083C3':'',
+                      border: activeIndex === 1?'':"1px solid #0A0A0A",
                       borderRadius: "12px",
                       // padding: "18px 141px 18px 141px",
                       fontWeight: 500,
@@ -397,9 +405,12 @@ function Subscription() {
             </div>
           ))}
         </Grid>
-        <Grid item lg={3.5} sx={{border: '0.5px solid #000000',borderRadius:'24px',width:dimensions.width,height:dimensions.height}}>
+        <Grid item lg={3.5} md={3} sx={{border: '0.5px solid #000000',borderRadius:'24px',width:dimensions.width,height:dimensions.height}} 
+        // onClick={handleSubscription2}
+        
+        >
           {subscriptionPage.map((post: any) => (
-            <div key={post.id} style={{padding:'14px'}}>
+            <div key={post.id} style={{padding:'14px'}} onClick={()=>{handleSubscriptionClick(2)}}>
                 <Typography  sx={{
                     fontFamily: "Poppins",
                     fontWeight: 400,
@@ -428,7 +439,8 @@ function Subscription() {
                       lg: "21px",
                       xl: "24px",
                     },
-                    color:'#0083C3'
+                  //  color:subscription2?'#0083C3':'#0A0A0A'
+                  color:activeIndex === 2 ?'#0083C3':'#0A0A0A'
                   }}>{post.data.pro}</Typography>
                 <Typography sx={{
                     fontFamily: "Poppins",
@@ -443,7 +455,8 @@ function Subscription() {
                       lg: "54px",
                       xl: "72px",
                     },
-                     color:'#0083C3'
+                    // color:subscription2?'#0083C3':'#0A0A0A'
+                    color:activeIndex === 2 ?'#0083C3':'#0A0A0A'
                   }}>
                   {post.data.growing_businesses_value}
                   
@@ -560,8 +573,11 @@ function Subscription() {
                   <Button
                     sx={{
                       textTransform: "none",
-                      color: "#0A0A0A",
-                      border: "1px solid #0A0A0A",
+                      // color: "#0A0A0A",
+                      // border: "1px solid #0A0A0A",
+                      color:activeIndex === 2?'#fff':'#0A0A0A',
+                      background:activeIndex === 2?'#0083C3':'',
+                     border: activeIndex === 2?'':"1px solid #0A0A0A",
                       borderRadius: "12px",
                       // padding: "18px 141px 18px 141px",
                       fontWeight: 500,
@@ -584,9 +600,11 @@ function Subscription() {
             </div>
           ))}
         </Grid>
-        <Grid item lg={3.5} sx={{border: '0.5px solid #000000',borderRadius:'24px',width:dimensions.width,height:dimensions.height}}>
+        <Grid item lg={3.5} md={3} sx={{border: '0.5px solid #000000',borderRadius:'24px',width:dimensions.width,height:dimensions.height}}
+        //  onClick={handleSubscription3}
+         >
           {subscriptionPage.map((post: any) => (
-            <div key={post.id} style={{padding:'14px'}}>
+            <div key={post.id} style={{padding:'14px'}} onClick={()=>{handleSubscriptionClick(3)}}>
                 <Typography sx={{
                     fontFamily: "Poppins",
                     fontWeight: 400,
@@ -615,7 +633,8 @@ function Subscription() {
                       lg: "27px",
                       xl: "30px",
                     },
-                    color:'#0A0A0A'
+                    // color:subscription3?'#0083C3':'#0A0A0A'
+                     color:activeIndex === 3 ?'#0083C3':'#0A0A0A'
                   }}>{post.data.enterprise}</Typography>
                 <Typography sx={{
                     fontFamily: "Poppins",
@@ -630,7 +649,8 @@ function Subscription() {
                       lg: "54px",
                       xl: "72px",
                     },
-                    color:'#0A0A0A'
+                    // color:subscription3?'#0083C3':'#0A0A0A'
+                     color:activeIndex === 3 ?'#0083C3':'#0A0A0A'
                   }} >
                   {post.data.custom}
                 </Typography>
@@ -739,8 +759,11 @@ function Subscription() {
                   <Button
                     sx={{
                       textTransform: "none",
-                      color: "#0A0A0A",
-                      border: "1px solid #0A0A0A",
+                      // color: "#0A0A0A",
+                      // border: "1px solid #0A0A0A",
+                      color:activeIndex === 3?'#fff':'#0A0A0A',
+                      background:activeIndex === 3?'#0083C3':'',
+                     border: activeIndex === 3?'':"1px solid #0A0A0A",
                       borderRadius: "12px",
                       // padding: "18px 141px 18px 141px",
                       fontWeight: 500,
@@ -765,7 +788,6 @@ function Subscription() {
         </Grid>
       </Grid>
       <div style={{paddingTop:'15px'}}> <Footer/></div>
-     
     </>
   );
 }
