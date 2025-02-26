@@ -404,12 +404,13 @@ function Revolutionizing() {
       </Grid>
       <Grid
         container
-        spacing={0}
-        sx={{ paddingTop: "29px", gap: "32px", paddingLeft: "24px" }}
+        spacing={1}
+        sx={{ paddingTop: "29px",gap: {sx:"10px",lg:"32px",md:'32px'}, paddingLeft: {lg:"24px",xs:'20px'}}}
       >
         <Grid
           item
           lg={2.7}
+          xs={6}
           sx={{ borderRadius: "24px", background: "#FAFAFA" }}
         >
           {revolutionizingPage.map((post: any) => (
@@ -488,6 +489,7 @@ function Revolutionizing() {
         <Grid
           item
           lg={2.7}
+          xs={6}
           sx={{ borderRadius: "24px", background: "#FAFAFA" }}
         >
           {revolutionizingPage.map((post: any) => (
@@ -560,6 +562,7 @@ function Revolutionizing() {
         <Grid
           item
           lg={2.7}
+          xs={6}
           sx={{ borderRadius: "24px", background: "#FAFAFA" }}
         >
           {revolutionizingPage.map((post: any) => (
@@ -631,6 +634,7 @@ function Revolutionizing() {
         <Grid
           item
           lg={2.7}
+          xs={6}
           sx={{ borderRadius: "24px", background: "#FAFAFA" }}
         >
           {revolutionizingPage.map((post: any) => (
