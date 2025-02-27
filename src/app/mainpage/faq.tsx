@@ -90,41 +90,51 @@ function Faq() {
   };
   const isSmallScreen = useMediaQuery("(max-width:440px)");
 
-
   return (
-    <div style={{paddingTop:'50px',textAlign:'center'}}>
-       <Typography
-            sx={{
-              border: "1px solid #0083C3",
-              borderRadius: "100px",
-              width: "155px",
-              display: "inline-block",
-              //   margin: "0 auto",
-              padding: "17px",
-              ...heading,
-            }}
-          >
-            {faqPage[0]?.data.heading}
-          </Typography>
-          <Typography 
-          // sx={title}
-          sx={{fontFamily: "Poppins",
-            fontWeight: 700,
-            // fontSize: "45px",
-            // lineHeight: "67.5px",
-            fontSize: { xs: "24px", sm: "32px",md:"32px", lg: "36px", xl: "45px" },
-            lineHeight: {
-              xs: "36px",
-              sm: "48px",
-              md:"48px",
-              lg: "54px",                         
-              xl: "67.5px",
-            }, 
-            paddingLeft:isSmallScreen?'20px':'0px',
-            letterSpacing: "0%",
-            color: "#0083C3",         
-            paddingTop: "25px",}}
-          > {faqPage[0]?.data.title}</Typography>
+    <div style={{ paddingTop: "50px", textAlign: "center" }}>
+      <Typography
+        sx={{
+          border: "1px solid #0083C3",
+          borderRadius: "100px",
+          width: "155px",
+          display: "inline-block",
+          //   margin: "0 auto",
+          padding: "17px",
+          ...heading,
+        }}
+      >
+        {faqPage[0]?.data.heading}
+      </Typography>
+      <Typography
+        // sx={title}
+        sx={{
+          fontFamily: "Poppins",
+          fontWeight: 700,
+          // fontSize: "45px",
+          // lineHeight: "67.5px",
+          fontSize: {
+            xs: "24px",
+            sm: "32px",
+            md: "32px",
+            lg: "36px",
+            xl: "45px",
+          },
+          lineHeight: {
+            xs: "36px",
+            sm: "48px",
+            md: "48px",
+            lg: "54px",
+            xl: "67.5px",
+          },
+          paddingLeft: isSmallScreen ? "20px" : "0px",
+          letterSpacing: "0%",
+          color: "#0083C3",
+          paddingTop: "25px",
+        }}
+      >
+        {" "}
+        {faqPage[0]?.data.title}
+      </Typography>
       <Grid container>
         {/* <Grid
           item
@@ -135,7 +145,7 @@ function Faq() {
             paddingLeft:{sm:'200px'},
           }}
         > */}
-          {/* <Typography
+        {/* <Typography
             sx={{
               border: "1px solid #0083C3",
               borderRadius: "100px",
@@ -148,7 +158,7 @@ function Faq() {
           >
             {faqPage[0]?.data.heading}
           </Typography> */}
-         
+
         {/* </Grid> */}
         <Grid
           item
@@ -158,8 +168,8 @@ function Faq() {
           xl={12}
           sx={{
             marginTop: "50px",
-            paddingRight:'10px',
-            paddingLeft:'10px'
+            paddingRight:'20px',
+            paddingLeft:'20px'
           }}
         >
           {faqs.slice(0, 10).map((faq, index) => (
@@ -189,14 +199,20 @@ function Faq() {
                       color: "#0A0A0A",
                       // lineHeight: "27px",
                       // fontSize: "18px",
-                      fontSize: { xs: "12px", sm: "14px",md:"14px", lg: "16px", xl: "18px" },
+                      fontSize: {
+                        xs: "12px",
+                        sm: "14px",
+                        md: "14px",
+                        lg: "16px",
+                        xl: "18px",
+                      },
                       lineHeight: {
                         xs: "18px",
                         sm: "21px",
-                        md:"21px",
-                        lg: "24px",                         
+                        md: "21px",
+                        lg: "24px",
                         xl: "27px",
-                      }, 
+                      },
                       fontWeight: 400,
                       fontFamily: "Poppins",
                       letterSpacing: "0%",
@@ -211,17 +227,24 @@ function Faq() {
                       color: "#0083C3",
                       // lineHeight: "24px",
                       // fontSize: "16px",
-                      fontSize: { xs: "12px", sm: "14px",md:"14px", lg: "14px", xl: "16px" },
+                      fontSize: {
+                        xs: "12px",
+                        sm: "14px",
+                        md: "14px",
+                        lg: "14px",
+                        xl: "16px",
+                      },
                       lineHeight: {
                         xs: "18px",
                         sm: "21px",
-                        md:"21px",
-                        lg: "21px",                         
+                        md: "21px",
+                        lg: "21px",
                         xl: "24px",
-                      }, 
+                      },
                       fontWeight: 400,
                       fontFamily: "Poppins",
                       letterSpacing: "0%",
+                      textAlign: "left",
                     }}
                   >
                     {faq.answer}
