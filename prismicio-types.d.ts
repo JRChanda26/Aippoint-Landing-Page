@@ -1980,7 +1980,18 @@ interface SubscriptionDocumentData {
   contact_us: prismic.KeyTextField;
 
   /**
-   * `slices` field in *Subscription*
+   * Try Now field in *Subscription*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: subscription.try_now
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  try_now: prismic.KeyTextField;
+
+  /**
+   * Slice Zone field in *Subscription*
    *
    * - **Field Type**: Slice Zone
    * - **Placeholder**: *None*

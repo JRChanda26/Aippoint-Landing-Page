@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { client } from "../../../lib/prismic-configuration";
 import { Button, Grid, Typography, useMediaQuery } from "@mui/material";
+import { useRouter } from "next/navigation";
 
 function Footer() {
   const [footerPage, setFooterPage] = useState<any[]>([]);
@@ -45,6 +46,10 @@ function Footer() {
   };
 
   const dimensions = getDimensions();
+  const router = useRouter();
+    const handleNavigation = () => {
+      router.push("/");
+    };
 
   return (
     <div>
@@ -76,6 +81,7 @@ function Footer() {
                   width: dimensions.width,
                   height: dimensions.height,
                 }}
+                onClick={handleNavigation}
               />
             )}
           </Grid>
