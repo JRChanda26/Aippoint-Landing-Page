@@ -309,6 +309,7 @@ function Subscription() {
                     <Checkbox
                       {...label}
                       defaultChecked
+                      disabled
                       style={{ color: "chartreuse" }}
                     />
                   </span>
@@ -327,6 +328,7 @@ function Subscription() {
                     <Checkbox
                       {...label}
                       defaultChecked
+                      disabled
                       style={{ color: "chartreuse" }}
                     />
                   </span>
@@ -345,6 +347,7 @@ function Subscription() {
                     <Checkbox
                       {...label}
                       defaultChecked
+                      disabled
                       style={{ color: "chartreuse" }}
                     />
                   </span>
@@ -363,6 +366,7 @@ function Subscription() {
                     <Checkbox
                       {...label}
                       defaultChecked
+                      disabled
                       style={{ color: "chartreuse" }}
                     />
                   </span>
@@ -476,6 +480,7 @@ function Subscription() {
                     <Checkbox
                       {...label}
                       defaultChecked
+                      disabled
                       style={{ color: "chartreuse" }}
                     />
                   </span>
@@ -492,6 +497,7 @@ function Subscription() {
                     <Checkbox
                       {...label}
                       defaultChecked
+                      disabled
                       style={{ color: "chartreuse" }}
                     />
                   </span>
@@ -508,6 +514,7 @@ function Subscription() {
                     <Checkbox
                       {...label}
                       defaultChecked
+                      disabled
                       style={{ color: "chartreuse" }}
                     />
                   </span>
@@ -524,6 +531,7 @@ function Subscription() {
                     <Checkbox
                       {...label}
                       defaultChecked
+                      disabled
                       style={{ color: "chartreuse" }}
                     />
                   </span>
@@ -540,6 +548,7 @@ function Subscription() {
                     <Checkbox
                       {...label}
                       defaultChecked
+                      disabled
                       style={{ color: "chartreuse" }}
                     />
                   </span>
@@ -556,6 +565,7 @@ function Subscription() {
                     <Checkbox
                       {...label}
                       defaultChecked
+                      disabled
                       style={{ color: "chartreuse" }}
                     />
                   </span>
@@ -662,6 +672,7 @@ function Subscription() {
                     <Checkbox
                       {...label}
                       defaultChecked
+                      disabled
                       style={{ color: "chartreuse" }}
                     />
                   </span>
@@ -678,6 +689,7 @@ function Subscription() {
                     <Checkbox
                       {...label}
                       defaultChecked
+                      disabled
                       style={{ color: "chartreuse" }}
                     />
                   </span>
@@ -694,6 +706,7 @@ function Subscription() {
                     <Checkbox
                       {...label}
                       defaultChecked
+                      disabled
                       style={{ color: "chartreuse" }}
                     />
                   </span>
@@ -710,6 +723,7 @@ function Subscription() {
                     <Checkbox
                       {...label}
                       defaultChecked
+                      disabled
                       style={{ color: "chartreuse" }}
                     />
                   </span>
@@ -726,6 +740,7 @@ function Subscription() {
                     <Checkbox
                       {...label}
                       defaultChecked
+                      disabled
                       style={{ color: "chartreuse" }}
                     />
                   </span>
@@ -742,6 +757,7 @@ function Subscription() {
                     <Checkbox
                       {...label}
                       defaultChecked
+                      disabled
                       style={{ color: "chartreuse" }}
                     />
                   </span>
