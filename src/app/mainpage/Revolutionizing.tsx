@@ -115,7 +115,7 @@ function Revolutionizing() {
       <Grid
         container
         spacing={1}
-        sx={{ paddingTop: "17px", gap: {sx:"10px",lg:"32px",md:'32px'}, paddingLeft: {lg:"24px",xs:'20px'} }}
+        sx={{ paddingTop: "17px", gap: {sx:"10px",lg:"32px",md:'32px'}, paddingLeft: {lg:"45px",xs:'20px',xl:'85px'},paddingRight: {xs:'20px'}}}
       >
         <Grid
           item
@@ -135,6 +135,7 @@ function Revolutionizing() {
                   paddingBottom:{ lg:"49px",xs:'11px'},
                   // width:'100px',
                   // background:'red',
+
                 }}
               >
                 <Box
@@ -405,7 +406,10 @@ function Revolutionizing() {
       <Grid
         container
         spacing={1}
-        sx={{ paddingTop: "29px",gap: {sx:"10px",lg:"32px",md:'32px'}, paddingLeft: {lg:"24px",xs:'20px'}}}
+        sx={{ paddingTop: "29px",gap: {sx:"10px",lg:"32px",md:'32px'}, 
+        // paddingLeft: {lg:"24px",xs:'20px'}
+         paddingLeft: {lg:"45px",xs:'20px',xl:'85px'}, paddingRight: {xs:'20px'}
+        }}
       >
         <Grid
           item
