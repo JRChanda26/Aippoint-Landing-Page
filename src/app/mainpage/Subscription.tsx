@@ -232,7 +232,7 @@ function Subscription() {
         }}
       >
         
-        <Grid item  lg={3.4} md={3} sx={{flexGrow:{lg: 1},border: '0.5px solid #000000',borderRadius:'24px',
+        <Grid item  lg={3.4} md={3} sx={{flexGrow:{lg: 1},border: activeIndex === 1?'0.5px solid #0083C3':'0.5px solid #000000',borderRadius:'24px',
           width:dimensions.width,
           height:dimensions.height}} 
           // onClick={handleSubscription1}
@@ -409,7 +409,7 @@ function Subscription() {
             </div>
           ))}
         </Grid>
-        <Grid item lg={3.4} md={3} sx={{fflexGrow:{lg: 1},border: '0.5px solid #000000',borderRadius:'24px',width:dimensions.width,height:dimensions.height}} 
+        <Grid item lg={3.4} md={3} sx={{fflexGrow:{lg: 1},border: activeIndex === 2?'0.5px solid #0083C3':'0.5px solid #000000',borderRadius:'24px',width:dimensions.width,height:dimensions.height}} 
         // onClick={handleSubscription2}
         
         >
@@ -610,7 +610,7 @@ function Subscription() {
             </div>
           ))}
         </Grid>
-        <Grid item lg={3.4} md={3} sx={{flexGrow:{lg: 1},border: '0.5px solid #000000',borderRadius:'24px',width:dimensions.width,height:dimensions.height}}
+        <Grid item lg={3.4} md={3} sx={{flexGrow:{lg: 1},border: activeIndex === 3?'0.5px solid #0083C3':'0.5px solid #000000',borderRadius:'24px',width:dimensions.width,height:dimensions.height}}
         //  onClick={handleSubscription3}
          >
           {subscriptionPage.map((post: any) => (
