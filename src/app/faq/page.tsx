@@ -69,7 +69,8 @@ function Faq() {
 
   const [clicked, setClicked] = useState<number | null>(0);
   const handleColor = (index: number) => {
-    setClicked(index);
+    setClicked(clicked === index ? null : index);
+    // setClicked(index);
   };
 
   const heading: React.CSSProperties = {
@@ -226,6 +227,7 @@ function Faq() {
                       fontWeight: 400,
                       fontFamily: "Poppins",
                       letterSpacing: "0%",
+                      textAlign: "left",
                     }}
                   >
                     {faq.answer}
