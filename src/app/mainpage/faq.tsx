@@ -65,9 +65,10 @@ function Faq() {
     },
   ];
 
-  const [clicked, setClicked] = useState<number | null>(0);
+  const [clicked, setClicked] = useState<number | null>();
   const handleColor = (index: number) => {
-    setClicked(index);
+    setClicked(clicked === index ? null : index);
+    // setClicked(index);
   };
 
   const heading: React.CSSProperties = {
@@ -176,9 +177,10 @@ function Faq() {
             <div key={index}>
               <Accordion
                 expanded={clicked === index}
-                style={{
+                sx={{
                   backgroundColor: "transparent",
                   boxShadow: "none",
+                  border: 'none',           
                 }}
               >
                 <AccordionSummary
