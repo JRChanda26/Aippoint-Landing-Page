@@ -150,7 +150,7 @@ function Ourvalueproposition() {
               </div>
               <Box sx={{ 
                 // paddingTop: "50px",
-                paddingTop:isSmallScreen?'25px':'0px',
+                paddingTop:isSmallScreen?'25px':'20px',
                  paddingLeft: "29px" }}>
                 <Typography
                   sx={{
@@ -174,7 +174,7 @@ function Ourvalueproposition() {
               </Box>
               <div style={{ 
                 // paddingTop: "50px",
-                paddingTop:isSmallScreen?'25px':'0px',
+                paddingTop:isSmallScreen?'25px':'20px',
                  paddingLeft: "29px" }}>
                 <Typography
                   sx={{
@@ -204,7 +204,7 @@ function Ourvalueproposition() {
                   // paddingTop: "50px",
                   paddingLeft: "29px",
                   // paddingBottom: "38px",
-                  paddingTop:isSmallScreen?'25px':'0px',
+                  paddingTop:isSmallScreen?'25px':'20px',
                 }}
               >
                 <Typography
@@ -214,6 +214,7 @@ function Ourvalueproposition() {
                     // fontSize: "45px",
                     // lineHeight: "67.5px",
                     fontSize: { xs: "28px", sm: "32px",md:"32px", lg: "36px", xl: "45px" },
+                    paddingBottom: "38px",
                     lineHeight: {
                       xs: "42px",
                       sm: "48px",
@@ -271,7 +272,7 @@ function Ourvalueproposition() {
               </div>
               <div style={{
                 //  paddingTop: "41px",
-                  paddingLeft: "29px",paddingTop:isSmallScreen?'25px':'0px', }}>
+                  paddingLeft: "29px",paddingTop:isSmallScreen?'25px':'20px', }}>
                 <Typography
                   sx={{
                     fontFamily: "Poppins",
@@ -294,7 +295,7 @@ function Ourvalueproposition() {
               </div>
               <div style={{ 
                 // paddingTop: "41px", 
-                paddingLeft: "29px",paddingTop:isSmallScreen?'25px':'0px', }}>
+                paddingLeft: "29px",paddingTop:isSmallScreen?'25px':'20px', }}>
                 <Typography
                   sx={{
                     fontFamily: "Poppins",
@@ -323,7 +324,7 @@ function Ourvalueproposition() {
                   // paddingTop: "50px",
                   paddingLeft: "29px",
                   // paddingBottom: "38px",
-                  paddingTop:isSmallScreen?'25px':'0px',
+                  paddingTop:isSmallScreen?'25px':'20px',
                 }}
               >
                 <Typography
@@ -332,6 +333,7 @@ function Ourvalueproposition() {
                     fontWeight: 700,
                     // fontSize: "45px",
                     // lineHeight: "67.5px",
+                    paddingBottom: "38px",
                     fontSize: { xs: "28px", sm: "32px",md:"32px", lg: "36px", xl: "45px" },
                     lineHeight: {
                       xs: "42px",
@@ -391,7 +393,7 @@ function Ourvalueproposition() {
               </div>
               <div style={{
                 //  paddingTop: "41px", 
-                 paddingLeft: "29px" ,paddingTop:isSmallScreen?'25px':'0px',}}>
+                 paddingLeft: "29px" ,paddingTop:isSmallScreen?'25px':'20px',}}>
                 <Typography
                   sx={{
                     fontFamily: "Poppins",
@@ -414,7 +416,7 @@ function Ourvalueproposition() {
               </div>
               <div style={{
                 //  paddingTop: "41px", 
-                paddingTop:isSmallScreen?'25px':'0px',
+                paddingTop:isSmallScreen?'25px':'20px',
                  paddingLeft: "29px" }}>
                 <Typography
                   sx={{
@@ -443,8 +445,8 @@ function Ourvalueproposition() {
                   gap: "59px",
                   // paddingTop: "50px",
                   paddingLeft: "29px",
-                  // paddingBottom: "38px",
-                  paddingTop:isSmallScreen?'25px':'0px',
+                  paddingBottom: "38px",
+                  paddingTop:isSmallScreen?'25px':'20px',
                 }}
               >
                 <Typography
@@ -505,7 +507,7 @@ function Ourvalueproposition() {
               </div>
               <div style={{
                 //  paddingTop: "50px", 
-                paddingTop:isSmallScreen?'25px':'0px',
+                paddingTop:isSmallScreen?'25px':'20px',
                  paddingLeft: "29px" }}>
                 <Typography
                   sx={{
@@ -529,7 +531,7 @@ function Ourvalueproposition() {
               </div>
               <div style={{
                 //  paddingTop: "50px",
-                paddingTop:isSmallScreen?'25px':'0px',
+                paddingTop:isSmallScreen?'25px':'20px',
                   paddingLeft: "29px" }}>
                 <Typography
                   sx={{
@@ -559,8 +561,8 @@ function Ourvalueproposition() {
                   gap: "57px",
                   // paddingTop: "50px",
                   paddingLeft: "29px",
-                  // paddingBottom: "38px",
-                  paddingTop:isSmallScreen?'25px':'0px',
+                  paddingBottom: "38px",
+                  paddingTop:isSmallScreen?'25px':'20px',
                 }}
               >
                 <Typography
