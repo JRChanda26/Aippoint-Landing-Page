@@ -228,11 +228,14 @@ function Subscription() {
           paddingTop:'32px',
           // paddingLeft:'24px',
           // paddingRight: '24px',
-          gap:{xl:'52px',lg:'14px',sm:'21px',md:'21px',xs:'25px'}
+          gap:{xl:'52px',lg:'14px',sm:'21px',md:'21px',xs:'25px'},
+          '@media (max-width: 1440px)': {
+            gap: '24px', // Adjust the gap for 1440px width
+          }
         }}
       >
         
-        <Grid item lg={3.5} md={3} sx={{border: '0.5px solid #000000',borderRadius:'24px',
+        <Grid item  lg={3.4} md={3} sx={{flexGrow:{lg: 1},border: activeIndex === 1?'0.5px solid #0083C3':'0.5px solid #000000',borderRadius:'24px',
           width:dimensions.width,
           height:dimensions.height}} 
           // onClick={handleSubscription1}
@@ -312,6 +315,7 @@ function Subscription() {
                     <Checkbox
                       {...label}
                       defaultChecked
+                      disabled
                       style={{ color: "chartreuse" }}
                     />
                   </span>
@@ -330,6 +334,7 @@ function Subscription() {
                     <Checkbox
                       {...label}
                       defaultChecked
+                      disabled
                       style={{ color: "chartreuse" }}
                     />
                   </span>
@@ -348,6 +353,7 @@ function Subscription() {
                     <Checkbox
                       {...label}
                       defaultChecked
+                      disabled
                       style={{ color: "chartreuse" }}
                     />
                   </span>
@@ -366,6 +372,7 @@ function Subscription() {
                     <Checkbox
                       {...label}
                       defaultChecked
+                      disabled
                       style={{ color: "chartreuse" }}
                     />
                   </span>
@@ -405,7 +412,7 @@ function Subscription() {
             </div>
           ))}
         </Grid>
-        <Grid item lg={3.5} md={3} sx={{border: '0.5px solid #000000',borderRadius:'24px',width:dimensions.width,height:dimensions.height}} 
+        <Grid item lg={3.4} md={3} sx={{fflexGrow:{lg: 1},border: activeIndex === 2?'0.5px solid #0083C3':'0.5px solid #000000',borderRadius:'24px',width:dimensions.width,height:dimensions.height}} 
         // onClick={handleSubscription2}
         
         >
@@ -479,6 +486,7 @@ function Subscription() {
                     <Checkbox
                       {...label}
                       defaultChecked
+                      disabled
                       style={{ color: "chartreuse" }}
                     />
                   </span>
@@ -495,6 +503,7 @@ function Subscription() {
                     <Checkbox
                       {...label}
                       defaultChecked
+                      disabled
                       style={{ color: "chartreuse" }}
                     />
                   </span>
@@ -511,6 +520,7 @@ function Subscription() {
                     <Checkbox
                       {...label}
                       defaultChecked
+                      disabled
                       style={{ color: "chartreuse" }}
                     />
                   </span>
@@ -527,6 +537,7 @@ function Subscription() {
                     <Checkbox
                       {...label}
                       defaultChecked
+                      disabled
                       style={{ color: "chartreuse" }}
                     />
                   </span>
@@ -543,6 +554,7 @@ function Subscription() {
                     <Checkbox
                       {...label}
                       defaultChecked
+                      disabled
                       style={{ color: "chartreuse" }}
                     />
                   </span>
@@ -559,6 +571,7 @@ function Subscription() {
                     <Checkbox
                       {...label}
                       defaultChecked
+                      disabled
                       style={{ color: "chartreuse" }}
                     />
                   </span>
@@ -591,7 +604,7 @@ function Subscription() {
                       marginTop:{xs:'96px',sm:'20px',md:'168px',lg:'168px',xl:'209px'},
                     }}
                   >
-                    {post.data.try_for_free}
+                    {post.data.try_now}
                     <span>
                       <ArrowForwardIcon />
                     </span>
@@ -600,7 +613,7 @@ function Subscription() {
             </div>
           ))}
         </Grid>
-        <Grid item lg={3.5} md={3} sx={{border: '0.5px solid #000000',borderRadius:'24px',width:dimensions.width,height:dimensions.height}}
+        <Grid item lg={3.4} md={3} sx={{flexGrow:{lg: 1},border: activeIndex === 3?'0.5px solid #0083C3':'0.5px solid #000000',borderRadius:'24px',width:dimensions.width,height:dimensions.height}}
         //  onClick={handleSubscription3}
          >
           {subscriptionPage.map((post: any) => (
@@ -665,6 +678,7 @@ function Subscription() {
                     <Checkbox
                       {...label}
                       defaultChecked
+                      disabled
                       style={{ color: "chartreuse" }}
                     />
                   </span>
@@ -681,6 +695,7 @@ function Subscription() {
                     <Checkbox
                       {...label}
                       defaultChecked
+                      disabled
                       style={{ color: "chartreuse" }}
                     />
                   </span>
@@ -697,6 +712,7 @@ function Subscription() {
                     <Checkbox
                       {...label}
                       defaultChecked
+                      disabled
                       style={{ color: "chartreuse" }}
                     />
                   </span>
@@ -713,6 +729,7 @@ function Subscription() {
                     <Checkbox
                       {...label}
                       defaultChecked
+                      disabled
                       style={{ color: "chartreuse" }}
                     />
                   </span>
@@ -729,6 +746,7 @@ function Subscription() {
                     <Checkbox
                       {...label}
                       defaultChecked
+                      disabled
                       style={{ color: "chartreuse" }}
                     />
                   </span>
@@ -745,6 +763,7 @@ function Subscription() {
                     <Checkbox
                       {...label}
                       defaultChecked
+                      disabled
                       style={{ color: "chartreuse" }}
                     />
                   </span>
