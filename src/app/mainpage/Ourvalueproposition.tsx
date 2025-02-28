@@ -119,7 +119,7 @@ function Ourvalueproposition() {
         spacing={0}
         sx={{ gap: "28px", paddingTop: "25px",display:'flex',justifyContent:'center' }}
       >
-        <Grid item lg={7} sx={{ borderRadius: "24px", background: "#FAFAFA" }}>
+        <Grid item lg={7} xs={11} sx={{ borderRadius: "24px", background: "#FAFAFA" ,marginRight:isSmallScreen?'20px':''}}>
           {ourvaluePage.map((post: any) => (
             <div key={post.id}>
               <div style={{ paddingTop: "38px", paddingLeft: "29px" }}>
@@ -243,7 +243,7 @@ function Ourvalueproposition() {
             </div>
           ))}
         </Grid>
-        <Grid item lg={4} sx={{ borderRadius: "24px", background: "#FAFAFA" }}>
+        <Grid item lg={4} xs={11} sx={{ borderRadius: "24px", background: "#FAFAFA" ,marginRight:isSmallScreen?'20px':''}}>
           {ourvaluePage.map((post: any) => (
             <div key={post.id}>
               <div style={{ paddingTop: "38px", paddingLeft: "29px" }}>
@@ -370,7 +370,7 @@ function Ourvalueproposition() {
         spacing={0}
         sx={{ gap: "28px", paddingTop: "25px", display:'flex',justifyContent:'center'}}
       >
-        <Grid item lg={4} sx={{ borderRadius: "24px", background: "#FAFAFA" }}>
+        <Grid item lg={4} xs={11} sx={{ borderRadius: "24px", background: "#FAFAFA" ,marginRight:isSmallScreen?'20px':''}}>
           {ourvaluePage.map((post: any) => (
             <div key={post.id}>
               <div style={{ paddingTop: "38px", paddingLeft: "29px" }}>
@@ -484,7 +484,7 @@ function Ourvalueproposition() {
             </div>
           ))}
         </Grid>
-        <Grid item lg={7} sx={{ borderRadius: "24px", background: "#FAFAFA" }}>
+        <Grid item lg={7} xs={11} sx={{ borderRadius: "24px", background: "#FAFAFA" ,marginRight:isSmallScreen?'20px':''}}>
           {ourvaluePage.map((post: any) => (
             <div key={post.id}>
               <div style={{ paddingTop: "38px", paddingLeft: "29px" }}>
