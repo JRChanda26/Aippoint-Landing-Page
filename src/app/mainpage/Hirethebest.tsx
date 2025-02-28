@@ -152,7 +152,7 @@ function Hire() {
             </div>
           ))}
         </Grid>
-        <Grid item lg={6.2}>
+        <Grid item lg={6.2} sx={{paddingLeft:isSmallScreen?'20px':'0px' ,}}>
           {hirePage.map((post: any) => (
             <div key={post.id}>
               <div style={{ paddingTop: "40px",paddingBottom:'25px',paddingRight:'33.29px' }}>
