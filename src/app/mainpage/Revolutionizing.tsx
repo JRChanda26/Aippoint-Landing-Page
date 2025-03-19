@@ -14,6 +14,19 @@ function Revolutionizing() {
     fetchData();
   }, []);
   const isSmallScreen = useMediaQuery("(max-width:440px)");
+  const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
+
+  useEffect(() => {
+    const checkDarkMode = () => {
+      const darkModeQuery = window.matchMedia("(prefers-color-scheme: dark)");
+      setIsDarkMode(darkModeQuery.matches);
+      darkModeQuery.addEventListener("change", (e) => {
+        setIsDarkMode(e.matches);
+      });
+    };
+
+    checkDarkMode();
+  }, []);
   return (
     <>
        <div style={{paddingTop:'75px'}}>
@@ -101,7 +114,8 @@ function Revolutionizing() {
                     lg: "24px",
                     xl: "27px",
                   },
-                  color: "#0A0A0A",
+                  // color: "#0A0A0A",
+                  color:isDarkMode?'#fff':'#0A0A0A',
                   paddingLeft:isSmallScreen?'20px':'0px',
                   // paddingRight:{sm:'30px'},
                   textAlign:'center'
@@ -122,7 +136,7 @@ function Revolutionizing() {
           item
           lg={2.7} 
           xs={6}
-          sx={{ borderRadius: "24px", background: "#FAFAFA", }}
+          sx={{ borderRadius: "24px", background: isDarkMode?'#1C1C1C':"#FAFAFA", }}
           
         >
           {revolutionizingPage.map((post: any) => (
@@ -141,7 +155,7 @@ function Revolutionizing() {
               >
                 <Box
                   sx={{
-                    background: "#F4F4F4",
+                    background:isDarkMode?'#0A0A0A': "#F4F4F4",
                     padding: {lg:"28px 45px",xs:'25px 33px 25px 33px'},
                     borderRadius: "12px",
                   }}
@@ -194,7 +208,7 @@ function Revolutionizing() {
           item
           lg={2.7}
           xs={6}
-          sx={{ borderRadius: "24px", background: "#FAFAFA" }}
+          sx={{ borderRadius: "24px", background: isDarkMode?'#1C1C1C':"#FAFAFA"}}
         >
           {revolutionizingPage.map((post: any) => (
             <div key={post.id} style={{textAlign:'center'}}>
@@ -211,7 +225,7 @@ function Revolutionizing() {
               >
                  <Box
                   sx={{
-                    background: "#F4F4F4",
+                    background:isDarkMode?'#0A0A0A': "#F4F4F4",
                     // padding: "28px 45px",
                     padding: {lg:"28px 45px",xs:'25px 33px 25px 33px'},
                     borderRadius: "12px",
@@ -265,7 +279,7 @@ function Revolutionizing() {
           item
           lg={2.7}
           xs={6}
-          sx={{ borderRadius: "24px", background: "#FAFAFA" }}
+          sx={{ borderRadius: "24px", background: isDarkMode?'#1C1C1C':"#FAFAFA"}}
         >
           {revolutionizingPage.map((post: any) => (
             <div key={post.id} style={{textAlign:'center'}}>
@@ -282,7 +296,7 @@ function Revolutionizing() {
               >
                 <Box
                   sx={{
-                    background: "#F4F4F4",
+                    background:isDarkMode?'#0A0A0A': "#F4F4F4",
                     // padding: "28px 45px",
                     padding: {lg:"28px 45px",xs:'25px 33px 25px 33px'},
                     borderRadius: "12px",
@@ -336,7 +350,7 @@ function Revolutionizing() {
           item
           lg={2.7}
           xs={6}
-          sx={{ borderRadius: "24px", background: "#FAFAFA" }}
+          sx={{ borderRadius: "24px", background: isDarkMode?'#1C1C1C':"#FAFAFA"}}
         >
           {revolutionizingPage.map((post: any) => (
             <div key={post.id} style={{textAlign:'center'}}>
@@ -353,7 +367,7 @@ function Revolutionizing() {
               >
                 <Box
                   sx={{
-                    background: "#F4F4F4",
+                    background:isDarkMode?'#0A0A0A': "#F4F4F4",
                     // padding: "28px 45px",
                     padding: {lg:"28px 45px",xs:'25px 33px 25px 33px'},
                     borderRadius: "12px",
@@ -416,7 +430,7 @@ function Revolutionizing() {
           item
           lg={2.7}
           xs={6}
-          sx={{ borderRadius: "24px", background: "#FAFAFA" }}
+          sx={{ borderRadius: "24px", background: isDarkMode?'#1C1C1C':"#FAFAFA"}}
         >
           {revolutionizingPage.map((post: any) => (
             <div key={post.id} style={{textAlign:'center'}}>
@@ -433,7 +447,7 @@ function Revolutionizing() {
               >
                 <Box
                   sx={{
-                    background: "#F4F4F4",
+                    background:isDarkMode?'#0A0A0A': "#F4F4F4",
                     // padding: "28px 45px",
                     padding: {lg:"28px 45px",xs:'25px 33px 25px 33px'},
                     borderRadius: "12px",
@@ -497,7 +511,7 @@ function Revolutionizing() {
           item
           lg={2.7}
           xs={6}
-          sx={{ borderRadius: "24px", background: "#FAFAFA" }}
+          sx={{ borderRadius: "24px", background: isDarkMode?'#1C1C1C':"#FAFAFA"}}
         >
           {revolutionizingPage.map((post: any) => (
             <div key={post.id} style={{textAlign:'center'}}>
@@ -515,7 +529,7 @@ function Revolutionizing() {
               >
                 <Box
                   sx={{
-                    background: "#F4F4F4",
+                    background:isDarkMode?'#0A0A0A': "#F4F4F4",
                     // padding: "28px 45px",
                     padding: {lg:"28px 45px",xs:'25px 33px 25px 33px'},
                     borderRadius: "12px",
@@ -572,7 +586,7 @@ function Revolutionizing() {
           item
           lg={2.7}
           xs={6}
-          sx={{ borderRadius: "24px", background: "#FAFAFA" }}
+          sx={{ borderRadius: "24px", background: isDarkMode?'#1C1C1C':"#FAFAFA"}}
         >
           {revolutionizingPage.map((post: any) => (
             <div key={post.id} style={{textAlign:'center'}}>
@@ -589,7 +603,7 @@ function Revolutionizing() {
               >
                 <Box
                   sx={{
-                    background: "#F4F4F4",
+                    background:isDarkMode?'#0A0A0A': "#F4F4F4",
                     // padding: "28px 45px",
                     padding: {lg:"28px 45px",xs:'25px 33px 25px 33px'},
                     borderRadius: "12px",
@@ -647,7 +661,7 @@ function Revolutionizing() {
           item
           lg={2.7}
           xs={6}
-          sx={{ borderRadius: "24px", background: "#FAFAFA" }}
+          sx={{ borderRadius: "24px", background: isDarkMode?'#1C1C1C':"#FAFAFA"}}
         >
           {revolutionizingPage.map((post: any) => (
             <div key={post.id} style={{textAlign:'center'}}>
@@ -664,7 +678,7 @@ function Revolutionizing() {
               >
                 <Box
                   sx={{
-                    background: "#F4F4F4",
+                    background:isDarkMode?'#0A0A0A': "#F4F4F4",
                     // padding: "28px 45px",
                     padding: {lg:"28px 45px",xs:'25px 33px 25px 33px'},
                     borderRadius: "12px",

@@ -90,6 +90,19 @@ function Faq() {
     paddingTop: "25px",
   };
   const isSmallScreen = useMediaQuery("(max-width:440px)");
+  const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
+
+  useEffect(() => {
+    const checkDarkMode = () => {
+      const darkModeQuery = window.matchMedia("(prefers-color-scheme: dark)");
+      setIsDarkMode(darkModeQuery.matches);
+      darkModeQuery.addEventListener("change", (e) => {
+        setIsDarkMode(e.matches);
+      });
+    };
+
+    checkDarkMode();
+  }, []);
 
   return (
     <div style={{ paddingTop: "50px", textAlign: "center" }}>
@@ -170,7 +183,8 @@ function Faq() {
           sx={{
             marginTop: "50px",
             paddingRight:'20px',
-            paddingLeft:'20px'
+            paddingLeft:'20px',
+            background:isDarkMode?'#1C1C1C': ''
           }}
         >
           {faqs.slice(0, 10).map((faq, index) => (
@@ -189,7 +203,8 @@ function Faq() {
                       onClick={() => handleColor(index)}
                       sx={{
                         //   color: clicked === index ? "#3D8C6E" : "#292F36",
-                        color: "#0A0A0A",
+                        // color: "#0A0A0A",
+                        color:isDarkMode?'#fff':'#0A0A0A'
                       }}
                     />
                   }
@@ -198,7 +213,8 @@ function Faq() {
                     onClick={() => handleColor(index)}
                     sx={{
                       // color: clicked === index ? "#3D8C6E" : "#292F36",
-                      color: "#0A0A0A",
+                      // color: "#0A0A0A",
+                      color:isDarkMode?'#fff':'#0A0A0A',
                       // lineHeight: "27px",
                       // fontSize: "18px",
                       fontSize: {
