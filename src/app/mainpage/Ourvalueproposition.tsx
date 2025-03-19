@@ -14,6 +14,19 @@ function Ourvalueproposition() {
     fetchData();
   }, []);
   const isSmallScreen = useMediaQuery("(max-width:440px)");
+  const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
+
+  useEffect(() => {
+    const checkDarkMode = () => {
+      const darkModeQuery = window.matchMedia("(prefers-color-scheme: dark)");
+      setIsDarkMode(darkModeQuery.matches);
+      darkModeQuery.addEventListener("change", (e) => {
+        setIsDarkMode(e.matches);
+      });
+    };
+
+    checkDarkMode();
+  }, []);
 
   return (
     <div style={{paddingLeft:isSmallScreen?'20px':'0px'}}>
@@ -105,7 +118,8 @@ function Ourvalueproposition() {
                     lg: "24px",
                     xl: "27px",
                   },
-                  color: "#0A0A0A",
+                  // color: "#0A0A0A",
+                  color:isDarkMode?'#fff':'#0A0A0A'
                 }}
               >
                 {post.data.top_content}
@@ -119,7 +133,7 @@ function Ourvalueproposition() {
         spacing={0}
         sx={{ gap: "28px", paddingTop: "25px",display:'flex',justifyContent:'center' }}
       >
-        <Grid item lg={7} xs={11} sx={{ borderRadius: "24px", background: "#FAFAFA" ,marginRight:isSmallScreen?'20px':''}}>
+        <Grid item lg={7} xs={11} sx={{ borderRadius: "24px", background: isDarkMode?'#1C1C1C':"#FAFAFA" ,marginRight:isSmallScreen?'20px':''}}>
           {ourvaluePage.map((post: any) => (
             <div key={post.id}>
               <div style={{ paddingTop: "38px", paddingLeft: "29px" }}>
@@ -138,7 +152,8 @@ function Ourvalueproposition() {
                       xl: "24px",
                     },
                     color: "#0083C3",
-                    border: "0.5px solid #0A0A0A",
+                    border: isDarkMode?'0.5px solid #0083C3':"0.5px solid #0A0A0A",
+                    background:isDarkMode?'#1C1C1C':'',
                     borderRadius: "100px",
                     padding: "20px 20px",
                     width: "220px",
@@ -166,7 +181,9 @@ function Ourvalueproposition() {
                       lg: "54px",
                       xl: "67.5px",
                     },
-                    color: "#0A0A0A",
+                    // color: "#0A0A0A",
+                    color:isDarkMode?'#fff':'#0A0A0A'
+
                   }}
                 >
                   {post.data.faster_hiring_heading}
@@ -190,7 +207,8 @@ function Ourvalueproposition() {
                       lg: "24px",
                       xl: "27px",
                     },
-                    color: "#0A0A0A",
+                    // color: "#0A0A0A",
+                    color:isDarkMode?'#fff':'#0A0A0A',
                     paddingRight: {lg:"233px",md:'233px',xl:'233px',xs:'144px'},
                   }}
                 >
@@ -243,7 +261,7 @@ function Ourvalueproposition() {
             </div>
           ))}
         </Grid>
-        <Grid item lg={4} xs={11} sx={{ borderRadius: "24px", background: "#FAFAFA" ,marginRight:isSmallScreen?'20px':''}}>
+        <Grid item lg={4} xs={11} sx={{ borderRadius: "24px", background: isDarkMode?'#1C1C1C':"#FAFAFA" ,marginRight:isSmallScreen?'20px':''}}>
           {ourvaluePage.map((post: any) => (
             <div key={post.id}>
               <div style={{ paddingTop: "38px", paddingLeft: "29px" }}>
@@ -260,7 +278,7 @@ function Ourvalueproposition() {
                       xl: "24px",
                     },
                     color: "#0083C3",
-                    border: "0.5px solid #0A0A0A",
+                    border: isDarkMode?'0.5px solid #0083C3':"0.5px solid #0A0A0A",
                     borderRadius: "100px",
                     padding: "20px 20px",
                     width: "220px",
@@ -287,7 +305,8 @@ function Ourvalueproposition() {
                       lg: "54px",
                       xl: "67.5px",
                     },
-                    color: "#0A0A0A",
+                    // color: "#0A0A0A",
+                    color:isDarkMode?'#fff':'#0A0A0A'
                   }}
                 >
                   {post.data.smart_matching_heading}
@@ -310,7 +329,8 @@ function Ourvalueproposition() {
                       lg: "24px",
                       xl: "27px",
                     },
-                    color: "#0A0A0A",
+                    // color: "#0A0A0A",
+                    color:isDarkMode?'#fff':'#0A0A0A',
                     paddingRight: "37px",
                   }}
                 >
@@ -370,7 +390,7 @@ function Ourvalueproposition() {
         spacing={0}
         sx={{ gap: "28px", paddingTop: "25px", display:'flex',justifyContent:'center'}}
       >
-        <Grid item lg={4} xs={11} sx={{ borderRadius: "24px", background: "#FAFAFA" ,marginRight:isSmallScreen?'20px':''}}>
+        <Grid item lg={4} xs={11} sx={{ borderRadius: "24px", background: isDarkMode?'#1C1C1C':"#FAFAFA" ,marginRight:isSmallScreen?'20px':''}}>
           {ourvaluePage.map((post: any) => (
             <div key={post.id}>
               <div style={{ paddingTop: "38px", paddingLeft: "29px" }}>
@@ -381,7 +401,7 @@ function Ourvalueproposition() {
                     fontSize: "16px",
                     lineHeight: "24px",
                     color: "#0083C3",
-                    border: "0.5px solid #0A0A0A",
+                    border: isDarkMode?'0.5px solid #0083C3':"0.5px solid #0A0A0A",
                     borderRadius: "100px",
                     padding: "20px 20px",
                     width: "220px",
@@ -408,7 +428,8 @@ function Ourvalueproposition() {
                       lg: "54px",
                       xl: "67.5px",
                     },
-                    color: "#0A0A0A",
+                    // color: "#0A0A0A",
+                    color:isDarkMode?'#fff':'#0A0A0A',
                   }}
                 >
                   {post.data.cost_efficient_heading}
@@ -432,7 +453,8 @@ function Ourvalueproposition() {
                       lg: "24px",
                       xl: "27px",
                     },
-                    color: "#0A0A0A",
+                    // color: "#0A0A0A",
+                    color:isDarkMode?'#fff':'#0A0A0A',
                     paddingRight: "37px",
                   }}
                 >
@@ -484,7 +506,7 @@ function Ourvalueproposition() {
             </div>
           ))}
         </Grid>
-        <Grid item lg={7} xs={11} sx={{ borderRadius: "24px", background: "#FAFAFA" ,marginRight:isSmallScreen?'20px':''}}>
+        <Grid item lg={7} xs={11} sx={{ borderRadius: "24px", background: isDarkMode?'#1C1C1C':"#FAFAFA",marginRight:isSmallScreen?'20px':''}}>
           {ourvaluePage.map((post: any) => (
             <div key={post.id}>
               <div style={{ paddingTop: "38px", paddingLeft: "29px" }}>
@@ -495,7 +517,7 @@ function Ourvalueproposition() {
                     fontSize: "16px",
                     lineHeight: "24px",
                     color: "#0083C3",
-                    border: "0.5px solid #0A0A0A",
+                    border: isDarkMode?'0.5px solid #0083C3':"0.5px solid #0A0A0A",
                     borderRadius: "100px",
                     padding: "20px 20px",
                     width: "220px",
@@ -523,7 +545,8 @@ function Ourvalueproposition() {
                       lg: "54px",
                       xl: "67.5px",
                     },
-                    color: "#0A0A0A",
+                    // color: "#0A0A0A",
+                    color:isDarkMode?'#fff':'#0A0A0A',
                   }}
                 >
                   {post.data.ai_assistance_heading}
@@ -547,7 +570,8 @@ function Ourvalueproposition() {
                       lg: "24px",
                       xl: "27px",
                     },
-                    color: "#0A0A0A",
+                    // color: "#0A0A0A",
+                    color:isDarkMode?'#fff':'#0A0A0A',
                     // paddingRight: "233px",
                     paddingRight: {lg:"233px",md:'233px',xl:'233px',xs:'144px'},
                   }}

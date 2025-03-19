@@ -45,6 +45,19 @@ function Subscription() {
   const handlePricingNavigation = () => {
     router.push("/contact");
   };
+  const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
+
+  useEffect(() => {
+    const checkDarkMode = () => {
+      const darkModeQuery = window.matchMedia("(prefers-color-scheme: dark)");
+      setIsDarkMode(darkModeQuery.matches);
+      darkModeQuery.addEventListener("change", (e) => {
+        setIsDarkMode(e.matches);
+      });
+    };
+
+    checkDarkMode();
+  }, []);
   
   return (
     // <>
@@ -870,7 +883,8 @@ function Subscription() {
                     lg: "24px",
                     xl: "27px",
                   },
-                  color: "#0A0A0A",
+                  // color: "#0A0A0A",
+                  color:isDarkMode?'#fff':'#0A0A0A',
                   paddingLeft:isSmallScreen?'20px':'0px',
                   textAlign:'center',
                   paddingTop:'40px'
@@ -879,7 +893,7 @@ function Subscription() {
       For more details and a personalized quote, please contact us.
       </Typography>
     <div style={{display:'flex',justifyContent:'center',alignItems:'center',textAlign:'center',paddingTop:'10px'}}>
-      <Button style={{textTransform:'none',padding:'10px',color:'#0A0A0A'}} onClick={handlePricingNavigation}>Contact Us<span style={{paddingLeft:'5px'}}><ArrowForwardIcon/></span></Button>
+      <Button style={{textTransform:'none',padding:'10px',color:isDarkMode?'#fff':'#0A0A0A'}} onClick={handlePricingNavigation}>Contact Us<span style={{paddingLeft:'5px'}}><ArrowForwardIcon/></span></Button>
     </div>
     </>
   );
