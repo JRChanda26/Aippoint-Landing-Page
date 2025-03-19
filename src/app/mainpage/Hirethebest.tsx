@@ -29,6 +29,19 @@ function Hire() {
   };
 
   const dimensions = getDimensions();
+  const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
+
+  useEffect(() => {
+    const checkDarkMode = () => {
+      const darkModeQuery = window.matchMedia("(prefers-color-scheme: dark)");
+      setIsDarkMode(darkModeQuery.matches);
+      darkModeQuery.addEventListener("change", (e) => {
+        setIsDarkMode(e.matches);
+      });
+    };
+
+    checkDarkMode();
+  }, []);
 
   return (
     <>
@@ -76,7 +89,8 @@ function Hire() {
                       lg: "24px",
                       xl: "27px",
                     },
-                    color: "#0A0A0A",
+                    // color: "#0A0A0A",
+                    color:isDarkMode?'#fff':'#0A0A0A'
                   }}
                 >
                   {post.data.content}
@@ -128,9 +142,10 @@ function Hire() {
                     sx={{
                       textTransform: "none",
                       borderRadius: "12px",
-                      color: "#0A0A0A",
+                      // color: "#0A0A0A",
+                      border: isDarkMode?'1px solid #FFFFFF':'1px solid #0A0A0A',
+                    color:isDarkMode?'#fff':'#0A0A0A',
                       width:isSmallScreen?'100%':'auto',
-                      border: "1px solid #0A0A0A",
                       // padding: "18px 38px 18px 38px",
                       padding:{lg:'18px 38px 18px 38px', xs:'18px 134px 18px 133px'},
                       fontWeight:500,

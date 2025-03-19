@@ -44,6 +44,19 @@ function Header() {
   const handleFaqNavigation = () => {
     router.push("/faq");
   };
+  const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
+
+  useEffect(() => {
+    const checkDarkMode = () => {
+      const darkModeQuery = window.matchMedia("(prefers-color-scheme: dark)");
+      setIsDarkMode(darkModeQuery.matches);
+      darkModeQuery.addEventListener("change", (e) => {
+        setIsDarkMode(e.matches);
+      });
+    };
+
+    checkDarkMode();
+  }, []);
  
   return (
     <>
@@ -94,7 +107,8 @@ function Header() {
                       fontSize: "16px",
                       lineHeight: "24px",
                       paddingBottom:'10px',
-                      color:'#0A0A0A'
+                      // color:'#0A0A0A'
+                      color:isDarkMode?'#fff':'#0A0A0A'
                     }}
                     onClick={handleNavigation}
                   >
@@ -107,7 +121,8 @@ function Header() {
                       fontSize: "16px",
                       lineHeight: "24px",
                        paddingBottom:'10px',
-                       color:'#0A0A0A'
+                      //  color:'#0A0A0A'
+                      color:isDarkMode?'#fff':'#0A0A0A'
                     }}
                     onClick={handleFeatureNavigation}
                   >
@@ -120,7 +135,8 @@ function Header() {
                       fontSize: "16px",
                       lineHeight: "24px",
                        paddingBottom:'10px',
-                       color:'#0A0A0A'
+                      //  color:'#0A0A0A'
+                      color:isDarkMode?'#fff':'#0A0A0A'
                     }}
                     onClick={handlePricingNavigation}
                   >
@@ -133,7 +149,8 @@ function Header() {
                       fontSize: "16px",
                       lineHeight: "24px",
                        paddingBottom:'10px',
-                       color:'#0A0A0A'
+                      //  color:'#0A0A0A'
+                      color:isDarkMode?'#fff':'#0A0A0A'
                     }}
                     onClick={handleFaqNavigation}
                   >
@@ -146,7 +163,8 @@ function Header() {
                       fontSize: "16px",
                       lineHeight: "24px",
                        paddingBottom:'10px',
-                       color:'#0A0A0A'
+                      //  color:'#0A0A0A'
+                      color:isDarkMode?'#fff':'#0A0A0A'
                     }}
                     onClick={handleContactNavigation}
                   >
@@ -197,7 +215,8 @@ function Header() {
                     fontWeight: 300,
                     fontSize: "16px",
                     lineHeight: "24px",
-                    color:'#0A0A0A'
+                    // color:'#0A0A0A'
+                    color:isDarkMode?'#fff':'#0A0A0A'
                   }}
                   onClick={handleNavigation}
                 >
@@ -209,7 +228,8 @@ function Header() {
                     fontWeight: 300,
                     fontSize: "16px",
                     lineHeight: "24px",
-                    color:'#0A0A0A'
+                    // color:'#0A0A0A',
+                    color:isDarkMode?'#fff':'#0A0A0A'
                   }}
                   onClick={handleFeatureNavigation}
                 >
@@ -221,7 +241,8 @@ function Header() {
                     fontWeight: 300,
                     fontSize: "16px",
                     lineHeight: "24px",
-                    color:'#0A0A0A'
+                    // color:'#0A0A0A'
+                    color:isDarkMode?'#fff':'#0A0A0A'
                   }}
                   onClick={handlePricingNavigation}
                 >
@@ -233,7 +254,8 @@ function Header() {
                     fontWeight: 300,
                     fontSize: "16px",
                     lineHeight: "24px",
-                    color:'#0A0A0A'
+                    // color:'#0A0A0A'
+                    color:isDarkMode?'#fff':'#0A0A0A'
                   }}
                   onClick={handleFaqNavigation}
                 >
@@ -245,7 +267,8 @@ function Header() {
                     fontWeight: 300,
                     fontSize: "16px",
                     lineHeight: "24px",
-                    color:'#0A0A0A'
+                    // color:'#0A0A0A'
+                    color:isDarkMode?'#fff':'#0A0A0A'
                   }}
                   onClick={handleContactNavigation}
                 >
@@ -296,8 +319,9 @@ function Header() {
                 <Button
                   sx={{
                     // background: "#0083C3",
-                    border: '1px solid #0A0A0A',
-                    color: "#0A0A0A",
+                    border: isDarkMode?'1px solid #FFFFFF':'1px solid #0A0A0A',
+                    // color: "#0A0A0A",,
+                    color:isDarkMode?'#fff':'#0A0A0A',
                     textTransform: "none",
                     padding: { lg:"12px 19px 11px 19px",xl:'18px 38px 18px 38px',md:"9px 11px 9px 11px",sm:"9px 11px 9px 11px"},
                     fontWeight: 500,
