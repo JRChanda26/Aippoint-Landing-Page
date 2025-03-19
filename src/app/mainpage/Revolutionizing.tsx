@@ -103,7 +103,8 @@ function Revolutionizing() {
                   },
                   color: "#0A0A0A",
                   paddingLeft:isSmallScreen?'20px':'0px',
-                  paddingRight:{sm:'30px'},
+                  // paddingRight:{sm:'30px'},
+                  textAlign:'center'
                 }}
               >
                 {post.data.top_content}

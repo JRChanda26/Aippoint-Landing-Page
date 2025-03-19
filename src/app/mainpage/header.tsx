@@ -93,7 +93,8 @@ function Header() {
                       fontWeight: 300,
                       fontSize: "16px",
                       lineHeight: "24px",
-                      paddingBottom:'10px'
+                      paddingBottom:'10px',
+                      color:'#0A0A0A'
                     }}
                     onClick={handleNavigation}
                   >
@@ -105,7 +106,8 @@ function Header() {
                       fontWeight: 300,
                       fontSize: "16px",
                       lineHeight: "24px",
-                       paddingBottom:'10px'
+                       paddingBottom:'10px',
+                       color:'#0A0A0A'
                     }}
                     onClick={handleFeatureNavigation}
                   >
@@ -117,7 +119,8 @@ function Header() {
                       fontWeight: 300,
                       fontSize: "16px",
                       lineHeight: "24px",
-                       paddingBottom:'10px'
+                       paddingBottom:'10px',
+                       color:'#0A0A0A'
                     }}
                     onClick={handlePricingNavigation}
                   >
@@ -129,7 +132,8 @@ function Header() {
                       fontWeight: 300,
                       fontSize: "16px",
                       lineHeight: "24px",
-                       paddingBottom:'10px'
+                       paddingBottom:'10px',
+                       color:'#0A0A0A'
                     }}
                     onClick={handleFaqNavigation}
                   >
@@ -141,7 +145,8 @@ function Header() {
                       fontWeight: 300,
                       fontSize: "16px",
                       lineHeight: "24px",
-                       paddingBottom:'10px'
+                       paddingBottom:'10px',
+                       color:'#0A0A0A'
                     }}
                     onClick={handleContactNavigation}
                   >
@@ -192,6 +197,7 @@ function Header() {
                     fontWeight: 300,
                     fontSize: "16px",
                     lineHeight: "24px",
+                    color:'#0A0A0A'
                   }}
                   onClick={handleNavigation}
                 >
@@ -203,6 +209,7 @@ function Header() {
                     fontWeight: 300,
                     fontSize: "16px",
                     lineHeight: "24px",
+                    color:'#0A0A0A'
                   }}
                   onClick={handleFeatureNavigation}
                 >
@@ -214,6 +221,7 @@ function Header() {
                     fontWeight: 300,
                     fontSize: "16px",
                     lineHeight: "24px",
+                    color:'#0A0A0A'
                   }}
                   onClick={handlePricingNavigation}
                 >
@@ -225,6 +233,7 @@ function Header() {
                     fontWeight: 300,
                     fontSize: "16px",
                     lineHeight: "24px",
+                    color:'#0A0A0A'
                   }}
                   onClick={handleFaqNavigation}
                 >
@@ -236,6 +245,7 @@ function Header() {
                     fontWeight: 300,
                     fontSize: "16px",
                     lineHeight: "24px",
+                    color:'#0A0A0A'
                   }}
                   onClick={handleContactNavigation}
                 >

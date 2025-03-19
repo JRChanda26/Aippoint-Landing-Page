@@ -241,7 +241,8 @@ function Subscription() {
           // onClick={handleSubscription1}
           >
           {subscriptionPage.map((post: any,index:any) => (
-            <div key={post.id} style={{padding:'14px',display:'flex',flexDirection:'column'}} onClick={()=>{handleSubscriptionClick(1)}}>
+            <div key={post.id} onClick={()=>{handleSubscriptionClick(1)}}>
+            <div  style={{padding:'14px',height:'450px',display:'flex',flexDirection:'column'}} >
                 <Typography
                   sx={{
                     fontFamily: "Poppins",
@@ -384,9 +385,14 @@ function Subscription() {
                   display:'flex',
                       justifyContent:'center',
                       textAlign:'center'}}> */}
-                  <Button
+                  
+                {/* </Box> */}
+            </div>
+            <div style={{padding:'20px'}}>
+              <Button
                     sx={{
                       textTransform: "none",
+                      width:'100%',
                        color: activeIndex === 1 ?'#fff':'#0A0A0A',
                        background:activeIndex === 1?'#0083C3':'',
                       border: activeIndex === 1?'':"1px solid #0A0A0A",
@@ -399,7 +405,8 @@ function Subscription() {
                       paddingTop:'18px',
                       paddingBottom:'18px',
                       // paddingBottom:{xs:'25px',sm:'22.98px',md:'22.98px',lg:'20px',xl:'14px'},
-                      marginTop:{xs:'125px',sm:'45px',md:'210px',lg:'210px',xl:'290px'},
+                      // marginTop:{xs:'125px',sm:'45px',md:'210px',lg:'210px',xl:'290px'},
+                      marginTop:'100px'
                       
                     }}
                   >
@@ -408,7 +415,7 @@ function Subscription() {
                       <ArrowForwardIcon />
                     </span>
                   </Button>
-                {/* </Box> */}
+            </div>
             </div>
           ))}
         </Grid>
@@ -417,7 +424,8 @@ function Subscription() {
         
         >
           {subscriptionPage.map((post: any) => (
-            <div key={post.id} style={{padding:'14px'}} onClick={()=>{handleSubscriptionClick(2)}}>
+            <div key={post.id} onClick={()=>{handleSubscriptionClick(2)}}>
+            <div  style={{padding:'14px',height:'450px'}} >
                 <Typography  sx={{
                     fontFamily: "Poppins",
                     fontWeight: 400,
@@ -583,7 +591,11 @@ function Subscription() {
                   display:'flex',
                       justifyContent:'center',
                       textAlign:'center' }}> */}
-                  <Button
+                  
+                {/* </Box> */}
+            </div>
+            <div style={{padding:'20px'}}>
+              <Button
                     sx={{
                       textTransform: "none",
                       // color: "#0A0A0A",
@@ -601,7 +613,8 @@ function Subscription() {
                       paddingTop:'18px',
                       paddingBottom:'18px',
                       // paddingBottom:{xs:'25px',sm:'22.98px',md:'22.98px',lg:'20px',xl:'14px'},
-                      marginTop:{xs:'96px',sm:'20px',md:'168px',lg:'168px',xl:'209px'},
+                      // marginTop:{xs:'96px',sm:'20px',md:'168px',lg:'168px',xl:'209px'},
+                      marginTop:'100px'
                     }}
                   >
                     {post.data.try_now}
@@ -609,7 +622,7 @@ function Subscription() {
                       <ArrowForwardIcon />
                     </span>
                   </Button>
-                {/* </Box> */}
+            </div>
             </div>
           ))}
         </Grid>
@@ -617,7 +630,8 @@ function Subscription() {
         //  onClick={handleSubscription3}
          >
           {subscriptionPage.map((post: any) => (
-            <div key={post.id} style={{padding:'14px'}} onClick={()=>{handleSubscriptionClick(3)}}>
+            <div key={post.id} onClick={()=>{handleSubscriptionClick(3)}}>
+            <div  style={{padding:'14px',height:'450px'}} >
                 <Typography sx={{
                     fontFamily: "Poppins",
                     fontWeight: 400,
@@ -775,7 +789,11 @@ function Subscription() {
                    display:'flex',
                       justifyContent:'center',
                       textAlign:'center' }}> */}
-                  <Button
+                  
+                {/* </Box> */}
+            </div>
+            <div style={{padding:'20px'}}>
+              <Button
                     sx={{
                       textTransform: "none",
                       // color: "#0A0A0A",
@@ -793,7 +811,8 @@ function Subscription() {
                       paddingTop:'18px',
                       paddingBottom:'18px',
                       // paddingBottom:{xs:'25px',sm:'22.98px',md:'22.98px',lg:'20px',xl:'14px'},
-                      marginTop:{xs:'26px',sm:'45px',md:'93px',lg:'93px',xl:'205px'},
+                      // marginTop:{xs:'26px',sm:'45px',md:'93px',lg:'93px',xl:'205px'},
+                      marginTop:'100px'
                     }}
                   >
                     {post.data.contact_us}
@@ -801,7 +820,7 @@ function Subscription() {
                       <ArrowForwardIcon />
                     </span>
                   </Button>
-                {/* </Box> */}
+            </div>
             </div>
           ))}
         </Grid>
