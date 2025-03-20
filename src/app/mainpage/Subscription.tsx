@@ -843,7 +843,7 @@ function Subscription() {
     //   </Grid>
     // </>
     <>
-    <div>
+    <div style={{paddingBottom:'20px'}}>
         {subscriptionPage.map((post: any) => (
           <div key={post.id}>
             <div
@@ -872,6 +872,8 @@ function Subscription() {
           </div>
         ))}
       </div>
+      <div style={{padding:'20px'}}>
+      <Box sx={{borderRadius:'12px',background: 'linear-gradient(90.81deg, rgba(255, 255, 255, 0.5) 1%, rgba(0, 131, 195, 0.25) 52%, rgba(255, 255, 255, 0.5) 100%)'}}>
     <Typography sx={{
                   fontFamily: "Poppins",
                   fontWeight: 400,
@@ -885,15 +887,18 @@ function Subscription() {
                   },
                   // color: "#0A0A0A",
                   color:isDarkMode?'#fff':'#0A0A0A',
-                  paddingLeft:isSmallScreen?'20px':'0px',
+                  paddingLeft:isSmallScreen?'80px':'150px',
                   textAlign:'center',
+                  paddingRight:isSmallScreen?'80px':'150px',
                   paddingTop:'40px'
                 }}>
       We offer tailored subscription plans based on your specific needs. The pricing will vary depending on the services and features that best fit your requirements.
       For more details and a personalized quote, please contact us.
       </Typography>
-    <div style={{display:'flex',justifyContent:'center',alignItems:'center',textAlign:'center',paddingTop:'10px'}}>
-      <Button style={{textTransform:'none',padding:'10px',color:isDarkMode?'#fff':'#0A0A0A'}} onClick={handlePricingNavigation}>Contact Us<span style={{paddingLeft:'5px'}}><ArrowForwardIcon/></span></Button>
+    <div style={{display:'flex',justifyContent:'center',alignItems:'center',textAlign:'center',paddingTop:'27px',paddingBottom:'29px'}}>
+      <Button style={{background:'#0083C3',textTransform:'none',padding:'18px 55px 18px 55px',color:isDarkMode?'#fff':'#fff',borderRadius:'12px'}} onClick={handlePricingNavigation}>Reach out to us <span style={{paddingLeft:'5px'}}><ArrowForwardIcon/></span></Button>
+    </div>
+    </Box>
     </div>
     </>
   );
