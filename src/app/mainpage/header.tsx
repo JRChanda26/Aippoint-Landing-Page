@@ -97,7 +97,7 @@ function Header() {
             open={isDrawerOpen}
             onClose={toggleDrawer(false)}
           >
-            <div style={{ width: 250, padding: "20px" }}>
+            <div style={{ width: 250, padding: "20px",background:isDarkMode?'#000':'',height:'100%' }}>
               {headerPage.map((post: any) => (
                 <div key={post.id}>
                   <Typography
