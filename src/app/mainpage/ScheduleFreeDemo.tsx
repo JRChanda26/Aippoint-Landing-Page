@@ -10,16 +10,14 @@ import {
 import React, { useEffect, useState } from "react";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { client } from "../../../lib/prismic-configuration";
-import Footer from "../mainpage/footer";
-import Header from "../mainpage/header";
 
-function Contact() {
-  const [contactPage, setContactPage] = useState<any[]>([]);
+function Scheduledemo() {
+  const [scheduledemoPage, setScheduledemoPage] = useState<any[]>([]);
 
   useEffect(() => {
     const fetchData = async () => {
-      const response: any = await client.getAllByType("contact" as any);
-      setContactPage(response);
+      const response: any = await client.getAllByType("schedulefreedemo" as any);
+      setScheduledemoPage(response);
     };
     fetchData();
   }, []);
@@ -155,16 +153,16 @@ function Contact() {
 
     checkDarkMode();
   }, []);
+
   return (
     <div>
-        <Header/>
-        <Grid container>
+      <Grid container>
         <Grid
           item
           lg={12}
           sx={{
             textAlign: "center",
-            marginTop: "50px",
+            marginTop: "120px",
             paddingLeft: { sm: '70px' }
           }}
         >
@@ -179,7 +177,7 @@ function Contact() {
               ...heading,
             }}
           >
-            {contactPage[0]?.data.heading}
+            {scheduledemoPage[0]?.data.request_demo}
           </Typography>
           <Typography
             //  sx={title}
@@ -208,7 +206,7 @@ function Contact() {
             }}
           >
             {" "}
-            {contactPage[0]?.data.title}
+            {scheduledemoPage[0]?.data.top_heading}
           </Typography>
           <Typography
             //  sx={description}
@@ -238,7 +236,7 @@ function Contact() {
             }}
           >
             {" "}
-            {contactPage[0]?.data.description}
+            {scheduledemoPage[0]?.data.top_content}
           </Typography>
         </Grid>
         <Grid
@@ -253,6 +251,21 @@ function Contact() {
             paddingLeft: { sm: '70px' }
           }}
         >
+            <Grid item lg={6}>
+            {scheduledemoPage[0]?.data.left_image && (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                src={scheduledemoPage[0]?.data.left_image.url || undefined}
+                alt={scheduledemoPage[0]?.data.left_image.alt || "Image"}
+                style={{
+                  width: "100%",
+                  height: "auto",
+                  //   objectFit: "cover",
+                  //   display: "block",
+                }}
+              />
+            )}
+          </Grid>
           <Grid
             item
             lg={6}
@@ -292,7 +305,7 @@ function Contact() {
                 }}
               >
                 {" "}
-                {contactPage[0]?.data.full_name_label}
+                {scheduledemoPage[0]?.data.first_name}
               </Typography>
               <TextField
                 name="fullname"
@@ -328,7 +341,7 @@ function Contact() {
                   },
                 }}
               >
-                {contactPage[0]?.data.email_label}
+                {scheduledemoPage[0]?.data.work_email}
               </Typography>
               <TextField
                 name="email"
@@ -363,7 +376,7 @@ function Contact() {
                   },
                 }}
               >
-                {contactPage[0]?.data.phone_label}
+                {scheduledemoPage[0]?.data.phone_number}
               </Typography>
               <TextField
                 name="phone"
@@ -398,7 +411,7 @@ function Contact() {
                   },
                 }}
               >
-                {contactPage[0]?.data.message_label}
+                {scheduledemoPage[0]?.data.primary_challenge_which_want_solve}
               </Typography>
               <TextField
                 name="message"
@@ -450,7 +463,7 @@ function Contact() {
               }}
               onClick={handleSubmit}
             >
-              Send Message
+              {scheduledemoPage[0]?.data.button_text}
               <ArrowForwardIcon />
             </Button>
             <Snackbar
@@ -466,26 +479,11 @@ function Contact() {
               </Alert>
             </Snackbar>
           </Grid>
-          <Grid item lg={6}>
-            {contactPage[0]?.data.image && (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img
-                src={contactPage[0]?.data.image.url || undefined}
-                alt={contactPage[0]?.data.image.alt || "Image"}
-                style={{
-                  width: "100%",
-                  height: "auto",
-                  //   objectFit: "cover",
-                  //   display: "block",
-                }}
-              />
-            )}
-          </Grid>
+          
         </Grid>
       </Grid>
-      <Footer/>
     </div>
   );
 }
 
-export default Contact;
+export default Scheduledemo;

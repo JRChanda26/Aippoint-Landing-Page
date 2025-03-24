@@ -1,0 +1,137 @@
+{
+  "format": "page",
+  "id": "schedulefreedemo",
+  "label": "ScheduleFreeDemo",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "request_demo": {
+        "type": "Text",
+        "config": {
+          "label": "Request Demo",
+          "placeholder": ""
+        }
+      },
+      "top_heading": {
+        "type": "Text",
+        "config": {
+          "label": "Top Heading",
+          "placeholder": ""
+        }
+      },
+      "top_content": {
+        "type": "Text",
+        "config": {
+          "label": "Top Content",
+          "placeholder": ""
+        }
+      },
+      "left_image": {
+        "type": "Image",
+        "config": {
+          "label": "Left Image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "first_name": {
+        "type": "Text",
+        "config": {
+          "label": "First Name",
+          "placeholder": ""
+        }
+      },
+      "last_name": {
+        "type": "Text",
+        "config": {
+          "label": "Last Name",
+          "placeholder": ""
+        }
+      },
+      "work_email": {
+        "type": "Text",
+        "config": {
+          "label": "Work Email",
+          "placeholder": ""
+        }
+      },
+      "phone_number": {
+        "type": "Text",
+        "config": {
+          "label": "Phone Number",
+          "placeholder": ""
+        }
+      },
+      "company_size": {
+        "type": "Text",
+        "config": {
+          "label": "Company SIze",
+          "placeholder": ""
+        }
+      },
+      "industry": {
+        "type": "Text",
+        "config": {
+          "label": "Industry",
+          "placeholder": ""
+        }
+      },
+      "primary_challenge_which_want_solve": {
+        "type": "Text",
+        "config": {
+          "label": "Primary Challenge Which Want Solve",
+          "placeholder": ""
+        }
+      },
+      "preferred_demo_date_and_time": {
+        "type": "Text",
+        "config": {
+          "label": "Preferred Demo Date And Time",
+          "placeholder": ""
+        }
+      },
+      "button_text": {
+        "type": "Text",
+        "config": {
+          "label": "Button Text",
+          "placeholder": ""
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {}
+        }
+      }
+    },
+    "SEO & Metadata": {
+      "meta_title": {
+        "config": {
+          "label": "Meta Title",
+          "placeholder": "A title of the page used for social media and search engines"
+        },
+        "type": "Text"
+      },
+      "meta_description": {
+        "config": {
+          "label": "Meta Description",
+          "placeholder": "A brief summary of the page"
+        },
+        "type": "Text"
+      },
+      "meta_image": {
+        "config": {
+          "constraint": {
+            "height": 1260,
+            "width": 2400
+          },
+          "label": "Meta Image",
+          "thumbnails": []
+        },
+        "type": "Image"
+      }
+    }
+  }
+}
