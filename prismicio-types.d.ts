@@ -1599,6 +1599,214 @@ export type RevolutionizingDocument<Lang extends string = string> =
     Lang
   >;
 
+type SchedulefreedemoDocumentDataSlicesSlice = never;
+
+/**
+ * Content for ScheduleFreeDemo documents
+ */
+interface SchedulefreedemoDocumentData {
+  /**
+   * Request Demo field in *ScheduleFreeDemo*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: schedulefreedemo.request_demo
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  request_demo: prismic.KeyTextField;
+
+  /**
+   * Top Heading field in *ScheduleFreeDemo*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: schedulefreedemo.top_heading
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  top_heading: prismic.KeyTextField;
+
+  /**
+   * Top Content field in *ScheduleFreeDemo*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: schedulefreedemo.top_content
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  top_content: prismic.KeyTextField;
+
+  /**
+   * Left Image field in *ScheduleFreeDemo*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: schedulefreedemo.left_image
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  left_image: prismic.ImageField<never>;
+
+  /**
+   * First Name field in *ScheduleFreeDemo*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: schedulefreedemo.first_name
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  first_name: prismic.KeyTextField;
+
+  /**
+   * Last Name field in *ScheduleFreeDemo*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: schedulefreedemo.last_name
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  last_name: prismic.KeyTextField;
+
+  /**
+   * Work Email field in *ScheduleFreeDemo*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: schedulefreedemo.work_email
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  work_email: prismic.KeyTextField;
+
+  /**
+   * Phone Number field in *ScheduleFreeDemo*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: schedulefreedemo.phone_number
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  phone_number: prismic.KeyTextField;
+
+  /**
+   * Company SIze field in *ScheduleFreeDemo*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: schedulefreedemo.company_size
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  company_size: prismic.KeyTextField;
+
+  /**
+   * Industry field in *ScheduleFreeDemo*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: schedulefreedemo.industry
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  industry: prismic.KeyTextField;
+
+  /**
+   * Primary Challenge Which Want Solve field in *ScheduleFreeDemo*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: schedulefreedemo.primary_challenge_which_want_solve
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  primary_challenge_which_want_solve: prismic.KeyTextField;
+
+  /**
+   * Preferred Demo Date And Time field in *ScheduleFreeDemo*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: schedulefreedemo.preferred_demo_date_and_time
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  preferred_demo_date_and_time: prismic.KeyTextField;
+
+  /**
+   * Button Text field in *ScheduleFreeDemo*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: schedulefreedemo.button_text
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  button_text: prismic.KeyTextField;
+
+  /**
+   * Slice Zone field in *ScheduleFreeDemo*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: schedulefreedemo.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#slices
+   */
+  slices: prismic.SliceZone<SchedulefreedemoDocumentDataSlicesSlice> /**
+   * Meta Title field in *ScheduleFreeDemo*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: schedulefreedemo.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */;
+  meta_title: prismic.KeyTextField;
+
+  /**
+   * Meta Description field in *ScheduleFreeDemo*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: schedulefreedemo.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  meta_description: prismic.KeyTextField;
+
+  /**
+   * Meta Image field in *ScheduleFreeDemo*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: schedulefreedemo.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  meta_image: prismic.ImageField<never>;
+}
+
+/**
+ * ScheduleFreeDemo document from Prismic
+ *
+ * - **API ID**: `schedulefreedemo`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type SchedulefreedemoDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<
+    Simplify<SchedulefreedemoDocumentData>,
+    "schedulefreedemo",
+    Lang
+  >;
+
 type SubscriptionDocumentDataSlicesSlice = never;
 
 /**
@@ -2026,6 +2234,7 @@ export type AllDocumentTypes =
   | HirethebestDocument
   | OurvaluepropositionDocument
   | RevolutionizingDocument
+  | SchedulefreedemoDocument
   | SubscriptionDocument;
 
 declare module "@prismicio/client" {
@@ -2070,6 +2279,9 @@ declare module "@prismicio/client" {
       RevolutionizingDocument,
       RevolutionizingDocumentData,
       RevolutionizingDocumentDataSlicesSlice,
+      SchedulefreedemoDocument,
+      SchedulefreedemoDocumentData,
+      SchedulefreedemoDocumentDataSlicesSlice,
       SubscriptionDocument,
       SubscriptionDocumentData,
       SubscriptionDocumentDataSlicesSlice,

@@ -140,6 +140,19 @@ function Contact() {
       console.error("Error saving contact:", error);
     }
   };
+  const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
+
+  useEffect(() => {
+    const checkDarkMode = () => {
+      const darkModeQuery = window.matchMedia("(prefers-color-scheme: dark)");
+      setIsDarkMode(darkModeQuery.matches);
+      darkModeQuery.addEventListener("change", (e) => {
+        setIsDarkMode(e.matches);
+      });
+    };
+
+    checkDarkMode();
+  }, []);
 
   return (
     <div>
@@ -150,7 +163,7 @@ function Contact() {
           sx={{
             textAlign: "center",
             marginTop: "120px",
-            paddingLeft:{sm:'70px'}
+            paddingLeft: { sm: '70px' }
           }}
         >
           <Typography
@@ -203,7 +216,8 @@ function Contact() {
               // fontSize: "18px",
               // lineHeight: "27px",
               letterSpacing: "0%",
-              color: "#0A0A0A",
+              // color: "#0A0A0A",
+              color: isDarkMode ? '#fff' : '#0A0A0A',
               paddingTop: "25px",
               fontSize: {
                 xs: "14px",
@@ -234,14 +248,15 @@ function Contact() {
             justifyContent: "center",
             padding: "20px",
             gap: "10px",
-            paddingLeft:{sm:'70px'}
+            paddingLeft: { sm: '70px' }
           }}
         >
           <Grid
             item
             lg={6}
             sx={{
-              background: "#FAFAFA",
+              // background: "#FAFAFA",
+              background: isDarkMode ? '#1C1C1C' : "#FAFAFA",
               textAlign: "center",
               borderRadius: "24px",
               padding: "22px",
@@ -263,12 +278,12 @@ function Contact() {
                   fontWeight: 700,
                   // fontSize: "18px",
                   // lineHeight: "27px",
-                  fontSize: { xs: "14px", sm: "18px",md:"18px", lg: "18px", xl: "18px" },
+                  fontSize: { xs: "14px", sm: "18px", md: "18px", lg: "18px", xl: "18px" },
                   lineHeight: {
                     xs: "21px",
                     sm: "27px",
-                    md:"27px",
-                    lg: "27px",                         
+                    md: "27px",
+                    lg: "27px",
                     xl: "27px",
                   },
                   letterSpacing: "0%",
@@ -289,22 +304,27 @@ function Contact() {
                 placeholder="Enter your full name"
                 sx={{
                   "& fieldset": { border: "none" },
-                  backgroundColor: "#FFFFFF",
+                  // backgroundColor: "#FFFFFF",
+
+                  background: isDarkMode ? '#0A0A0A' : "#FFFFFF",
                   borderRadius: "12px",
+                  "& input::placeholder": {
+                    color: isDarkMode ? "#FFFFFF59" : '',
+                  },
                 }}
               />
-              <Typography 
-              // sx={labels}
-              sx={{
-                fontSize: { xs: "14px", sm: "18px",md:"18px", lg: "18px", xl: "18px" },
-                lineHeight: {
-                  xs: "21px",
-                  sm: "27px",
-                  md:"27px",
-                  lg: "27px",                         
-                  xl: "27px",
-                },
-              }}
+              <Typography
+                // sx={labels}
+                sx={{
+                  fontSize: { xs: "14px", sm: "18px", md: "18px", lg: "18px", xl: "18px" },
+                  lineHeight: {
+                    xs: "21px",
+                    sm: "27px",
+                    md: "27px",
+                    lg: "27px",
+                    xl: "27px",
+                  },
+                }}
               >
                 {contactPage[0]?.data.email_label}
               </Typography>
@@ -320,22 +340,26 @@ function Contact() {
                 placeholder="Enter your valid and working email address"
                 sx={{
                   "& fieldset": { border: "none" },
-                  backgroundColor: "#FFFFFF",
+                  // backgroundColor: "#FFFFFF",
+                  background: isDarkMode ? '#0A0A0A' : "#FFFFFF",
                   borderRadius: "12px",
+                  "& input::placeholder": {
+                    color: isDarkMode ? "#FFFFFF59" : '',
+                  },
                 }}
               />
-              <Typography 
-              // sx={labels}
-              sx={{
-                fontSize: { xs: "14px", sm: "18px",md:"18px", lg: "18px", xl: "18px" },
-                lineHeight: {
-                  xs: "21px",
-                  sm: "27px",
-                  md:"27px",
-                  lg: "27px",                         
-                  xl: "27px",
-                },
-              }}
+              <Typography
+                // sx={labels}
+                sx={{
+                  fontSize: { xs: "14px", sm: "18px", md: "18px", lg: "18px", xl: "18px" },
+                  lineHeight: {
+                    xs: "21px",
+                    sm: "27px",
+                    md: "27px",
+                    lg: "27px",
+                    xl: "27px",
+                  },
+                }}
               >
                 {contactPage[0]?.data.phone_label}
               </Typography>
@@ -351,22 +375,26 @@ function Contact() {
                 placeholder="+91 9100876754"
                 sx={{
                   "& fieldset": { border: "none" },
-                  backgroundColor: "#FFFFFF",
+                  // backgroundColor: "#FFFFFF",
+                  background: isDarkMode ? '#0A0A0A' : "#FFFFFF",
                   borderRadius: "12px",
+                  "& input::placeholder": {
+                    color: isDarkMode ? "#FFFFFF59" : '',
+                  },
                 }}
               />
-              <Typography 
-              // sx={labels}
-              sx={{
-                fontSize: { xs: "14px", sm: "18px",md:"18px", lg: "18px", xl: "18px" },
-                lineHeight: {
-                  xs: "21px",
-                  sm: "27px",
-                  md:"27px",
-                  lg: "27px",                         
-                  xl: "27px",
-                },
-              }}
+              <Typography
+                // sx={labels}
+                sx={{
+                  fontSize: { xs: "14px", sm: "18px", md: "18px", lg: "18px", xl: "18px" },
+                  lineHeight: {
+                    xs: "21px",
+                    sm: "27px",
+                    md: "27px",
+                    lg: "27px",
+                    xl: "27px",
+                  },
+                }}
               >
                 {contactPage[0]?.data.message_label}
               </Typography>
@@ -385,8 +413,13 @@ function Contact() {
                 variant="outlined"
                 sx={{
                   "& fieldset": { border: "none" },
-                  backgroundColor: "#FFFFFF",
+                  // backgroundColor: "#FFFFFF",
+                  background: isDarkMode ? '#0A0A0A' : "#FFFFFF",
                   borderRadius: "12px",
+                  "& textarea::placeholder": {
+                    color: isDarkMode ? "#FFFFFF59" : "",
+                  },
+
                 }}
               />
             </Grid>
@@ -397,12 +430,12 @@ function Contact() {
                 fontWeight: 500,
                 // fontSize: "16px",
                 // lineHeight: "24px",
-                fontSize: { xs: "16px", sm: "16px",md:"16px", lg: "16px", xl: "16px" },
+                fontSize: { xs: "16px", sm: "16px", md: "16px", lg: "16px", xl: "16px" },
                 lineHeight: {
                   xs: "24px",
                   sm: "24px",
-                  md:"24px",
-                  lg: "24px",                         
+                  md: "24px",
+                  lg: "24px",
                   xl: "24px",
                 },
                 letterSpacing: "0%",
