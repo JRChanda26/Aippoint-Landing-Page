@@ -13,7 +13,7 @@ function Hire() {
     fetchData();
   }, []);
   const isSmallScreen = useMediaQuery("(max-width:440px)");
-   const isXl = useMediaQuery("(max-width:1920px)");
+  const isXl = useMediaQuery("(max-width:1920px)");
   const isLg = useMediaQuery("(max-width:1360px)");
   const isMd = useMediaQuery("(max-width:992px)");
   const isSm = useMediaQuery("(max-width:768px)");
@@ -50,21 +50,21 @@ function Hire() {
           {hirePage.map((post: any) => (
             <div key={post.id}>
               <Box sx={{
-                paddingRight:isSmallScreen?'20px':'0px' ,
-                paddingLeft: {xs:"16px",sm:"35px",md:"35px",lg:"25px",xl:"20px"},
-                paddingTop:{xs:"55px",sm:"72.19px",md:"72.19px",lg:"215px",xl:"283px"} 
-            }}>
+                paddingRight: isSmallScreen ? '20px' : '0px',
+                paddingLeft: { xs: "16px", sm: "35px", md: "35px", lg: "25px", xl: "20px" },
+                paddingTop: { xs: "55px", sm: "72.19px", md: "72.19px", lg: "215px", xl: "283px" },
+              }}>
                 <Typography
-                  sx={{ 
+                  sx={{
                     fontFamily: "Poppins",
                     fontWeight: 700,
                     // fontSize: "45px",
-                    fontSize: { xs: "24px", sm: "32px",md:"32px", lg: "36px", xl: "45px" },
+                    fontSize: { xs: "24px", sm: "32px", md: "32px", lg: "36px", xl: "45px" },
                     // lineHeight: "67.5px",
                     lineHeight: {
                       xs: "36px",
                       sm: "48px",
-                      md:"48px",
+                      md: "48px",
                       lg: "54px",
                       xl: "67.5px",
                     },
@@ -74,23 +74,23 @@ function Hire() {
                   {post.data.heading}
                 </Typography>
               </Box>
-              <Box sx={{  paddingLeft: {xs:"16px",sm:"35px",md:"35px",lg:"25px",xl:"20px"},paddingRight:isSmallScreen?'20px':'0px' }}>
+              <Box sx={{ paddingLeft: { xs: "16px", sm: "35px", md: "35px", lg: "25px", xl: "20px" }, paddingRight: isSmallScreen ? '20px' : '0px' }}>
                 <Typography
                   sx={{
                     fontFamily: "Poppins",
                     fontWeight: 400,
                     // fontSize: "18px",
-                    fontSize: { xs: "14px", sm: "14px",md:"14px", lg: "16px", xl: "18px" },
+                    fontSize: { xs: "14px", sm: "14px", md: "14px", lg: "16px", xl: "18px" },
                     // lineHeight: "27px",
                     lineHeight: {
                       xs: "21px",
                       sm: "21px",
-                      md:"21px",
+                      md: "21px",
                       lg: "24px",
                       xl: "27px",
                     },
                     // color: "#0A0A0A",
-                    color:isDarkMode?'#fff':'#0A0A0A'
+                    color: isDarkMode ? '#fff' : '#0A0A0A'
                   }}
                 >
                   {post.data.content}
@@ -99,13 +99,13 @@ function Hire() {
               <Box
                 sx={{
                   display: "flex",
-                  flexDirection:isSmallScreen?"column":"row",
-                  
+                  flexDirection: isSmallScreen ? "column" : "row",
+
                   gap: "24px",
-                  paddingLeft: {xs:"12px",sm:"35px",md:"35px",lg:"25px",xl:"20px"},
-                  paddingRight:isSmallScreen?'12px':'0px',
-                  
-                  paddingTop: {xs:"25px",sm:"30px",md:"30px",lg:"25px",xl:"25px"},
+                  paddingLeft: { xs: "12px", sm: "35px", md: "35px", lg: "25px", xl: "20px" },
+                  paddingRight: isSmallScreen ? '12px' : '0px',
+
+                  paddingTop: { xs: "25px", sm: "30px", md: "30px", lg: "25px", xl: "25px" },
                 }}
               >
                 <div style={{}}>
@@ -115,21 +115,21 @@ function Hire() {
                       background: "#0083C3",
                       borderRadius: "12px",
                       color: "#FFFFFF",
-                      width:isSmallScreen?'100%':'auto',
+                      width: isSmallScreen ? '100%' : 'auto',
                       // padding: "18px 58px 18px 59px",
-                      padding:{lg:'18px 73px 18px 72px', xs:'18px 169px 18px 167px'},
-                      fontWeight:500,
-                      fontFamily:'Poppins',
-                      fontSize: { xs: "16px", sm: "12px",md:"12px", lg: "16px", xl: "16px" },
+                      padding: { lg: '18px 73px 18px 72px', xs: '18px 169px 18px 167px' },
+                      fontWeight: 500,
+                      fontFamily: 'Poppins',
+                      fontSize: { xs: "16px", sm: "12px", md: "12px", lg: "16px", xl: "16px" },
                       lineHeight: {
                         xs: "24px",
                         sm: "18px",
-                        md:"18px",
+                        md: "18px",
                         lg: "24px",
                         xl: "24px",
                       },
                     }}
-                    
+
                     onClick={() => {
                       window.location.href = "https://aippoint.ai/aippoint-userinterface/";
                     }}
@@ -143,18 +143,18 @@ function Hire() {
                       textTransform: "none",
                       borderRadius: "12px",
                       // color: "#0A0A0A",
-                      border: isDarkMode?'1px solid #FFFFFF':'1px solid #0A0A0A',
-                    color:isDarkMode?'#fff':'#0A0A0A',
-                      width:isSmallScreen?'100%':'auto',
+                      border: isDarkMode ? '1px solid #FFFFFF' : '1px solid #0A0A0A',
+                      color: isDarkMode ? '#fff' : '#0A0A0A',
+                      width: isSmallScreen ? '100%' : 'auto',
                       // padding: "18px 38px 18px 38px",
-                      padding:{lg:'18px 38px 18px 38px', xs:'18px 134px 18px 133px'},
-                      fontWeight:500,
-                      fontFamily:'Poppins',
-                      fontSize: { xs: "16px", sm: "12px",md:"12px", lg: "16px", xl: "16px" },
+                      padding: { lg: '18px 38px 18px 38px', xs: '18px 134px 18px 133px' },
+                      fontWeight: 500,
+                      fontFamily: 'Poppins',
+                      fontSize: { xs: "16px", sm: "12px", md: "12px", lg: "16px", xl: "16px" },
                       lineHeight: {
                         xs: "24px",
                         sm: "18px",
-                        md:"18px",
+                        md: "18px",
                         lg: "24px",
                         xl: "24px",
                       },
@@ -167,10 +167,10 @@ function Hire() {
             </div>
           ))}
         </Grid>
-        <Grid item lg={6.2} sx={{paddingLeft:isSmallScreen?'20px':'0px' ,}}>
+        <Grid item lg={6.2} sx={{ paddingLeft: isSmallScreen ? '20px' : '0px', }}>
           {hirePage.map((post: any) => (
             <div key={post.id}>
-              <div style={{ paddingTop: "40px",paddingBottom:'25px',paddingRight:'33.29px' }}>
+              <div style={{ paddingTop: "40px", paddingBottom: '25px', paddingRight: '33.29px' }}>
                 {post?.data.hire_image && (
                   // eslint-disable-next-line @next/next/no-img-element
                   <img
@@ -178,10 +178,12 @@ function Hire() {
                     alt={post.data.hire_image.alt || "Image"}
                     style={
                       {
-                          // width: "912.71px",
-                          // height: "762.67px",
-                          width: dimensions.width,
-                          height: dimensions.height,
+                        // width: "912.71px",
+                        // height: "762.67px",
+                        // width: dimensions.width,
+                        // height: dimensions.height,
+                        width: "100%",
+                        height: "auto",
                       }
                     }
                   />
