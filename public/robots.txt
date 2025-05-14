@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://aippoint.ai
+
+# Sitemaps
+Sitemap: https://aippoint.ai/sitemap.xml
