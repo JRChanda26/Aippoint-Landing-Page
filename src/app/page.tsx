@@ -12,14 +12,14 @@ import Subscription from "./mainpage/Subscription";
 export default function Home() {
   return (
     <>
-    <Head>
+      <Head>
         <title>AI Interview Platform | Practice Real Job Interviews with AI</title>
         {/* Shown in Google search description part */}
         <meta name="description" content="AI-driven mock interview platform to practice job interviews. Get real-time feedback and improve your skills. Free demo available!" />
         <meta name="keywords" content="AI interview, mock interview, job interview preparation, AI mock interview platform, interview coaching" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        {/* Open Graph For Facebook, LinkedIn part*/ } 
+        {/* Open Graph For Facebook, LinkedIn part*/}
         <meta property="og:title" content="AI Interview Practice Platform" />
         <meta property="og:description" content="Practice interviews with our AI-powered simulator and improve your confidence." />
         <meta property="og:image" content="/Brandname.png" />
@@ -31,18 +31,38 @@ export default function Home() {
         <meta name="twitter:description" content="Try our AI-powered interview simulation app. Free practice sessions, instant feedback." />
         <meta name="twitter:image" content="/Brandname.png" />
         <link rel="canonical" href="https://aippoint.ai" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "SoftwareApplication",
+              "name": "AIPPoint",
+              "url": "https://aippoint.ai",
+              "description": "AI-powered mock interview platform for job seekers",
+              "applicationCategory": "BusinessApplication",
+              "operatingSystem": "All",
+              "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD"
+              }
+            })
+          }}
+        />
+
       </Head>
-    <div>
-      <Header/>
-      <Hire/>
-      <Ourvalueproposition/>
-      <Revolutionizing/>
-      <Subscription/>
-      <Faq/>
-      <Contact/>
-      {/* <Scheduledemo/> */}
-      <Footer/>
-    </div>
+      <div>
+        <Header />
+        <Hire />
+        <Ourvalueproposition />
+        <Revolutionizing />
+        <Subscription />
+        <Faq />
+        <Contact />
+        {/* <Scheduledemo/> */}
+        <Footer />
+      </div>
     </>
   )
 }
