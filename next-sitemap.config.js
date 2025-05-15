@@ -22,12 +22,8 @@ module.exports = {
         { page: '/' },
         { page: '/contact' },
         { page: '/faq' },
-        { page: '/footer' },
-        { page: '/header' },
-        { page: '/Hirethebest' },
-        { page: '/Ourvalueproposition' },
-        { page: '/Revolutionizing' },
-        { page: '/Subscription' }
+        { page: '/feature' },
+        { page: '/pricing' },
       ];
     }
   }
